@@ -1,0 +1,84 @@
+import React, {useEffect} from 'react';
+import {useCommonSection} from "../../../hooks/useCommonSection";
+import {useGlobalContext} from "../../../context/context";
+import styles from './Footer.module.css'
+import {stack} from "../../../hooks/useClassName";
+import {Link} from "react-router-dom";
+import Logo from "../../images/Logo/Logo";
+import ToTopButton from "../../common/ToTopButton/ToTopButton";
+
+const Footer = () => {
+
+    const [section] = useCommonSection("podval")
+    const {setFooterLoading, menu} = useGlobalContext()
+    useEffect(() => {
+        if (section) {
+            setFooterLoading(false)
+        }
+    }, [section])
+
+    if (!section) return null
+
+    return (
+        <section className={stack('container', styles.footer)}>
+            <ToTopButton className={styles.buttonToTop}></ToTopButton>
+            <div className={styles.footer__body}>
+                <div className={styles.logo}>
+                    <Logo className={styles.logo__link} mobileUrl={section?.footer?.footerLogotipMobile?.sourceUrl}
+                          desktopUrl={section?.footer?.footerLogotip?.sourceUrl}></Logo>
+                    <p className={stack(styles.text,styles.logo__copy)}
+                       dangerouslySetInnerHTML={{__html: section?.footer?.footerKopirajt}}></p>
+                </div>
+                <div className={styles.doc}>
+                    <a href={section?.footer?.footerPublichnayaOferta?.mediaItemUrl} className={stack('link',styles.text,styles.doc__item)}
+                       target={"_blank"}>Публичная оферта</a>
+                    <a href={section?.footer?.footerPolitikaKonfidenczialnosti?.mediaItemUrl}
+                       className={stack('link',styles.text,styles.doc__item)}
+                       target={"_blank"}>Политика конфиденциальности</a>
+                </div>
+
+                <div className={styles.nav}>
+                    <h3 className={stack(styles.title, styles.nav__title)}
+                        dangerouslySetInnerHTML={{__html: section?.footer?.footerMenuZagolovok}}></h3>
+                    <ul className={styles.nav__list}>
+                        {menu?.menu?.menuItems?.nodes?.map(item => <Link className={stack('nav-link', styles.text, styles.nav__link)} key={item.label}
+                                                                         to={item.url}>{item.label}</Link>)}
+                    </ul>
+                </div>
+
+                <div className={styles.social}>
+                    <h3 className={stack(styles.title, styles.social__title)}
+                        dangerouslySetInnerHTML={{__html: section?.footer?.footerSocialZagolovok}}></h3>
+                    <ul className={styles.social__list}>
+                        {section?.footer?.footerSocialSpisok?.map((item, index) => <a
+                            href={item.footerSocialAdres}
+                            target={"_blank"}
+                            className={stack('link',styles.social__item)}
+                            key={index}>
+                            <img className={styles.social__icon} src={item?.footerSocialIkonka?.sourceUrl} alt=""/>
+                            <p className={stack(styles.text,styles.social__text)}>{item.footerSocialTekst}</p>
+                        </a>)}
+                    </ul>
+                    <p className={stack('remark',styles.social__remark)}
+                       dangerouslySetInnerHTML={{__html: section?.footer?.footerSocialRemarka}}></p>
+                </div>
+
+                <div className={styles.contacts}>
+                    <h3 className={stack(styles.title, styles.contacts__title)}>{section?.footer?.footerContactsZagolovok}</h3>
+                    <ul className={styles.contacts__list}>
+                        {section?.footer?.footerContactsSpisok?.map((item, index) => <a
+                            className={stack('link',styles.contacts__link)}
+                            key={index}>
+                            <p className={stack(styles.text,styles.contacts__text)}>{item.footerContactsTekst}</p>
+                            {item.footerContactsEstKommentarij === "true" &&
+                                <p className={styles.contacts__description}> {item.footerContactsKommentarij}</p>}
+
+                        </a>)}
+                    </ul>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Footer;

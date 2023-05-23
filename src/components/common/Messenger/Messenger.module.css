@@ -1,0 +1,51 @@
+.body {
+    @apply pt-[77px]
+    2xl:pt-[73px]
+    lg:pt-[48px]
+    md:pt-[0px]
+}
+
+.content {
+    @apply z-10 relative
+}
+
+.wrapper {
+    @apply relative rounded-[33px] bg-yellow-200 px-[93px] py-[80px]
+    2xl:rounded-[20px] 2xl:p-[60px]
+    xl:pl-[20px] xl:pt-[60px] xl:pb-[94px]
+    lg:py-[60px] lg:px-[30px]
+    md:pl-[10px] md:pt-[34px] md:pb-[193px]
+}
+
+.title {
+    @apply mb-[26px]
+    2xl:mb-[20px]
+    lg:mb-[10px]
+    md:mb-[5px]
+}
+
+.body .text {
+    @apply font-normal mb-[66px]
+    2xl:mb-[50px]
+    lg:mb-[40px]
+    md:text-[14px] md:mb-[20px]
+}
+
+.body .link {
+    @apply w-[507px] h-[95px] rounded-[16px] text-[32px]
+    2xl:w-[381px] 2xl:h-[74px] 2xl:text-[24px] 2xl:rounded-[12px]
+    xl:w-[276px] xl:h-[65px] xl:text-[18px] xl:rounded-[12px]
+    lg:w-[256px] lg:h-[55px] lg:text-[18px] lg:rounded-[8px]
+    md:w-[234px] md:h-[42px] md:text-[16px] md:rounded-[8px] md:pt-[3px]
+
+}
+
+.picture {
+    @apply w-[437px] h-[536px] absolute bottom-0 right-[143px]
+    2xl:w-[340px] 2xl:h-[417px] 2xl:right-[214px]
+    xl:w-[340px] xl:h-[417px] xl:right-[142px]
+    lg:w-[264px] lg:h-[324px] lg:right-[90px]
+    md:w-[215px] md:h-[264px] md:right-[20px]
+    sm:w-[181px] sm:h-[222px] sm:right-[13px]
+
+}

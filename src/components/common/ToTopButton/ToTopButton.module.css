@@ -1,0 +1,16 @@
+.body {
+
+    @apply flex items-center gap-[33px]
+    2xl:gap-[23px]
+}
+
+.text {
+    @apply text-[29px]
+    2xl:text-[22px]
+
+}
+
+.icon {
+    @apply w-[40px] h-[40px]
+    2xl:w-[32px] 2xl:h-[32px]
+}

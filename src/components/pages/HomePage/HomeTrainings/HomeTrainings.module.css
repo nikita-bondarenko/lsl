@@ -1,0 +1,93 @@
+.body {}
+.title {
+    @apply mb-[50px]
+    2xl:mb-[40px]
+    xl:mb-[57px]
+    lg:mb-[20px]
+}
+.body .button {
+    @apply ml-auto w-[533px] h-[101px] mt-[80px]
+    2xl:mt-[50px] 2xl:w-[360px] 2xl:h-[74px]
+    xl:mt-[20px] xl:w-[290px] xl:h-[65px] xl:text-[18px]
+    lg:mt-[-52px] lg:w-[267px] lg:h-[52px] lg:text-[16px]
+    md:mt-[20px]
+}
+
+.list {
+    @apply flex justify-between flex-wrap gap-y-[80px]
+    2xl:gap-y-[50px]
+    xl:gap-y-[57px]
+    lg:gap-y-[20px]
+    md:flex-col md:gap-y-[30px]
+    sm:gap-y-[20px]
+}
+
+.list .list__item:nth-child(1), .list .list__item:nth-child(2) {
+    @apply w-[calc((100%-40px)/2)]
+    2xl:w-[calc((100%-30px)/2)]
+    xl:w-[calc((100%-20px)/2)]
+    lg:w-full lg:flex lg:gap-[15px]
+}
+
+.list .list__item:nth-child(1) .item__text , .list  .list__item:nth-child(2)  .item__text {
+    @apply max-w-[75%] xl:max-w-[80%] md:max-w-none
+}
+
+.list__item {
+    @apply w-[calc((100%-50px*2)/3)] cursor-pointer
+    2xl:w-[calc((100%-30px*2)/3)]
+    xl:w-[calc((100%-20px*2)/3)]
+    lg:w-[calc((100%-20px)/2)]
+
+}
+
+.body .list .list__item {
+    @apply  md:w-full md:block
+}
+
+
+.body .list .list__item .item__image {
+    @apply md:w-full md:h-[310px] md:mb-[10px] sm:mb-[5px] sm:h-[230px] !important
+}
+
+.item__image {
+    @apply mb-[20px] rounded-[32px] overflow-hidden h-[520px] border-[5px] border-transparent transition-all box-content
+    2xl:rounded-[24px] 2xl:mb-[15px] 2xl:h-[390px]
+    xl:rounded-[18px] xl:h-[284px] xl:mb-[12px] xl:border-[3px]
+    lg:rounded-[12px] lg:h-[250px] lg:shrink-0 lg:mb-[10px]
+    md:border-[0px]
+}
+
+.list__item:hover .item__image {
+    @apply border-yellow-400
+}
+
+.list .list__item:nth-child(1) .item__image, .list .list__item:nth-child(2) .item__image {
+    @apply h-[700px] 2xl:h-[530px]
+    xl:h-[385px]
+    lg:h-[340px] lg:w-[467px] lg:mb-[0px]
+}
+
+.list .item__title, .list .item__price {
+    @apply xl:text-[18px] md:text-[16px] sm:text-[14px]
+}
+
+ .list__item:not(:last-child) .item__text {
+    @apply max-w-[75%] xl:max-w-none
+}
+
+.item__price {}
+
+.item__content {}
+
+.item__top {
+    @apply flex justify-between mb-[8px]
+    2xl:mb-[5px]
+    md:mb-[3px]
+}
+
+.list .list__item:nth-child(1) .item__top, .list .list__item:nth-child(2) .item__top {
+    @apply lg:flex-col lg:mb-[12px] lg:gap-[8px]
+    md:flex-row md:mb-[3px]
+
+}
