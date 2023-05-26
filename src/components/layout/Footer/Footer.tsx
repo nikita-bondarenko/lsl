@@ -10,12 +10,7 @@ import ToTopButton from "../../common/ToTopButton/ToTopButton";
 const Footer = () => {
 
     const [section] = useCommonSection("podval")
-    const {setFooterLoading, menu} = useGlobalContext()
-    useEffect(() => {
-        if (section) {
-            setFooterLoading(false)
-        }
-    }, [section])
+    const { data} = useGlobalContext()
 
     if (!section) return null
 
@@ -41,7 +36,7 @@ const Footer = () => {
                     <h3 className={stack(styles.title, styles.nav__title)}
                         dangerouslySetInnerHTML={{__html: section?.footer?.footerMenuZagolovok}}></h3>
                     <ul className={styles.nav__list}>
-                        {menu?.menu?.menuItems?.nodes?.map(item => <Link className={stack('nav-link', styles.text, styles.nav__link)} key={item.label}
+                        {data?.menu?.menuItems?.nodes?.map(item => <Link className={stack('nav-link', styles.text, styles.nav__link)} key={item.label}
                                                                          to={item.url}>{item.label}</Link>)}
                     </ul>
                 </div>

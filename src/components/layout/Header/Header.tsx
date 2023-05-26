@@ -6,20 +6,20 @@ import Logo from "../../images/Logo/Logo";
 import styles from './Header.module.css'
 import {stack} from "../../../hooks/useClassName";
 import {useSortNav} from "../../../hooks/useSortNav";
-import {MenuNode} from "../../../types/menu";
+import {Items, MenuItemsNode} from "../../../types/data";
 
 type PhoneButtonProps = {
     number: string
 }
 
-const NavSublist = (props: MenuNode) => {
+const NavSublist = (props: MenuItemsNode) => {
     const [arr] = useSortNav(props.childItems.nodes)
     const [open, setOpen] = useState(false)
     const [sublistHeight, setSublistHeight] = useState<number>()
-const {isMobile} = useGlobalContext()
+    const {isMobile, setIsNavModalOpen} = useGlobalContext()
     const ref = createRef<HTMLDivElement>()
     const onOpen = () => {
-        !isMobile &&   setOpen(true)
+        !isMobile && setOpen(true)
     }
     const onClose = () => {
         !isMobile && setOpen(false)
@@ -32,7 +32,7 @@ const {isMobile} = useGlobalContext()
     }, [open])
 
     const onClick = () => {
-    isMobile &&  setOpen(prev => !prev)
+        isMobile && setOpen(prev => !prev)
     }
 
     return <>
@@ -42,7 +42,7 @@ const {isMobile} = useGlobalContext()
             <img className={styles.sublist__arrow} src="/image/nav-arrow.png" alt=""/>
             <div ref={ref} className={styles.sublist__wrapper}>
                 <ul className={styles.sublist__list}>
-                    {arr.map(({label, url}) => <Link key={label}
+                    {arr.map(({label, url}) => <Link onClick={() => setIsNavModalOpen(false)} key={label}
                                                      className={stack('text-small', 'nav-link', styles.nav__link, styles.sublist__item)}
                                                      to={url}>{label}</Link>)}
                 </ul>
@@ -57,35 +57,19 @@ const PhoneButton = ({number}: PhoneButtonProps) => {
 }
 
 export const Navigation = () => {
-    const {menu} = useGlobalContext()
-    const {setIsMenuLoading, setHeaderLoading, setIsNavModalOpen} = useGlobalContext()
-
-
-    useEffect(() => {
-        if (menu) {
-            setIsMenuLoading(false)
-        }
-    }, [menu])
-
+    const {data} = useGlobalContext()
+    const {setIsNavModalOpen} = useGlobalContext()
     const [section] = useCommonSection("shapka")
 
-
-    useEffect(() => {
-        if (section) {
-            setHeaderLoading(false)
-        }
-    }, [section])
-
-    const [navArr] = useSortNav(menu?.menu?.menuItems?.nodes)
-
+    const [navArr] = useSortNav(data?.menu?.menuItems?.nodes)
 
     return (
-
         <ul onClick={(e) => e.stopPropagation()} className={stack(styles.nav)}>
             {navArr?.map((item) => <li className={styles.nav__item}
                                        key={item.label}>
                 {!item.childItems.nodes.length
-                    ? <Link className={stack('text-small', 'nav-link', styles.nav__link)}
+                    ? <Link onClick={() => setIsNavModalOpen(false)}
+                            className={stack('text-small', 'nav-link', styles.nav__link)}
                             to={item.url}>{item.label}</Link>
                     : <NavSublist {...item}></NavSublist>}
             </li>)}
@@ -100,14 +84,8 @@ export const Navigation = () => {
 const Header = () => {
 
     const [section] = useCommonSection("shapka")
-    const {setHeaderLoading, setIsNavModalOpen} = useGlobalContext()
+    const { setIsNavModalOpen} = useGlobalContext()
 
-
-    useEffect(() => {
-        if (section) {
-            setHeaderLoading(false)
-        }
-    }, [section])
 
     const clickHandler = () => {
         setIsNavModalOpen(prev => !prev)

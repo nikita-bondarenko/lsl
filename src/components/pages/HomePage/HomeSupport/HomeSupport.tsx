@@ -4,7 +4,7 @@ import {stack} from "../../../../hooks/useClassName";
 import {useGlobalContext} from "../../../../context/context";
 
 const HomeSupport = () => {
-    const {mainPageData} = useGlobalContext()
+    const {mainPage:page} = useGlobalContext()
     const [selectedSum, setSelectedSum] = useState(0)
     const [text, setText] = useState('')
     const [isFormInvalid, settIsFormInvalid] = useState(true)
@@ -18,15 +18,15 @@ const HomeSupport = () => {
         <section className={stack('container','section-indent', styles.body)}>
             <div className={styles.content}>
                 <h2 className={stack('title-secondary', styles.title)}
-                    dangerouslySetInnerHTML={{__html: mainPageData?.page?.main?.mainSupportZagolovok}}></h2>
+                    dangerouslySetInnerHTML={{__html: page?.main?.mainSupportZagolovok}}></h2>
                 <p className={stack('text-simple', styles.text)}
-                   dangerouslySetInnerHTML={{__html: mainPageData?.page?.main?.mainSupportTekst}}></p>
+                   dangerouslySetInnerHTML={{__html: page?.main?.mainSupportTekst}}></p>
                 <p className={stack('remark', styles.remark)}
-                   dangerouslySetInnerHTML={{__html: mainPageData?.page?.main?.mainSupportRemarka}}></p>
+                   dangerouslySetInnerHTML={{__html: page?.main?.mainSupportRemarka}}></p>
             </div>
             <div className={styles.donation}>
                 <div className={styles.donation__buttons}>
-                    {mainPageData?.page?.main?.mainSupportSpisokVozmozhnyhPozhertvovanij?.map((item) => <button
+                    {page?.main?.mainSupportSpisokVozmozhnyhPozhertvovanij?.map((item) => <button
                         key={item.mainSupportSpisokSumma}
                         onClick={() => setSelectedSum(item.mainSupportSpisokSumma)}
                         className={stack(styles.donation__button, item.mainSupportSpisokSumma === selectedSum && styles.selected)}>
@@ -37,10 +37,10 @@ const HomeSupport = () => {
                     <textarea onChange={e => setText(e.target.value)}  className={styles.input}
                               placeholder={'Ваш комментарий'}/>
                     <button
-                        className={stack('button-primary', styles.submit, isFormInvalid && 'disabled')}>{mainPageData?.page?.main?.mainSupportTekstKnopki}</button>
+                        className={stack('button-primary', styles.submit, isFormInvalid && 'disabled')}>{page?.main?.mainSupportTekstKnopki}</button>
                 </div>
                 <p className={stack('remark', styles.remark)}
-                   dangerouslySetInnerHTML={{__html: mainPageData?.page?.main?.mainSupportRemarkaVnizu}}></p>
+                   dangerouslySetInnerHTML={{__html: page?.main?.mainSupportRemarkaVnizu}}></p>
             </div>
         </section>
     );

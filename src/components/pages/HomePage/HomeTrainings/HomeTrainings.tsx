@@ -3,30 +3,29 @@ import {stack} from "../../../../hooks/useClassName";
 import styles from './HomeTrainings.module.css'
 import {useGlobalContext} from "../../../../context/context";
 import {Link} from "react-router-dom";
-import {TrainingsNode} from "../../../../types/trainings";
 import {sortDate} from "../../../../hooks/useSortDate";
 import Picture from "../../../images/Picture/Picture";
+import {TrainingsNode} from "../../../../types/data";
 
 const HomeTrainings = () => {
-    const {mainPageData, trainings: trainingsData} = useGlobalContext()
+
+    const {mainPage:page, data} = useGlobalContext()
+
 
     const [trainings, setTrainings] = useState<TrainingsNode[]>()
 
     useEffect(() => {
-        if (trainingsData) {
+        if (data) {
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             //@ts-ignore
-            setTrainings(sortDate(trainingsData?.trainings?.nodes).filter((item, index) => index < 5))
+            setTrainings(sortDate(data?.trainings?.nodes).filter((item, index) => index < 5))
         }
-    }, [trainingsData])
+    }, [data])
 
-    useEffect(() => {
-        console.log(trainings)
-    }, [trainings])
 
     return (
         <section className={stack('container', 'section-indent', styles.body)}>
-            <h2 className={stack('title-secondary',styles.title)}>{mainPageData?.page?.main?.mainTrainingZagolovok}</h2>
+            <h2 className={stack('title-secondary',styles.title)}>{page?.main?.mainTrainingZagolovok}</h2>
             <ul className={styles.list}>
                 {trainings?.map((item,index) => <Link to={''} key={index} className={stack(styles.list__item)}>
                     <Picture className={styles.item__image}
@@ -47,7 +46,7 @@ const HomeTrainings = () => {
                 </Link>)}
             </ul>
             <Link className={stack('button-primary', styles.button)}
-                to={mainPageData?.page?.main?.mainTrainingAdresSsylki}>{mainPageData?.page?.main?.mainTrainingTekstSsylki}</Link>
+                to={page?.main?.mainTrainingAdresSsylki}>{page?.main?.mainTrainingTekstSsylki}</Link>
         </section>
     );
 };

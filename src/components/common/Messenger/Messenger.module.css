@@ -17,6 +17,10 @@
     md:pl-[10px] md:pt-[34px] md:pb-[193px]
 }
 
+.withPhone  .wrapper {
+    @apply md:pb-[94px] sm:pb-[76px]
+}
+
 .title {
     @apply mb-[26px]
     2xl:mb-[20px]
@@ -29,6 +33,10 @@
     2xl:mb-[50px]
     lg:mb-[40px]
     md:text-[14px] md:mb-[20px]
+}
+
+.withPhone .text {
+    @apply md:mb-[40px] sm:mb-[60px] !important
 }
 
 .body .link {
@@ -47,5 +55,29 @@
     lg:w-[264px] lg:h-[324px] lg:right-[90px]
     md:w-[215px] md:h-[264px] md:right-[20px]
     sm:w-[181px] sm:h-[222px] sm:right-[13px]
+
+}
+
+.withPhone .picture {
+    @apply 2xl:right-[55px]
+    xl:right-[62px]
+    lg:right-[18px]
+    md:right-[20px]
+    sm:right-[13px]
+}
+
+.buttons {
+    @apply flex gap-[67px]
+    2xl:gap-[50px]
+    xl:gap-[30px]
+    lg:gap-[20px] lg:flex-col
+}
+
+.body .phoneButton {
+    @apply bg-transparent w-[403px] h-[96px] hover:bg-yellow-400
+    2xl:w-[290px] 2xl:h-[74px]
+    xl:w-[221px] xl:h-[65px] xl:pt-[3px] xl:rounded-[12px]
+    lg:h-[55px] lg:w-[206px]
+    md:h-[42px] md:rounded-[10px] md:w-[180px]
 
 }

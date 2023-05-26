@@ -2,7 +2,7 @@ import {gql} from "@apollo/client";
 
 export const GET_TRAININGS = gql(`
 query GetTrainings {
-  trainings {
+trainings {
     nodes {
       date
       modified
@@ -27,4 +27,5 @@ query GetTrainings {
     }
   }
 }
+
 `)

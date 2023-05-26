@@ -1,25 +1,27 @@
-import {ReactElement, ReactNode} from 'react';
+import {memo, ReactElement, ReactNode, useEffect} from 'react';
 import {Route, Routes} from "react-router-dom";
 import Home from "../../pages/Home";
-import Trainings from "../../pages/Trainings";
+import Contacts from "../../pages/Contacts";
 
-const routes: {path: string, element: ReactElement | ReactNode}[] = [
+import {useWholeData} from "../../hooks/useWholeData";
+
+const routes: { path: string, element: ReactElement | ReactNode }[] = [
     {
         path: '/',
         element: <Home/>
-    },
-    {
-        path: '/trainings',
-        element: <Trainings/>
+    }, {
+        path: '/contacts',
+        element: <Contacts/>
     }
 ]
 
-const Router = () => {
+const Router = memo(() => {
+    useWholeData()
     return (
-       <Routes>
-           {routes.map((item) => <Route {...item} key={item.path}></Route>)}
-       </Routes>
+        <Routes>
+            {routes.map((item, index) => <Route {...item} key={index}></Route>)}
+        </Routes>
     );
-};
+});
 
 export default Router;

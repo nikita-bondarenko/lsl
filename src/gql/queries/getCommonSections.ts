@@ -94,6 +94,7 @@ query GetCommonSections {
         messengerSsylkaKnopki
         messengerTekstKnopki
         messengerZagolovok
+        messengerTelefon
         messengerImageKompyuter1x {
           sourceUrl
         }

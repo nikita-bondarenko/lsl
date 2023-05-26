@@ -1,19 +1,17 @@
 import {useEffect, useState} from "react";
 import {useGlobalContext} from "../context/context";
-import {CommonSectionsNode} from "../types/commonSections";
+import {CommonSectionsNode} from "../types/data";
 
 
 export const useCommonSection = (slug: string) => {
     const [section, setSection] = useState<CommonSectionsNode>()
-    const {commonSections} = useGlobalContext()
+    const { data} = useGlobalContext()
 
     useEffect(() => {
-        if (commonSections) {
-            const item = commonSections?.commonSections?.nodes?.find(el => el.slug === slug)
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            //@ts-ignore
+        if (data) {
+            const item = data.commonSections?.nodes?.find(el => el.slug === slug)
             item &&  setSection(item)
         }
-    } , [commonSections])
+    } , [data])
     return [section]
 }

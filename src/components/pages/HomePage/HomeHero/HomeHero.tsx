@@ -4,18 +4,8 @@ import {stack} from "../../../../hooks/useClassName";
 import {useGlobalContext} from "../../../../context/context";
 import Carousel from 're-carousel'
 import Picture from "../../../images/Picture/Picture";
+import {usePage} from "../../../../hooks/usePage";
 
-
-const buttonStyles = {
-    wrapper: {
-        position: 'absolute',
-        width: '100%',
-        zIndex: '100',
-        bottom: '0',
-        textAlign: 'center'
-    },
-
-}
 
 function Buttons(props) {
 
@@ -39,28 +29,28 @@ function Buttons(props) {
 
 const HomeHero = () => {
 
-    const {mainPageData} = useGlobalContext()
+    const {mainPage:page} = useGlobalContext()
     return (
         <section className={stack('container', styles.body)}>
             <div className={styles.content}>
                 <div className={styles.content__top}>
                     <h1 className={stack('title-primary', styles.title)}
-                        dangerouslySetInnerHTML={{__html: mainPageData?.page?.main?.mainHeroZagolovok}}></h1>
+                        dangerouslySetInnerHTML={{__html: page?.main?.mainHeroZagolovok}}></h1>
                     <p className={stack('text-primary', styles.subtitle)}
-                       dangerouslySetInnerHTML={{__html: mainPageData?.page?.main?.mainHeroPodzagolovok}}></p>
+                       dangerouslySetInnerHTML={{__html: page?.main?.mainHeroPodzagolovok}}></p>
                 </div>
                 <div className={styles.content__bottom}>
                     <p className={stack('text-primary', styles.text)}
-                       dangerouslySetInnerHTML={{__html: mainPageData?.page?.main?.mainHeroTekst}}></p>
+                       dangerouslySetInnerHTML={{__html: page?.main?.mainHeroTekst}}></p>
                     <p className={stack('text-secondary', styles.small)}
-                       dangerouslySetInnerHTML={{__html: mainPageData?.page?.main?.mainHeroMalyjTekst}}></p>
+                       dangerouslySetInnerHTML={{__html: page?.main?.mainHeroMalyjTekst}}></p>
                 </div>
             </div>
             <div className={styles.slider}>
                 {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
                 {/*@ts-ignore  */}
                 <Carousel loop auto widgets={[Buttons]} className={styles.slider__carousel}>
-                    {mainPageData?.page?.main?.mainHeroSlajder?.map((item, index) => <Picture key={index}
+                    {page?.main?.mainHeroSlajder?.map((item, index) => <Picture key={index}
                         className={styles.slider__picture} imageClassName={styles.slider__image} desktopIImageX1={item.mainHeroSlajderKompyuter1x.sourceUrl}
                         desktopIImageX2={item.mainHeroSlajderKompyuter2x.sourceUrl}
                         mobileIImageX1={item.mainHeroSlajderTelefon1x.sourceUrl}
@@ -69,7 +59,7 @@ const HomeHero = () => {
                     {/*@ts-ignore  */}
                 </Carousel>
                 <a className={stack('button-primary', styles.button)}
-                   href={mainPageData?.page?.main?.mainHeroAdresSsylki}>{mainPageData?.page?.main?.mainHeroTekstSsylki}</a>
+                   href={page?.main?.mainHeroAdresSsylki}>{page?.main?.mainHeroTekstSsylki}</a>
             </div>
         </section>
     );

@@ -1,4 +1,4 @@
-import React, {ReactElement, ReactNode, useEffect} from 'react';
+import React, {memo, ReactElement, ReactNode, useEffect, useState} from 'react';
 import {Helmet} from "react-helmet";
 import Header, {Navigation} from "./Header/Header";
 import Cookies from "./Cookies/Cookies";
@@ -11,29 +11,22 @@ import Loading from "../loading/Loading";
 import FixedLayer from "./FixedLayer/FixedLayer";
 import Modal from "./Modal/Modal";
 import NavModal from "./Header/Navigatioin/NavModal/NavModal";
+import {init} from "@graphql-codegen/cli";
 
 type LayoutProps = {
     children: ReactElement | ReactNode,
 }
 
-const Layout = ({children}: LayoutProps) => {
+const Layout = memo(({children}: LayoutProps) => {
+    const {
+        title,
+        description,
+        isLoading,
+        isNavModalOpen,
+        setIsNavModalOpen,
+        historyLength
+    } = useGlobalContext()
 
-    const {setCommonSections, setMenu, title, description, isLoading, setIsLoading, isNavModalOpen, setIsNavModalOpen} = useGlobalContext()
-
-    const {data: commonSections} = useQuery(GET_COMMON_SECTIONS, {fetchPolicy: 'no-cache'})
-    const {data: menu} = useQuery(getMenu, {fetchPolicy: 'no-cache'})
-
-
-    useEffect(() => {
-        if (commonSections) {
-            commonSections && setCommonSections(commonSections)
-        }
-    }, [commonSections])
-    useEffect(() => {
-        if (menu) {
-            menu && setMenu(menu)
-        }
-    }, [menu])
 
     const onModalClose = (value: boolean) => {
         setIsNavModalOpen(false)
@@ -46,21 +39,35 @@ const Layout = ({children}: LayoutProps) => {
                 {title && <title>{title}</title>}
                 {description && <meta name={'description'} content={description}/>}
             </Helmet>
-            <Loading></Loading>
-            <div style={{display: isLoading ? 'none' : 'block'}} className={!isLoading ? 'animate-appear' : ''}>
-            <Header></Header>
-            <FixedLayer>
-                <Cookies></Cookies>
-                <Modal open={isNavModalOpen} setOpen={onModalClose}>
-                    {isNavModalOpen && <Navigation></Navigation>}
-                </Modal>
-            </FixedLayer>
-            {children}
-            <Footer></Footer>
-            </div>
+
+            {historyLength < 2 ?
+                <>
+                    <Loading></Loading>
+                <div style={{display: isLoading ? 'none' : 'block'}} className={!isLoading ? 'animate-appear' : ''}>
+                    <Header></Header>
+                    <FixedLayer>
+                        <Cookies></Cookies>
+                        <Modal open={isNavModalOpen} setOpen={onModalClose}>
+                            {isNavModalOpen && <Navigation></Navigation>}
+                        </Modal>
+                    </FixedLayer>
+                    {children}
+                    <Footer></Footer>
+                </div>
+                </>
+                : <>
+                    <Header></Header>
+                    <FixedLayer>
+                        <Modal open={isNavModalOpen} setOpen={onModalClose}>
+                            {isNavModalOpen && <Navigation></Navigation>}
+                        </Modal>
+                    </FixedLayer>
+                    {children}
+                    <Footer></Footer>
+                </>}
 
         </>
     );
-};
+});
 
 export default Layout;

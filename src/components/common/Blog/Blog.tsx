@@ -4,8 +4,8 @@ import {stack} from "../../../hooks/useClassName";
 import {useGlobalContext} from "../../../context/context";
 import {sortDate} from "../../../hooks/useSortDate";
 import Picture from "../../images/Picture/Picture";
-import {BlogNode} from "../../../types/blogs";
 import {Link} from "react-router-dom";
+import {AllBlogNode} from "../../../types/data";
 
 export type BlogProps = {
     title: string,
@@ -15,17 +15,17 @@ export type BlogProps = {
 }
 const Blog = ({title, linkHref, linkText, remark}: BlogProps) => {
 
-    const {blogs: blogData} = useGlobalContext()
+    const {data} = useGlobalContext()
 
-    const [blog, setBlog] = useState<BlogNode[]>()
+    const [blog, setBlog] = useState<AllBlogNode[]>()
 
     useEffect(() => {
-        if (blogData) {
+        if (data) {
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             //@ts-ignore
-            setBlog(sortDate(blogData?.allBlog?.nodes, 'DESC').filter((item, index) => index < 3))
+            setBlog(sortDate(data?.allBlog?.nodes, 'DESC').filter((item, index) => index < 3))
         }
-    }, [blogData])
+    }, [data])
 
     return (
         <section className={stack('container', 'section-indent', styles.body)}>

@@ -7,9 +7,7 @@ import {Navigation} from "../../Header";
 
 const NavModal = () => {
     const {isNavModalOpen, setIsNavModalOpen} = useGlobalContext()
-    useEffect(() => {
-        console.log(isNavModalOpen)
-    }, [isNavModalOpen])
+
     return (
         <Modal open={isNavModalOpen} setOpen={setIsNavModalOpen}>
             <div className={stack(styles.body, 'container')}>

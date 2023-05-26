@@ -2,24 +2,24 @@ import React, {useEffect, useState} from 'react';
 import styles from './HomePublications.module.css'
 import {stack} from "../../../../hooks/useClassName";
 import {useGlobalContext} from "../../../../context/context";
-import {PublicationsNode} from "../../../../types/publications";
 import {sortDate} from "../../../../hooks/useSortDate";
 import Picture from "../../../images/Picture/Picture";
 import {Link} from "react-router-dom";
+import {PublicationsNode} from "../../../../types/data";
 
 const HomePublications = () => {
 
-    const {publications: publicationsData} = useGlobalContext()
+    const { data} = useGlobalContext()
 
     const [publications, setPublications] = useState<PublicationsNode[]>()
 
     useEffect(() => {
-        if (publicationsData) {
+        if (data) {
             // eslint-disable-next-line @typescript-eslint/ban-ts-comment
             //@ts-ignore
-            setPublications(sortDate(publicationsData?.publications?.nodes).filter((item, index) => index < 2))
+            setPublications(sortDate(data?.publications?.nodes).filter((item, index) => index < 2))
         }
-    }, [publicationsData])
+    }, [data])
     return (
         <section className={stack('container', 'section-indent', styles.body)}>
             <h2 className={stack('title-secondary', styles.title)}>Публикации</h2>
