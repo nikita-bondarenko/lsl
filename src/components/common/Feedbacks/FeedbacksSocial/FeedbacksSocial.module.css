@@ -1,0 +1,71 @@
+.body {
+    @apply flex justify-between
+    xl:block
+}
+
+.title {
+    @apply mb-[20px]
+    2xl:mb-[15px]
+    xl:mb-[8px]
+    md:mb-[10px]
+}
+
+.text {
+    @apply max-w-[500px]
+    2xl:max-w-[370px]
+    xl:max-w-none
+    md:max-w-[230px]
+}
+
+
+.slider__list {
+    @apply flex gap-[40px] select-none
+    xl:gap-[20px]
+    md:gap-[15px]
+    sm:gap-[10px]
+}
+
+
+.body .slide__picture {
+    @apply w-full h-full block
+}
+
+
+.slider__item {
+    @apply border-[2px] rounded-[27px] border-[#DFDFDF] overflow-hidden h-[800px] shrink-0 w-[450px] pointer-events-none select-none
+    2xl:border-[1px] 2xl:h-[600px] 2xl:rounded-[20px] 2xl:w-[337px]
+    xl:h-[460px] xl:rounded-[10px] xl:w-[260px]
+    md:h-[390px] md:rounded-[10px] md:w-[220px]
+    sm:h-[350px]
+
+}
+
+.slider__wrapper {
+    @apply m-[-3px]
+    xl:m-[-3px]
+    md:m-[-6px]
+}
+
+.slider__image {
+    @apply object-cover
+}
+
+
+.content {
+    @apply shrink-0
+    xl:mb-[40px]
+    lg:mb-[30px]
+    md:mb-[20px]
+
+}
+
+.sliders {
+    @apply w-[1250px]
+    2xl:w-[940px]
+    xl:w-full
+}
+
+
+
+
+

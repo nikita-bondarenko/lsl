@@ -110,8 +110,11 @@ query Data {
         }
       }
       feedbacks {
-        feedbacksPodzagolovok
+          feedbacksPodzagolovok
         feedbacksZagolovok
+            feedbacksPodzagolovok1
+        feedbacksZagolovok1
+        feedbacksZagolovok2
         feedbacksImageSlajder {
           feedbacksImageKompyuter1x {
             sourceUrl

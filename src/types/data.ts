@@ -61,6 +61,10 @@ export interface CookiesPolitikaKonfidenczialnosti {
 export interface Feedbacks {
     feedbacksPodzagolovok:  null | string;
     feedbacksZagolovok:     null | string;
+    feedbacksPodzagolovok1:  null | string;
+    feedbacksZagolovok1:     null | string;
+    feedbacksPodzagolovok2:  null | string;
+    feedbacksZagolovok2:     null | string;
     feedbacksImageSlajder:  FeedbacksImageSlajder[] | null;
     feedbacksSimpleSlajder: FeedbacksSimpleSlajder[] | null;
 }

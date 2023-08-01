@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import styles from './HomePublications.module.css'
+import styles from './Publications.module.css'
 import {stack} from "../../../../hooks/useClassName";
 import {useGlobalContext} from "../../../../context/context";
 import {sortDate} from "../../../../hooks/useSortDate";
@@ -7,7 +7,7 @@ import Picture from "../../../images/Picture/Picture";
 import {Link} from "react-router-dom";
 import {PublicationsNode} from "../../../../types/data";
 
-const HomePublications = () => {
+const Publications = () => {
 
     const { data} = useGlobalContext()
 
@@ -38,4 +38,4 @@ const HomePublications = () => {
     );
 };
 
-export default HomePublications;
+export default Publications;

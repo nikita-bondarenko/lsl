@@ -6,7 +6,7 @@ import HomeTrainings from "../components/pages/HomePage/HomeTrainings/HomeTraini
 import HomeSafety from "../components/pages/HomePage/HomeSafety/HomeSafety";
 import Steps from "../components/common/Steps/Steps";
 import Messenger from "../components/common/Messenger/Messenger";
-import HomePublications from "../components/pages/HomePage/HomePublications/HomePublications";
+import HomePublications from "../components/common/Publications/Old/Publications";
 import HomeValues from "../components/pages/HomePage/HomeValues/HomeValues";
 import Blog from "../components/common/Blog/Blog";
 import Feedbacks from "../components/common/Feedbacks/Feedbacks";

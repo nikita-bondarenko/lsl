@@ -123,7 +123,7 @@ const Feedbacks = () => {
                 <div className={styles.sliderFirst}>
                     {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
                     {/*@ts-ignore  */}
-                    <swiper-container space-between={spaceBetweenFirst} slides-per-view={slidePerPageFirst}
+                    <swiper-container  space-between={spaceBetweenFirst} slides-per-view={slidePerPageFirst}
                     >
                         {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
                         {/*@ts-ignore  */}
