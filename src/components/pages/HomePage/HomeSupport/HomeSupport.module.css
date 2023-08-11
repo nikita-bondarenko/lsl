@@ -1,0 +1,114 @@
+.content {
+@apply lg:mb-[30px] lg:max-w-[490px]
+    md:mb-[20px]
+sm:mb-[17px]
+}
+
+.title {
+    @apply mb-[30px]
+    2xl:mb-[23px]
+    xl:mb-[15px]
+    lg:mb-[20px]
+    sm:mb-[17px]
+}
+
+.text {
+    @apply mb-[84px]
+    2xl:mb-[71px]
+    xl:mb-[15px]
+    lg:mb-[20px]
+    sm:mb-[17px]
+}
+
+.content .remark {
+    @apply mr-[-450px]
+    2xl:mr-[47px]
+    lg:mr-[-150px]
+    md:mr-[0px]
+}
+
+.body {
+    @apply flex gap-[150px]
+    2xl:gap-[57px]
+    xl:gap-[20px]
+    lg:block
+}
+
+.donation .remark {
+    @apply max-w-[800px]
+    2xl:max-w-[600px]
+    xl:max-w-[460px]
+    md:max-w-[400px]
+}
+
+.donation {
+    @apply w-[944px] shrink-0
+    2xl:w-[700px]
+    xl:w-[483px]
+    lg:w-full
+}
+
+.donation__buttons {
+    @apply flex items-stretch justify-between mb-[50px]
+    2xl:mb-[33px]
+    xl:mb-[20px]
+    lg:justify-start lg:gap-[30px] lg:mb-[30px]
+    md:justify-between md:mb-[20px] md:gap-[20px]
+    sm:flex-wrap sm:gap-[15px] sm:justify-start
+}
+
+.body  .donation__button {
+    @apply w-[192px] h-[95px]
+    font-bold text-[32px] leading-[1.4] flex items-center hover:bg-yellow-200 justify-center rounded-[16px] border-[3px] bg-white border-yellow-400 transition-all
+    2xl:rounded-[12px] 2xl:text-[24px] 2xl:w-[145px] 2xl:h-[74px] 2xl:pt-[3px]
+    xl:text-[16px] xl:rounded-[8px]  xl:border-[2px] xl:w-[107px] xl:h-[55px]
+    lg:w-[144px] lg:h-[65px] lg:text-[18px]
+    md:w-[95px] md:h-[48px] md:text-[16px] md:flex-grow
+    sm:w-[90px] sm:h-[48px]
+}
+
+.body  .donation__button:last-child {
+    @apply sm:w-[calc((100%-15px*2)/3)] sm:flex-grow-0
+}
+
+.donation__button.selected {
+    @apply bg-yellow-400
+}
+
+
+.donation__bottom {
+    @apply flex items-end mb-[55px] justify-between
+    2xl:mb-[30px]
+    xl:flex-col xl:items-start xl:gap-[20px] xl:mb-[22px]
+    lg:gap-[30px] lg:mb-[30px] lg:flex-row lg:items-end lg:justify-start
+    md:flex-col md:gap-[20px] md:mb-[20px]
+    sm:gap-[15px] sm:mb-[16px]
+}
+
+.input {
+    @apply w-[586px] h-[175px] font-nunito resize-none
+    font-bold text-[32px] leading-[1.4] rounded-[16px] border-[3px] bg-white border-yellow-400 p-[40px]
+    2xl:rounded-[12px] 2xl:text-[24px] 2xl:w-[440px] 2xl:h-[174px] 2xl:p-[30px]
+    xl:text-[16px] xl:rounded-[8px]  xl:border-[2px] xl:w-[355px] xl:h-[150px] xl:px-[20px]
+    lg:w-[492px] lg:h-[168px]
+    md:w-full md:h-[130px] md:p-[15px] md:rounded-[12px]
+}
+
+.input::placeholder {
+    @apply text-[#979797]
+}
+
+.submit {
+    @apply w-[318px] h-[95px]
+    2xl:w-[230px] 2xl:h-[74px]
+    xl:w-[192px] xl:h-[65px]
+    md:w-[180px] md:h-[52px]
+    sm:w-[160px] sm:h-[52px]
+
+}
+
+.buttonToTop {
+
+}
+
+

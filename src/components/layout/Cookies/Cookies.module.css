@@ -1,0 +1,39 @@
+.wrapper {
+    @apply relative h-full
+}
+
+.content {
+    @apply h-full
+}
+
+.body {
+    @apply absolute right-[13px] bottom-0 transition-all translate-y-[200%]  flex items-center justify-between rounded-[12px] bg-yellow-400 py-[30px] px-[27px] w-[656px] pointer-events-auto gap-[56px]
+    2xl:gap-[43px] 2xl:py-[33px] 2xl:px-[30px] 2xl:w-[580px] 2xl:right-[30px]
+        xl:right-[34px]
+    lg:py-[22px] lg:gap-[35px]
+    md:w-full md:px-[20px] md:rounded-[8px] md:right-0
+    sm:flex-col sm:gap-[10px] sm:items-start
+}
+
+.body.open {
+    @apply translate-y-[0]
+}
+
+.text {
+    @apply text-[22px] leading-[1.3]
+    2xl:text-[18px]
+    lg:text-[16px]
+    md:text-[14px]
+}
+
+.link {
+    @apply underline
+}
+
+.button {
+    @apply w-[175px] h-[48px] pt-[3px] shrink-0
+    2xl:w-[168px] 2xl:h-[48px]
+    lg:w-[133px] lg:h-[44px] lg:pt-[1px]
+    sm:w-[112px] sm:h-[34px]
+
+}

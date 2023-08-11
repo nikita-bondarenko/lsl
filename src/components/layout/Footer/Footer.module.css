@@ -1,0 +1,191 @@
+.footer {
+    @apply pt-[73px] relative
+    mb-[42px]
+    2xl:pt-[55px] 2xl:mb-[22px]
+    xl:mb-[30px]
+    lg:mb-[20px]
+    md:mb-[22px]
+}
+
+.footer__body {
+    @apply bg-yellow-200 rounded-[30px]  pt-[68px] pb-[60px] pl-[67px] pr-[40px] grid grid-cols-[483px,auto,1fr,1fr] grid-rows-[auto,auto] gap-x-[80px] gap-y-[74px]
+    2xl:px-[40px] 2xl:pt-[49px] 2xl:pb-[44px] 2xl:gap-y-[56px] 2xl:gap-x-[60px] 2xl:grid-cols-[362px,auto,1fr,1fr]
+    xl:rounded-[10px]  xl:p-[20px] xl:pb-[29px] xl:pr-[37px] xl:gap-y-[42px] xl:gap-x-[42px] xl:grid-cols-[198px,auto,1fr,auto]
+    lg:rounded-[10px]  lg:px-[20px] lg:py-[20px] lg:gap-y-[18px] lg:gap-x-[36px] lg:grid-cols-[203px,0.5fr,255px]
+    md:px-[10px] md:pt-[20px] md:pb-[12px]  md:gap-y-[34px] md:gap-x-[47px] md:grid-cols-[1fr,auto]
+    sm:gap-y-[23px] sm:gap-x-[23px] sm:pb-[32px]
+}
+
+.logo {
+    @apply row-start-1 row-end-2 col-start-1 col-end-2
+}
+
+.logo__link {
+    @apply w-[131px] h-[80px] mb-[40px] block
+    2xl:mb-[30px] 2xl:w-[98px] 2xl:h-[60px]
+    xl:mb-[20px] xl:w-[82px] xl:h-[50px]
+    lg:mb-[20px] lg:w-[82px] lg:h-[50px]
+
+}
+
+.footer .logo__copy, .footer .doc__item {
+    @apply xl:text-[12px] xl:leading-[1.3]
+
+}
+
+
+.logo__copy {
+    @apply sm:whitespace-nowrap
+}
+
+.doc {
+    @apply row-start-2 row-end-3 col-start-1 col-end-2 flex flex-col gap-[15px]
+    2xl:gap-[12px]
+    xl:gap-[15px]
+    lg:row-start-2 lg:row-end-3 lg:col-start-2 lg:col-end-4 lg:mt-auto lg:justify-between lg:flex-row lg:gap-[42px]
+    md:row-start-3 md:row-end-4 md:col-start-1 md:col-end-3 md:flex md:flex-row-reverse   md:gap-[34px] md:justify-end
+    sm:row-start-5 sm:row-end-6 sm:col-start-1 sm:col-end-3 sm:flex sm:flex-col   sm:gap-[8px]
+
+}
+
+.doc__item {
+    @apply underline
+}
+
+.doc__item:nth-child(1) {
+}
+
+.doc__item:nth-child(2) {
+    @apply lg:mr-[72px] md:mr-[0px] md:translate-x-[7px] sm:translate-x-[0]
+
+}
+
+.title {
+    @apply text-[28px] leading-[1.3] 2xl:text-[22px] font-bold
+    xl:text-[16px] md:text-[14px]
+}
+
+.nav {
+    @apply row-start-1 row-end-3 col-start-2 col-end-3 w-fit
+    lg:row-start-1 lg:row-end-2 lg:col-start-2 lg:col-end-3
+    md:row-start-1 md:row-end-2 md:col-start-2 md:col-end-3
+}
+
+.nav__title {
+    @apply mb-[26px]
+    2xl:mb-[20px]
+    xl:mb-[10px]
+}
+
+.nav__item {
+}
+
+.nav__list, .social__list, .contacts__list {
+    @apply flex flex-col
+}
+
+.nav__list {
+    @apply gap-[18px]
+    2xl:gap-[12px]
+    xl:gap-[8px]
+}
+
+
+.nav__link {
+    @apply whitespace-nowrap text-[0px]
+}
+
+.social {
+    @apply row-start-1 row-end-3 col-start-3 col-end-4
+    lg:row-start-1 lg:row-end-2 lg:col-start-3 lg:col-end-4
+    md:row-start-2 md:row-end-3 md:col-start-2 md:col-end-3
+    sm:row-start-4 sm:row-end-5 sm:col-start-1 sm:col-end-3 sm:mt-[-20px]
+}
+
+.social__title {
+    @apply mb-[22px] 2xl:mb-[16px]
+    xl:mb-[6px]
+}
+
+.social__item {
+    @apply flex items-center gap-[13px]
+    2xl:gap-[10px]
+    xl:gap-[5px]
+}
+
+.social__link {
+}
+
+.social__icon {
+    @apply w-[53px] h-[53px] object-contain
+    2xl:w-[40px] 2xl:h-[40px]
+    xl:w-[22px] xl:h-[22px]
+}
+
+.social__list {
+    @apply gap-[22px]
+    2xl:gap-[16px]
+    xl:gap-[5px]
+}
+
+.social__text {
+}
+
+.social__remark {
+    @apply mt-[30px] text-[14px] leading-[1.3] mr-[-40px]
+    2xl:mr-[-20px] 2xl:mt-[16px]
+    xl:mt-[6px] xl:text-[12px]
+    lg:mr-[0px]
+    !important
+}
+
+.contacts {
+    @apply row-start-1 row-end-3 col-start-4 col-end-5
+    lg:row-start-2 lg:row-end-3 lg:col-start-1 lg:col-end-2
+    md:row-start-2 md:row-end-3 md:col-start-1 md:col-end-2
+    sm:row-start-2 sm:row-end-3 sm:col-start-1 sm:col-end-3
+}
+
+.contacts__title {
+    @apply mb-[30px]
+    2xl:mb-[23px]
+    xl:mb-[10px]
+}
+
+.contacts__list {
+    @apply gap-[24px]
+    2xl:gap-[18px]
+    xl:gap-[8px]
+}
+
+.contacts__item {
+}
+
+.contacts__link {
+}
+
+.contacts__text {
+}
+
+.contacts__description {
+    @apply mt-[10px] text-[#5A5A5A] font-normal text-[20px] leading-none
+    2xl:mt-[6px] 2xl:text-[16px]
+    xl:text-[14px] xl:mt-[2px]
+
+}
+
+.buttonToTop {
+    @apply absolute top-0 right-[40px]
+    xl:hidden !important;
+}
+
+.text {
+    @apply text-[24px] leading-[1.3] font-normal
+    2xl:text-[18px]
+    xl:text-[16px]
+    md:text-[14px]
+}
+
+.li {
+    @apply text-[0px]
+}
