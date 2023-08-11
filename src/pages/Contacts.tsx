@@ -26,7 +26,7 @@ const Contacts = () => {
     return (
       <Layout>
           <LeaveContacts title={page?.contacts?.contactsPageZagolovok} buttonText={page?.contacts?.contactsPageTekstKnopki}></LeaveContacts>
-          <Messenger text={page?.contacts?.contactsPagePodzagolovok} isPhoneButton={true}></Messenger>
+          <Messenger text={page?.contacts?.contactsPagePodzagolovok}></Messenger>
       </Layout>
     );
 };

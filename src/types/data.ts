@@ -61,6 +61,10 @@ export interface CookiesPolitikaKonfidenczialnosti {
 export interface Feedbacks {
     feedbacksPodzagolovok:  null | string;
     feedbacksZagolovok:     null | string;
+    feedbacksPodzagolovok1:  null | string;
+    feedbacksZagolovok1:     null | string;
+    feedbacksPodzagolovok2:  null | string;
+    feedbacksZagolovok2:     null | string;
     feedbacksImageSlajder:  FeedbacksImageSlajder[] | null;
     feedbacksSimpleSlajder: FeedbacksSimpleSlajder[] | null;
 }
@@ -189,6 +193,8 @@ export interface Main {
     mainHeroZagolovok:                         null | string;
     mainSafetyPervyjTekst:                     null | string;
     mainSafetyVtorojTekst:                     null | string;
+
+    mainSafetyThirdTekst:                       null | string;
     mainSafetyZagolovok:                       null | string;
     mainSupportRemarka:                        null | string;
     mainSupportRemarkaVnizu:                   null | string;
@@ -245,6 +251,8 @@ export interface NodePublications {
     publicationsNazvanie:          string;
     publicationsPodrobnoeOpisanie: null;
     publicationsAdresSsylki:       null | string;
+
+    publicationsAlt: null | string;
     publicationsImageKompyuter1x:  BlogPostImageKompyuter1X;
     publicationsImageKompyuter2x:  BlogPostImageKompyuter1X;
     publicationsImageTelefon1x:    BlogPostImageKompyuter1X;

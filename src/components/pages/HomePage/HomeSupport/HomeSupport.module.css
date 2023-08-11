@@ -63,8 +63,12 @@ sm:mb-[17px]
     2xl:rounded-[12px] 2xl:text-[24px] 2xl:w-[145px] 2xl:h-[74px] 2xl:pt-[3px]
     xl:text-[16px] xl:rounded-[8px]  xl:border-[2px] xl:w-[107px] xl:h-[55px]
     lg:w-[144px] lg:h-[65px] lg:text-[18px]
-    md:w-[95px] md:h-[48px] md:text-[16px]
+    md:w-[95px] md:h-[48px] md:text-[16px] md:flex-grow
     sm:w-[90px] sm:h-[48px]
+}
+
+.body  .donation__button:last-child {
+    @apply sm:w-[calc((100%-15px*2)/3)] sm:flex-grow-0
 }
 
 .donation__button.selected {

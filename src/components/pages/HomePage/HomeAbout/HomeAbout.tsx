@@ -12,7 +12,7 @@ const HomeAbout = () => {
                      desktopIImageX2={page?.main?.mainAboutImageKompyuter2x?.sourceUrl}
                      mobileIImageX1={page?.main?.mainAboutImageTelefon1x?.sourceUrl}
                      mobileIImageX2={page?.main?.mainAboutImageTelefon2x?.sourceUrl}
-                     className={styles.picture} imageClassName={styles.image}></Picture>
+                     className={styles.picture} imageClassName={styles.image} alt={"Девочка с ходунками"}></Picture>
             <div className={styles.content}>
                 <h2 className={stack('title-secondary', styles.title)}
                     dangerouslySetInnerHTML={{__html: page?.main?.mainAboutZagolovok}}></h2>

@@ -49,12 +49,12 @@ const HomeHero = () => {
             <div className={styles.slider}>
                 {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
                 {/*@ts-ignore  */}
-                <Carousel loop auto widgets={[Buttons]} className={styles.slider__carousel}>
+                <Carousel loop widgets={[Buttons]} className={styles.slider__carousel}>
                     {page?.main?.mainHeroSlajder?.map((item, index) => <Picture key={index}
                         className={styles.slider__picture} imageClassName={styles.slider__image} desktopIImageX1={item.mainHeroSlajderKompyuter1x.sourceUrl}
                         desktopIImageX2={item.mainHeroSlajderKompyuter2x.sourceUrl}
                         mobileIImageX1={item.mainHeroSlajderTelefon1x.sourceUrl}
-                        mobileIImageX2={item.mainHeroSlajderTelefon2x.sourceUrl}></Picture>)}
+                        mobileIImageX2={item.mainHeroSlajderTelefon2x.sourceUrl} alt={'Слайд'}></Picture>)}
                     {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
                     {/*@ts-ignore  */}
                 </Carousel>

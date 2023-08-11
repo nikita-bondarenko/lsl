@@ -5,8 +5,6 @@ import Cookies from "./Cookies/Cookies";
 import Footer from "./Footer/Footer";
 import {useGlobalContext} from "../../context/context";
 import {useQuery} from "@apollo/client";
-import {GET_COMMON_SECTIONS} from "../../gql/queries/getCommonSections";
-import {getMenu} from "../../gql/queries/getMenu";
 import Loading from "../loading/Loading";
 import FixedLayer from "./FixedLayer/FixedLayer";
 import Modal from "./Modal/Modal";
@@ -37,7 +35,6 @@ const Layout = memo(({children}: LayoutProps) => {
         <>
             <Helmet>
                 {title && <title>{title}</title>}
-                {description && <meta name={'description'} content={description}/>}
             </Helmet>
 
             {historyLength < 2 ?

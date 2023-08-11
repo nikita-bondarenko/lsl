@@ -28,12 +28,16 @@ const HomeSafety = () => {
             <div className={styles.top}>
                 <h2 className={stack('title-secondary', styles.title)}
                     dangerouslySetInnerHTML={{__html: page?.main?.mainSafetyZagolovok}}></h2>
+                <div className={styles.right}>
                 <p className={stack('text-secondary', styles.text)}
                    dangerouslySetInnerHTML={{__html: page?.main?.mainSafetyPervyjTekst}}></p>
+                <p className={stack('text-secondary', styles.text)}
+                   dangerouslySetInnerHTML={{__html: page?.main?.mainSafetyVtorojTekst}}></p>
+                </div>
             </div>
             <div className={styles.bottom}>
                 <p className={stack('text-secondary', styles.text)}
-                   dangerouslySetInnerHTML={{__html: page?.main?.mainSafetyVtorojTekst}}></p>
+                   dangerouslySetInnerHTML={{__html: page?.main?.mainSafetyThirdTekst}}></p>
                 <div onClick={videoClickHandler} className={styles.video}>
                     <video ref={video} className={styles.video__media}
                            src={page?.main?.mainSafetyVideo.mediaItemUrl}

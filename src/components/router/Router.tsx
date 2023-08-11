@@ -4,6 +4,8 @@ import Home from "../../pages/Home";
 import Contacts from "../../pages/Contacts";
 
 import {useWholeData} from "../../hooks/useWholeData";
+import Feedbacks from "../../pages/Feedbacks";
+import Test from "../../pages/Test";
 
 const routes: { path: string, element: ReactElement | ReactNode }[] = [
     {
@@ -12,7 +14,16 @@ const routes: { path: string, element: ReactElement | ReactNode }[] = [
     }, {
         path: '/contacts',
         element: <Contacts/>
+    },
+    {
+        path: '/feedbacks',
+        element: <Feedbacks/>
+    },
+    {
+        path: '/test',
+        element: <Test/>
     }
+
 ]
 
 const Router = memo(() => {

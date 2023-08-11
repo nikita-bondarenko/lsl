@@ -24,8 +24,8 @@ export default {
         'gray': {300: '#AFAFAF', 400: '#F5F7FA'}
       },
       animation: {
-        'appear': 'appear 2s linear',
-        'disappear': 'disappear 1s linear',
+        'appear': 'appear 0.3s linear',
+        'disappear': 'disappear 0.3s linear',
 
       },
       keyframes: {

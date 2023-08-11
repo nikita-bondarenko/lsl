@@ -1,5 +1,9 @@
 .body {
-@apply flex gap-[150px]  xl:justify-between xl:gap-[0px] md:flex-col md:justify-start md:gap-[34px]  xl:mt-[50px]
+@apply flex gap-[150px]
+ xl:gap-[168px]
+    lg:gap-[59px]
+md:flex-col md:justify-start md:gap-[34px]  xl:mt-[50px]
+    sm:mt-[15px]
 }
 
 .title {
@@ -8,7 +12,9 @@
 
 .form {
     @apply flex-col gap-[40px] w-[500px] flex
-    xl:w-[480px] lg:w-[350px] md:w-full
+    xl:w-[480px]
+    lg:w-[350px] lg:flex-grow
+    md:w-full
 }
 
 .input {

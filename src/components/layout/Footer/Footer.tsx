@@ -10,7 +10,7 @@ import ToTopButton from "../../common/ToTopButton/ToTopButton";
 const Footer = () => {
 
     const [section] = useCommonSection("podval")
-    const { data} = useGlobalContext()
+    const {data} = useGlobalContext()
 
     if (!section) return null
 
@@ -21,14 +21,15 @@ const Footer = () => {
                 <div className={styles.logo}>
                     <Logo className={styles.logo__link} mobileUrl={section?.footer?.footerLogotipMobile?.sourceUrl}
                           desktopUrl={section?.footer?.footerLogotip?.sourceUrl}></Logo>
-                    <p className={stack(styles.text,styles.logo__copy)}
+                    <p className={stack(styles.text, styles.logo__copy)}
                        dangerouslySetInnerHTML={{__html: section?.footer?.footerKopirajt}}></p>
                 </div>
                 <div className={styles.doc}>
-                    <a href={section?.footer?.footerPublichnayaOferta?.mediaItemUrl} className={stack('link',styles.text,styles.doc__item)}
+                    <a href={section?.footer?.footerPublichnayaOferta?.mediaItemUrl}
+                       className={stack('link', styles.text, styles.doc__item)}
                        target={"_blank"}>Публичная оферта</a>
                     <a href={section?.footer?.footerPolitikaKonfidenczialnosti?.mediaItemUrl}
-                       className={stack('link',styles.text,styles.doc__item)}
+                       className={stack('link', styles.text, styles.doc__item)}
                        target={"_blank"}>Политика конфиденциальности</a>
                 </div>
 
@@ -36,8 +37,11 @@ const Footer = () => {
                     <h3 className={stack(styles.title, styles.nav__title)}
                         dangerouslySetInnerHTML={{__html: section?.footer?.footerMenuZagolovok}}></h3>
                     <ul className={styles.nav__list}>
-                        {data?.menu?.menuItems?.nodes?.map(item => <Link className={stack('nav-link', styles.text, styles.nav__link)} key={item.label}
-                                                                         to={item.url}>{item.label}</Link>)}
+                        {data?.menu?.menuItems?.nodes?.map((item, index) => <li key={item.label}
+                                                                                className={styles.li}>
+                            <Link className={stack('nav-link', styles.text, styles.nav__link)}
+                                  to={item.url}>{item.label}</Link>
+                        </li>)}
                     </ul>
                 </div>
 
@@ -45,30 +49,34 @@ const Footer = () => {
                     <h3 className={stack(styles.title, styles.social__title)}
                         dangerouslySetInnerHTML={{__html: section?.footer?.footerSocialZagolovok}}></h3>
                     <ul className={styles.social__list}>
-                        {section?.footer?.footerSocialSpisok?.map((item, index) => <a
+                        {section?.footer?.footerSocialSpisok?.map((item, index) => <li className={styles.li} key={index}>
+                            <a
                             href={item.footerSocialAdres}
                             target={"_blank"}
-                            className={stack('link',styles.social__item)}
-                            key={index}>
-                            <img className={styles.social__icon} src={item?.footerSocialIkonka?.sourceUrl} alt=""/>
-                            <p className={stack(styles.text,styles.social__text)}>{item.footerSocialTekst}</p>
-                        </a>)}
+                            className={stack('link', styles.social__item)}
+                            >
+                            <img className={styles.social__icon} src={item?.footerSocialIkonka?.sourceUrl}
+                                 alt="Значок соцсети"/>
+                            <p className={stack(styles.text, styles.social__text)}>{item.footerSocialTekst}</p>
+                        </a>
+                        </li>)}
                     </ul>
-                    <p className={stack('remark',styles.social__remark)}
+                    <p className={stack('remark', styles.social__remark)}
                        dangerouslySetInnerHTML={{__html: section?.footer?.footerSocialRemarka}}></p>
                 </div>
 
                 <div className={styles.contacts}>
                     <h3 className={stack(styles.title, styles.contacts__title)}>{section?.footer?.footerContactsZagolovok}</h3>
                     <ul className={styles.contacts__list}>
-                        {section?.footer?.footerContactsSpisok?.map((item, index) => <a
-                            className={stack('link',styles.contacts__link)}
-                            key={index}>
-                            <p className={stack(styles.text,styles.contacts__text)}>{item.footerContactsTekst}</p>
+                        {section?.footer?.footerContactsSpisok?.map((item, index) => <li key={index} className={styles.li}><a
+                            className={stack('link', styles.contacts__link)}
+                            >
+                            <p className={stack(styles.text, styles.contacts__text)}>{item.footerContactsTekst}</p>
                             {item.footerContactsEstKommentarij === "true" &&
                                 <p className={styles.contacts__description}> {item.footerContactsKommentarij}</p>}
 
-                        </a>)}
+                        </a>
+                        </li>)}
                     </ul>
                 </div>
             </div>

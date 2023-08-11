@@ -11,7 +11,7 @@ const ToTopButton = ({className}:ToTopButtonProps) => {
     }
     return (
         <button onClick={clickHandler} className={stack('link',styles.body, className)}>
-            <p className={styles.text}>Наверх</p>
+            <span className={styles.text}>Наверх</span>
             <img src="/image/arrow-up.png" className={styles.icon} alt=""/>
         </button>
     );

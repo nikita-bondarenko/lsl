@@ -41,11 +41,11 @@ const NavSublist = (props: MenuItemsNode) => {
             <span className={stack('text-small', styles.nav__link, styles.sublist__title)}>{props.label}</span>
             <img className={styles.sublist__arrow} src="/image/nav-arrow.png" alt=""/>
             <div ref={ref} className={styles.sublist__wrapper}>
-                <ul className={styles.sublist__list}>
+                <div className={styles.sublist__list}>
                     {arr.map(({label, url}) => <Link onClick={() => setIsNavModalOpen(false)} key={label}
                                                      className={stack('text-small', 'nav-link', styles.nav__link, styles.sublist__item)}
                                                      to={url}>{label}</Link>)}
-                </ul>
+                </div>
             </div>
         </div>
         <div className={styles.nav__indent} style={{height: open && sublistHeight ? sublistHeight : 0}}></div>
@@ -53,7 +53,13 @@ const NavSublist = (props: MenuItemsNode) => {
 
 }
 const PhoneButton = ({number}: PhoneButtonProps) => {
-    return <a className={stack('button-secondary', styles.button)} href={`tel:${number}`}>{number}</a>
+    const [href, setHref] = useState('')
+    useEffect(() => {
+        if (number) {
+            setHref('tel:' + number.split(' ').join('').split('-').join(''))
+        }
+    },[number])
+    return <a className={stack('button-secondary', styles.button)} href={href}>{number}</a>
 }
 
 export const Navigation = () => {
@@ -64,20 +70,20 @@ export const Navigation = () => {
     const [navArr] = useSortNav(data?.menu?.menuItems?.nodes)
 
     return (
-        <ul onClick={(e) => e.stopPropagation()} className={stack(styles.nav)}>
-            {navArr?.map((item) => <li className={styles.nav__item}
-                                       key={item.label}>
+        <div onClick={(e) => e.stopPropagation()} className={stack(styles.nav)}>
+            {navArr?.map((item) =>
+                <React.Fragment key={item.label} >
                 {!item.childItems.nodes.length
-                    ? <Link onClick={() => setIsNavModalOpen(false)}
+                    ? <Link  onClick={() => setIsNavModalOpen(false)}
                             className={stack('text-small', 'nav-link', styles.nav__link)}
                             to={item.url}>{item.label}</Link>
-                    : <NavSublist {...item}></NavSublist>}
-            </li>)}
-            <PhoneButton number={section?.header?.headerTelefon}></PhoneButton>
+                    : <NavSublist  {...item}></NavSublist>}
+                </React.Fragment>)}
+                <PhoneButton number={section?.header?.headerTelefon}></PhoneButton>
             <button className={styles.nav__close} onClick={() => setIsNavModalOpen(false)}>
-                <img src="/image/nav-close.png" className={styles.nav__close__icon} alt=""/>
+                <img src="/image/nav-close.png" className={styles.nav__close__icon} alt="Крестик"/>
             </button>
-        </ul>
+        </div>
     );
 };
 
@@ -103,7 +109,7 @@ const Header = () => {
                 </div>
                 <button onClick={clickHandler} className={stack('nav-link', styles.burger)}>
                     <img className={styles.burger__icon}
-                         src="/image/burger.png" alt=""/>
+                         src="/image/burger.svg" alt="Бургер"/>
                 </button>
             </div>
         </div>

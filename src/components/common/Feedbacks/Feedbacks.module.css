@@ -4,10 +4,15 @@
 }
 
 .title {
-    @apply mb-[20px]
+    @apply mb-[24px]
     2xl:mb-[15px]
     xl:mb-[8px]
     md:mb-[10px]
+}
+
+
+.title, .text {
+    @apply relative z-[1]
 }
 
 .text {
@@ -24,17 +29,30 @@
     lg:mb-[20px]
 }
 
+.sliderFirst__list {
+    @apply flex gap-[40px] select-none
+    2xl:gap-[30px]
+    xl:gap-[20px]
+    md:gap-[10px]
+}
+
+.sliderSecond__list {
+    @apply flex gap-[53px]
+    2xl:gap-[47px]
+    xl:gap-[20px]
+}
+
 
 .body .slideFirst__picture {
     @apply w-full h-full block
 }
 
 .slideFirst__item {
-    @apply border-[2px] rounded-[27px] border-[#DFDFDF] overflow-hidden h-[800px]
-    2xl:border-[1px] 2xl:h-[600px] 2xl:rounded-[20px]
-    xl:h-[460px] xl:rounded-[10px]
-    md:h-[390px] md:rounded-[10px]
-sm:h-[350px]
+    @apply border-[2px] rounded-[27px] border-[#DFDFDF] overflow-hidden h-[800px] w-[450px] pointer-events-none shrink-0
+    2xl:border-[1px] 2xl:h-[600px] 2xl:w-[337px] 2xl:rounded-[20px]
+    xl:h-[460px] xl:w-[260px] xl:rounded-[10px]
+    md:h-[390px] md:w-[220px] md:rounded-[10px]
+sm:h-[373px]
 
 }
 
@@ -53,15 +71,16 @@ sm:h-[350px]
 
 
 .sliderSecond__item {
-    @apply w-full rounded-[32px] bg-gray-400 px-[40px] pt-[40px] pb-[53px]
-    2xl:rounded-[24px] 2xl:p-[30px]
-    xl:rounded-[24px] xl:py-[20px] xl:px-[30px]
+    @apply w-full rounded-[32px] bg-gray-400 px-[40px] pt-[40px] pb-[53px] w-[822px] select-none shrink-0
+    2xl:rounded-[24px] 2xl:p-[30px] 2xl:w-[610px]
+    xl:rounded-[24px] xl:py-[20px] xl:px-[30px] xl:w-[440px]
+    sm:w-[auto] sm:max-w-[300px]
 
 }
 
 
 .sliderSecond__picture {
-    @apply rounded-full w-[160px] h-[160px] mr-[26px]
+    @apply rounded-full w-[160px] h-[160px] mr-[26px] pointer-events-none
     2xl:w-[120px] 2xl:h-[120px] 2xl:mr-[20px]
     xl:w-[70px] xl:h-[70px] xl:mr-[10px]
     md:w-[60px] md:h-[60px]
@@ -94,16 +113,16 @@ sm:h-[350px]
 }
 
 .content {
-    @apply shrink-0
-    xl:mb-[20px]
+    @apply shrink-0 w-[630px] relative z-[1] after:bg-white after:absolute after:top-0 after:right-0 after:bottom-0 after:w-[50vw]
+        2xl:w-[463px]
+    xl:mb-[20px] xl:w-auto xl:after:hidden
 }
 
 .sliders {
-    @apply w-[1250px]
-    2xl:w-[940px]
+    @apply w-[calc(100%-630px)]
+    2xl:w-[calc(100%-463px)]
     xl:w-full
 }
-
 
 
 

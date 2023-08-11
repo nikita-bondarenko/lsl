@@ -1,7 +1,8 @@
 .body {
-    @apply pt-[77px]
-    2xl:pt-[73px]
-    lg:pt-[48px]
+    @apply pt-[96px]
+    2xl:pt-[171px]
+        xl:pt-[73px]
+    lg:pt-[37px]
     md:pt-[0px]
 }
 
@@ -10,11 +11,12 @@
 }
 
 .wrapper {
-    @apply relative rounded-[33px] bg-yellow-200 px-[93px] py-[80px]
-    2xl:rounded-[20px] 2xl:p-[60px]
-    xl:pl-[20px] xl:pt-[60px] xl:pb-[94px]
-    lg:py-[60px] lg:px-[30px]
-    md:pl-[10px] md:pt-[34px] md:pb-[193px]
+    @apply relative rounded-[33px] bg-yellow-200 px-[93px] py-[70px]
+    2xl:rounded-[24px] 2xl:px-[60px] 2xl:pb-[47px] 2xl:pt-[60px]
+    xl:pl-[20px] xl:pt-[60px] xl:pb-[70px] xl:rounded-[20px]
+    lg:px-[20px] lg:pb-[115px] lg:pt-[30px]
+    md:pl-[10px] md:pt-[34px] md:pb-[140px]
+    sm:pb-[236px] sm:pt-[20px]
 }
 
 .withPhone  .wrapper {
@@ -25,14 +27,16 @@
     @apply mb-[26px]
     2xl:mb-[20px]
     lg:mb-[10px]
-    md:mb-[5px]
+    md:mb-[8px]
 }
 
 .body .text {
-    @apply font-normal mb-[66px]
+    @apply font-normal mb-[70px]
     2xl:mb-[50px]
-    lg:mb-[40px]
-    md:text-[14px] md:mb-[20px]
+        xl:text-[18px]
+    lg:mb-[20px] lg:text-[16px]
+    md:text-[14px] md:mb-[40px]
+    sm:mb-[22px]
 }
 
 .withPhone .text {
@@ -40,19 +44,18 @@
 }
 
 .body .link {
-    @apply w-[507px] h-[95px] rounded-[16px] text-[32px]
-    2xl:w-[381px] 2xl:h-[74px] 2xl:text-[24px] 2xl:rounded-[12px]
-    xl:w-[276px] xl:h-[65px] xl:text-[18px] xl:rounded-[12px]
-    lg:w-[256px] lg:h-[55px] lg:text-[18px] lg:rounded-[8px]
-    md:w-[234px] md:h-[42px] md:text-[16px] md:rounded-[8px] md:pt-[3px]
-
+    @apply w-[403px] h-[95px] rounded-[16px] text-[26px]
+    2xl:w-[341px] 2xl:h-[74px] 2xl:text-[24px] 2xl:rounded-[12px]
+    xl:w-[256px] xl:h-[65px] xl:text-[18px] xl:rounded-[12px]
+    lg:w-[256px] lg:h-[65px] lg:text-[18px] lg:rounded-[8px]
+    md:w-[214px] md:h-[52px] md:text-[16px] md:rounded-[8px]
 }
 
 .picture {
-    @apply w-[437px] h-[536px] absolute bottom-0 right-[143px]
-    2xl:w-[340px] 2xl:h-[417px] 2xl:right-[214px]
-    xl:w-[340px] xl:h-[417px] xl:right-[142px]
-    lg:w-[264px] lg:h-[324px] lg:right-[90px]
+    @apply w-[474px] h-[581px] absolute bottom-0 right-[143px]
+    2xl:w-[437px] 2xl:h-[536px] 2xl:right-[54px]
+    xl:w-[340px] xl:h-[417px] xl:right-[62px]
+    lg:w-[285px] lg:h-[350px] lg:right-[18px]
     md:w-[215px] md:h-[264px] md:right-[20px]
     sm:w-[181px] sm:h-[222px] sm:right-[13px]
 
@@ -74,10 +77,10 @@
 }
 
 .body .phoneButton {
-    @apply bg-transparent w-[403px] h-[96px] hover:bg-yellow-400
-    2xl:w-[290px] 2xl:h-[74px]
-    xl:w-[221px] xl:h-[65px] xl:pt-[3px] xl:rounded-[12px]
-    lg:h-[55px] lg:w-[206px]
-    md:h-[42px] md:rounded-[10px] md:w-[180px]
+    @apply bg-transparent w-[403px] h-[96px] hover:bg-yellow-400 text-[26px] rounded-[16px]
+    2xl:w-[341px] 2xl:h-[74px] 2xl:text-[24px] 2xl:rounded-[12px]
+    xl:w-[256px] xl:h-[65px] xl:pt-[3px] xl:rounded-[12px] xl:text-[18px]
+    lg:rounded-[8px]
+    md:h-[42px]  md:w-[214px] md:h-[52px] md:text-[16px] md:pt-[0px]
 
 }

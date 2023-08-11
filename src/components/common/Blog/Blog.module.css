@@ -9,20 +9,24 @@
 }
 
 .list {
-    @apply flex justify-between mb-[60px]
-    2xl:mb-[38px]
-    xl:mb-[20px]
-    lg:flex-wrap lg:gap-y-[20px]
+    @apply flex justify-between mb-[60px] gap-[50px]
+    2xl:mb-[38px] 2xl:gap-[30px]
+    xl:mb-[20px] xl:gap-[18px]
+    lg:flex-wrap lg:gap-[20px]
     md:gap-y-[10px]
     md:mb-[10px]
 }
 
 .item {
-    @apply bg-white hover:bg-gray-800 w-[580px] h-[580px] rounded-[32px] border-[2px] border-[#DFDFDF] overflow-hidden
-    2xl:w-[430px] 2xl:h-[430px] 2xl:rounded-[24px] 2xl:border-[1px]
-    xl:w-[316px] xl:h-[316px] xl:rounded-[12px]
-    lg:w-[354px] lg:h-[354px]
+    @apply bg-white hover:bg-gray-800 flex-grow h-[580px] rounded-[32px] border-[2px] border-[#DFDFDF] overflow-hidden
+    2xl:h-[430px] 2xl:rounded-[24px] 2xl:border-[1px]
+ xl:h-[316px] xl:rounded-[12px]
+    lg:h-[354px]
     md:w-full md:h-[300px] md:rounded-[10px]
+}
+
+.item {
+    @apply lg:w-[calc((100%-20px)/2)] lg:flex-grow-0 md:w-full md:flex-grow
 }
 
 .item__picture {
@@ -30,7 +34,7 @@
 }
 
 .item__image {
-    @apply object-cover
+    @apply object-cover object-top
 }
 
 .link {

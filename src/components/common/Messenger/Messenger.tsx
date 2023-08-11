@@ -5,13 +5,14 @@ import {useCommonSection} from "../../../hooks/useCommonSection";
 import Picture from "../../images/Picture/Picture";
 type MessengerProps = {
     isPhoneButton?: boolean,
-    text?: string
+    text?: string,
+    className?:string;
 }
-const Messenger = ({isPhoneButton, text} : MessengerProps) => {
+const Messenger = ({isPhoneButton, text, className} : MessengerProps) => {
     const [section] = useCommonSection('messendzher')
 
     return (
-        <section className={stack('container','section-indent', styles.body, isPhoneButton && styles.withPhone)}>
+        <section className={stack('container','section-indent', styles.body, isPhoneButton && styles.withPhone, className)}>
             <div className={styles.wrapper}>
                 <div className={styles.content}>
                     <h2 className={stack('title-secondary', styles.title)}
@@ -34,7 +35,7 @@ const Messenger = ({isPhoneButton, text} : MessengerProps) => {
                          desktopIImageX1={section?.messenger?.messengerImageKompyuter1x?.sourceUrl}
                          desktopIImageX2={section?.messenger?.messengerImageKompyuter2x?.sourceUrl}
                          mobileIImageX1={section?.messenger?.messengerImageTelefon1x?.sourceUrl}
-                         mobileIImageX2={section?.messenger?.messengerImageTelefon2x?.sourceUrl}
+                         mobileIImageX2={section?.messenger?.messengerImageTelefon2x?.sourceUrl} alt={"Телефон"}
                 ></Picture>
             </div>
         </section>

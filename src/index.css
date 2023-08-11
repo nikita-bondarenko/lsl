@@ -35,11 +35,8 @@
 
     .container {
         @apply max-w-[1920px] mx-auto px-[40px]
-        2xl:max-w-[1440px]
-        xl:max-w-[1024px] xl:px-[20px]
-        lg:max-w-[768px]
-        md:max-w-[480px]
-        sm:px-[10px] sm:max-w-[320px]
+      xl:px-[20px]
+        sm:px-[10px]
     }
 
     .title-primary {
@@ -115,6 +112,10 @@
     .section-indent {
         @apply mb-[200px] 2xl:mb-[130px] xl:mb-[90px]
         md:mb-[70px]
+    }
+
+    .section-indent-new {
+        @apply mb-[140px] xl:mb-[86px] lg:mb-[72px] md:mb-[36px] sm:mb-[32px]
     }
 
     .ytp-large-play-button.ytp-button.ytp-large-play-button-red-bg {

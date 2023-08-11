@@ -8,9 +8,10 @@
 }
 
 .content {
-    @apply border-[5px] border-yellow-400
-    2xl:border-[4px]
-    xl:border-[2px]
+    @apply border-[5px] border-yellow-400 w-[calc(((100%-60px)/2)-9px)]
+    2xl:border-[4px] 2xl:w-[calc((100%-30px)/2)]
+    xl:border-[2px] xl:w-[calc((100%-20px)/2)]
+    md:w-full
 }
 
 .content__top, .content {
@@ -19,7 +20,7 @@
 }
 
 .content__top, .content__bottom {
-    @apply px-[50px]
+    @apply pr-[50px] pl-[47px]
     2xl:px-[40px]
     xl:px-[20px]
     lg:px-[15px]
@@ -38,7 +39,7 @@
 
 
 .content__bottom {
-    @apply py-[54px] pb-[98px]
+    @apply py-[54px] pb-[93px]
     2xl:pt-[37px] 2xl:pb-[70px]
     xl:py-[31px]
     lg:py-[15px]
@@ -67,10 +68,9 @@
 }
 
 .slider {
-    @apply w-[900px] shrink-0 rounded-[33px] overflow-hidden relative
-    2xl:w-[665px] 2xl:rounded-[25px]
-    xl:w-[482px] xl:rounded-[12px]
-    lg:w-[354px]
+    @apply w-[calc((100%-60px)/2)] shrink-0 rounded-[33px] overflow-hidden relative  flex-grow
+    2xl:w-[calc((100%-30px)/2)] 2xl:rounded-[25px]
+     xl:rounded-[12px] xl:w-[calc((100%-20px)/2)]
     md:w-full md:h-[230px]
 }
 
@@ -79,7 +79,7 @@
 }
 
 .slider__image {
-    @apply md:object-top
+    @apply object-top
 
 }
 
@@ -97,7 +97,7 @@
 }
 
 .slider__btn {
-    @apply pointer-events-auto absolute top-[50%] translate-y-[-50%] w-[80px] h-[80px]
+    @apply pointer-events-auto absolute top-[45%] translate-y-[-50%] w-[80px] h-[80px]
     2xl:w-[40px] 2xl:h-[40px]
     xl:w-[33px] xl:h-[33px]
     lg:w-[22px] lg:h-[22px]

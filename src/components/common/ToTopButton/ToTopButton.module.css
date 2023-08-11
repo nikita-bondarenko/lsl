@@ -5,7 +5,7 @@
 }
 
 .text {
-    @apply text-[29px]
+    @apply text-[29px] block
     2xl:text-[22px]
 
 }

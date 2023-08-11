@@ -1,6 +1,6 @@
 .body {}
 .title {
-    @apply mb-[50px]
+    @apply mb-[46px]
     2xl:mb-[40px]
     xl:mb-[57px]
     lg:mb-[20px]
@@ -14,7 +14,7 @@
 }
 
 .list {
-    @apply flex justify-between flex-wrap gap-y-[80px]
+    @apply flex justify-between flex-wrap gap-y-[72px]
     2xl:gap-y-[50px]
     xl:gap-y-[57px]
     lg:gap-y-[20px]
@@ -47,11 +47,15 @@
 
 
 .body .list .list__item .item__image {
-    @apply md:w-full md:h-[310px] md:mb-[10px] sm:mb-[5px] sm:h-[230px] !important
+    @apply w-full  md:h-[310px] md:mb-[10px] sm:mb-[5px] sm:h-[230px]  !important
+}
+
+.picture__image {
+    @apply  object-top
 }
 
 .item__image {
-    @apply mb-[20px] rounded-[32px] overflow-hidden h-[520px] border-[5px] border-transparent transition-all box-content
+    @apply mb-[8px] rounded-[32px] overflow-hidden h-[520px] border-[5px] border-transparent transition-all box-content
     2xl:rounded-[24px] 2xl:mb-[15px] 2xl:h-[390px]
     xl:rounded-[18px] xl:h-[284px] xl:mb-[12px] xl:border-[3px]
     lg:rounded-[12px] lg:h-[250px] lg:shrink-0 lg:mb-[10px]

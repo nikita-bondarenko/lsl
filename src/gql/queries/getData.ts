@@ -52,6 +52,7 @@ query Data {
       mainHeroZagolovok
       mainSafetyPervyjTekst
       mainSafetyVtorojTekst
+      mainSafetyThirdTekst
       mainSafetyZagolovok
       mainSupportRemarka
       mainSupportRemarkaVnizu
@@ -110,8 +111,11 @@ query Data {
         }
       }
       feedbacks {
-        feedbacksPodzagolovok
+          feedbacksPodzagolovok
         feedbacksZagolovok
+            feedbacksPodzagolovok1
+        feedbacksZagolovok1
+        feedbacksZagolovok2
         feedbacksImageSlajder {
           feedbacksImageKompyuter1x {
             sourceUrl
@@ -244,6 +248,7 @@ query Data {
         publicationsNazvanie
         publicationsPodrobnoeOpisanie
         publicationsAdresSsylki
+        publicationsAlt
         publicationsImageKompyuter1x {
           sourceUrl
         }

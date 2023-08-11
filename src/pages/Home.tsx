@@ -6,13 +6,14 @@ import HomeTrainings from "../components/pages/HomePage/HomeTrainings/HomeTraini
 import HomeSafety from "../components/pages/HomePage/HomeSafety/HomeSafety";
 import Steps from "../components/common/Steps/Steps";
 import Messenger from "../components/common/Messenger/Messenger";
-import HomePublications from "../components/pages/HomePage/HomePublications/HomePublications";
+import HomePublications from "../components/common/Publications/Publications";
 import HomeValues from "../components/pages/HomePage/HomeValues/HomeValues";
 import Blog from "../components/common/Blog/Blog";
 import Feedbacks from "../components/common/Feedbacks/Feedbacks";
 import HomeSupport from "../components/pages/HomePage/HomeSupport/HomeSupport";
 import HomeAbout from "../components/pages/HomePage/HomeAbout/HomeAbout";
 import {usePage} from "../hooks/usePage";
+import {stack} from "../hooks/useClassName";
 
 const Home = () => {
 
@@ -37,9 +38,9 @@ const Home = () => {
             <HomeTrainings></HomeTrainings>
             <HomeSafety></HomeSafety>
             <Steps></Steps>
-            <Messenger></Messenger>
-            <HomeAbout></HomeAbout>
-            <HomePublications></HomePublications>
+                <Messenger></Messenger>
+                <HomeAbout></HomeAbout>
+            <HomePublications ></HomePublications>
             <HomeValues></HomeValues>
             <Blog title={page?.main?.mainBlogZagolovok} remark={page?.main?.mainBlogRemarka}
                   linkHref={page?.main?.mainBlogAdresSsylki}

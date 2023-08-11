@@ -3,7 +3,7 @@
 }
 
 .picture {
-    @apply w-[665px] h-[832px] mr-[50px] shrink-0
+    @apply w-[657px] h-[797px] mr-[59px] shrink-0
     2xl:w-[500px] 2xl:h-[624px] 2xl:mr-[45px]
     xl:w-[405px] xl:h-[506px] xl:mr-[90px]
     lg:w-[358px] lg:h-[447px] lg:mr-[20px]
@@ -23,7 +23,7 @@
 }
 
 .title {
-    @apply mb-[25px] 2xl:mb-[20px]
+    @apply mb-[19px] 2xl:mb-[20px]
     xl:mb-[25px]
     lg:mb-[20px]
 }

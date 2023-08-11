@@ -13,7 +13,7 @@
 
 
 .title, .item {
-    @apply w-[580px]  rounded-[32px] shrink-0 px-[50px] py-[53px]
+    @apply w-[580px] flex-grow rounded-[32px] shrink-0 px-[50px] py-[53px]
     2xl:w-[434px] 2xl:rounded-[24px] 2xl:px-[30px] 2xl:py-[40px]
 }
 

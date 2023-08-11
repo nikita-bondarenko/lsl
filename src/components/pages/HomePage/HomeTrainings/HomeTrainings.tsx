@@ -26,13 +26,13 @@ const HomeTrainings = () => {
     return (
         <section className={stack('container', 'section-indent', styles.body)}>
             <h2 className={stack('title-secondary',styles.title)}>{page?.main?.mainTrainingZagolovok}</h2>
-            <ul className={styles.list}>
-                {trainings?.map((item,index) => <Link to={''} key={index} className={stack(styles.list__item)}>
-                    <Picture className={styles.item__image}
+            <div className={styles.list}>
+                {trainings?.map((item,index) =>  <Link to={''} key={index} className={stack(styles.list__item)}>
+                    <Picture className={styles.item__image} imageClassName={styles.picture__image}
                              desktopIImageX1={item.training?.trainingImageKompyuter1x?.sourceUrl}
                              desktopIImageX2={item.training?.trainingImageKompyuter2x?.sourceUrl}
                              mobileIImageX2={item.training?.trainingImageTelefon2x?.sourceUrl}
-                             mobileIImageX1={item.training?.trainingImageTelefon1x?.sourceUrl}></Picture>
+                             mobileIImageX1={item.training?.trainingImageTelefon1x?.sourceUrl} alt={"Тренажер"}></Picture>
                     <div className={styles.item__content}>
                         <div className={styles.item__top}>
                             <h3 className={stack('text-primary', styles.item__title)}
@@ -44,7 +44,7 @@ const HomeTrainings = () => {
                            dangerouslySetInnerHTML={{__html: item?.training?.trainingKratkoeOpisanie}}></p>
                     </div>
                 </Link>)}
-            </ul>
+            </div>
             <Link className={stack('button-primary', styles.button)}
                 to={page?.main?.mainTrainingAdresSsylki}>{page?.main?.mainTrainingTekstSsylki}</Link>
         </section>
