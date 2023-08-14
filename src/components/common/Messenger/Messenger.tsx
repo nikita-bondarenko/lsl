@@ -35,7 +35,7 @@ const Messenger = ({isPhoneButton, text, className} : MessengerProps) => {
                          desktopIImageX1={section?.messenger?.messengerImageKompyuter1x?.sourceUrl}
                          desktopIImageX2={section?.messenger?.messengerImageKompyuter2x?.sourceUrl}
                          mobileIImageX1={section?.messenger?.messengerImageTelefon1x?.sourceUrl}
-                         mobileIImageX2={section?.messenger?.messengerImageTelefon2x?.sourceUrl} alt={"Телефон"}
+                         mobileIImageX2={section?.messenger?.messengerImageTelefon2x?.sourceUrl} alt={section?.messenger?.messengerImageKompyuter1x?.altText}
                 ></Picture>
             </div>
         </section>

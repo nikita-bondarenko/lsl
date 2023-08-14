@@ -32,7 +32,7 @@ const HomeTrainings = () => {
                              desktopIImageX1={item.training?.trainingImageKompyuter1x?.sourceUrl}
                              desktopIImageX2={item.training?.trainingImageKompyuter2x?.sourceUrl}
                              mobileIImageX2={item.training?.trainingImageTelefon2x?.sourceUrl}
-                             mobileIImageX1={item.training?.trainingImageTelefon1x?.sourceUrl} alt={"Тренажер"}></Picture>
+                             mobileIImageX1={item.training?.trainingImageTelefon1x?.sourceUrl} alt={item.training?.trainingImageKompyuter1x?.altText}></Picture>
                     <div className={styles.item__content}>
                         <div className={styles.item__top}>
                             <h3 className={stack('text-primary', styles.item__title)}

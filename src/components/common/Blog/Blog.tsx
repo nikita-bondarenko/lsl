@@ -36,7 +36,7 @@ const Blog = ({title, linkHref, linkText, remark}: BlogProps) => {
                              desktopIImageX2={item?.blog?.blogPostImageKompyuter2x?.sourceUrl}
                              desktopIImageX1={item?.blog?.blogPostImageKompyuter1x?.sourceUrl}
                              mobileIImageX1={item?.blog?.blogPostImageTelefon1x?.sourceUrl}
-                             mobileIImageX2={item?.blog?.blogPostImageTelefon2x?.sourceUrl} alt={'Обложка записи'}></Picture>
+                             mobileIImageX2={item?.blog?.blogPostImageTelefon2x?.sourceUrl} alt={item?.blog?.blogPostImageKompyuter1x?.altText}></Picture>
                 </Link>
                 </li>)}
             </ul>

@@ -39,7 +39,7 @@ const NavSublist = (props: MenuItemsNode) => {
         <div onClick={onClick} onMouseEnter={onOpen} onMouseLeave={onClose}
              className={stack(styles.nav__sublist, open && styles.open)}>
             <span className={stack('text-small', styles.nav__link, styles.sublist__title)}>{props.label}</span>
-            <img className={styles.sublist__arrow} src="/image/nav-arrow.png" alt=""/>
+            <img className={styles.sublist__arrow} src="/image/nav-arrow.png" alt="Стрелка вниз"/>
             <div ref={ref} className={styles.sublist__wrapper}>
                 <div className={styles.sublist__list}>
                     {arr.map(({label, url}) => <Link onClick={() => setIsNavModalOpen(false)} key={label}
@@ -103,7 +103,7 @@ const Header = () => {
         <div className={stack('container', styles.body)}>
             <div className={styles.wrapper}>
                 <Logo className={styles.logo} desktopUrl={section?.header?.headerLogotip?.sourceUrl}
-                      mobileUrl={section?.header?.headerLogotipMobile?.sourceUrl}></Logo>
+                      mobileUrl={section?.header?.headerLogotipMobile?.sourceUrl} alt={section?.header?.headerLogotip?.altText}></Logo>
                 <div className={styles.body__nav}>
                     <Navigation></Navigation>
                 </div>

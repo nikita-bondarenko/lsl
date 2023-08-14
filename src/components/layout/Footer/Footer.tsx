@@ -20,7 +20,7 @@ const Footer = () => {
             <div className={styles.footer__body}>
                 <div className={styles.logo}>
                     <Logo className={styles.logo__link} mobileUrl={section?.footer?.footerLogotipMobile?.sourceUrl}
-                          desktopUrl={section?.footer?.footerLogotip?.sourceUrl}></Logo>
+                          desktopUrl={section?.footer?.footerLogotip?.sourceUrl} alt={section?.footer?.footerLogotip?.altText}></Logo>
                     <p className={stack(styles.text, styles.logo__copy)}
                        dangerouslySetInnerHTML={{__html: section?.footer?.footerKopirajt}}></p>
                 </div>
@@ -56,7 +56,7 @@ const Footer = () => {
                             className={stack('link', styles.social__item)}
                             >
                             <img className={styles.social__icon} src={item?.footerSocialIkonka?.sourceUrl}
-                                 alt="Значок соцсети"/>
+                                 alt={item?.footerSocialIkonka?.altText}/>
                             <p className={stack(styles.text, styles.social__text)}>{item.footerSocialTekst}</p>
                         </a>
                         </li>)}

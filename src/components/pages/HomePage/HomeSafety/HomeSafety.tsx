@@ -44,7 +44,7 @@ const HomeSafety = () => {
                     ></video>
                     {!isPlaying && <button
                                            className={stack('link', styles.video__button)}>
-                        <img className={styles.video__image} src="/image/play.png" alt=""/></button>}
+                        <img className={styles.video__image} src="/image/play.png" alt="Иконка Play"/></button>}
                 </div>
             </div>
         </section>

@@ -11,15 +11,19 @@ query Data {
         blogPostZagolovok
         blogPostImageKompyuter1x {
           sourceUrl
+          altText
         }
         blogPostImageKompyuter2x {
           sourceUrl
+          altText
         }
         blogPostImageTelefon1x {
           sourceUrl
+          altText
         }
         blogPostImageTelefon2x {
           sourceUrl
+          altText
         }
       }
       date
@@ -65,28 +69,36 @@ query Data {
       mainValuesZagolovok
       mainAboutImageKompyuter1x {
         sourceUrl
+        altText
       }
       mainAboutImageKompyuter2x {
         sourceUrl
+        altText
       }
       mainAboutImageTelefon1x {
         sourceUrl
+        altText
       }
       mainAboutImageTelefon2x {
         sourceUrl
+        altText
       }
       mainHeroSlajder {
         mainHeroSlajderKompyuter1x {
           sourceUrl
+          altText
         }
         mainHeroSlajderKompyuter2x {
           sourceUrl
+          altText
         }
         mainHeroSlajderTelefon1x {
           sourceUrl
+          altText
         }
         mainHeroSlajderTelefon2x {
           sourceUrl
+          altText
         }
       }
       mainSupportSpisokVozmozhnyhPozhertvovanij {
@@ -119,15 +131,19 @@ query Data {
         feedbacksImageSlajder {
           feedbacksImageKompyuter1x {
             sourceUrl
+            altText
           }
           feedbacksImageKompyuter2x {
             sourceUrl
+            altText
           }
           feedbacksImageTelefon1x {
             sourceUrl
+            altText
           }
           feedbacksImageTelefon2x {
             sourceUrl
+            altText
           }
         }
         feedbacksSimpleSlajder {
@@ -136,15 +152,19 @@ query Data {
           feedbacksSimpleTekstOtzyva
           feedbacksSimpleKompyuter1x {
             sourceUrl
+            altText
           }
           feedbacksSimpleKompyuter2x {
             sourceUrl
+            altText
           }
           feedbacksSimpleTelefon1x {
             sourceUrl
+            altText
           }
           feedbacksSimpleTelefon2x {
             sourceUrl
+            altText
           }
         }
       }
@@ -160,9 +180,11 @@ query Data {
         }
         footerLogotip {
           sourceUrl
+          altText
         }
         footerLogotipMobile {
           sourceUrl
+          altText
         }
         footerPolitikaKonfidenczialnosti {
           mediaItemUrl
@@ -175,6 +197,7 @@ query Data {
           footerSocialTekst
           footerSocialIkonka {
             sourceUrl
+            altText
           }
         }
         footerMenuZagolovok
@@ -186,9 +209,11 @@ query Data {
         headerTelefon
         headerLogotip {
           sourceUrl
+          altText
         }
         headerLogotipMobile {
           sourceUrl
+          altText
         }
       }
       messenger {
@@ -199,15 +224,19 @@ query Data {
         messengerTelefon
         messengerImageKompyuter1x {
           sourceUrl
+          altText
         }
         messengerImageKompyuter2x {
           sourceUrl
+          altText
         }
         messengerImageTelefon1x {
           sourceUrl
+          altText
         }
         messengerImageTelefon2x {
           sourceUrl
+          altText
         }
       }
       orderSteps {
@@ -248,18 +277,21 @@ query Data {
         publicationsNazvanie
         publicationsPodrobnoeOpisanie
         publicationsAdresSsylki
-        publicationsAlt
         publicationsImageKompyuter1x {
           sourceUrl
+          altText
         }
         publicationsImageKompyuter2x {
           sourceUrl
+          altText
         }
         publicationsImageTelefon1x {
           sourceUrl
+          altText
         }
         publicationsImageTelefon2x {
           sourceUrl
+          altText
         }
       }
     }
@@ -275,15 +307,19 @@ query Data {
         trainingPodrobnoeOpisanie
         trainingImageKompyuter1x {
           sourceUrl
+          altText
         }
         trainingImageKompyuter2x {
           sourceUrl
+          altText
         }
         trainingImageTelefon1x {
           sourceUrl
+          altText
         }
         trainingImageTelefon2x {
           sourceUrl
+          altText
         }
       }
     }

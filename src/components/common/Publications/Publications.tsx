@@ -10,9 +10,6 @@ import SwiperLight from "../../lowleveled/SwiperLight/SwiperLight";
 
 
 const SlideItem = (item : PublicationsNode) => {
-useEffect(() => {
-    console.log(item)
-}, [item])
 
     return <Link to={item.publications.publicationsAdresSsylki} target={"_blank"} onMouseMove={  (e) => e.preventDefault()} className={stack('link',styles.item)}>
         <div className={styles.item__top}>
@@ -21,7 +18,7 @@ useEffect(() => {
                       desktopIImageX1={item?.publications?.publicationsImageKompyuter1x?.sourceUrl}
                       desktopIImageX2={item?.publications?.publicationsImageKompyuter2x?.sourceUrl}
                       mobileIImageX1={item?.publications?.publicationsImageTelefon1x?.sourceUrl}
-                      mobileIImageX2={item?.publications?.publicationsImageTelefon2x?.sourceUrl} alt={item.publications.publicationsAlt}></Picture>
+                      mobileIImageX2={item?.publications?.publicationsImageTelefon2x?.sourceUrl} alt={item?.publications?.publicationsImageKompyuter1x?.altText}></Picture>
         </div>
 
             <p  className={stack('text-secondary', styles.item__text)}

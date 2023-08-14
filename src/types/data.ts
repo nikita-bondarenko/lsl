@@ -34,6 +34,7 @@ export interface Blog {
 
 export interface BlogPostImageKompyuter1X {
     sourceUrl: string;
+    altText: string;
 }
 
 export interface CommonSections {

@@ -28,7 +28,7 @@ const FeedbacksSimple = ({className} : {className?: string}) => {
                                                      mobileIImageX1={item?.feedbacksSimpleTelefon1x?.sourceUrl}
                                                      mobileIImageX2={item?.feedbacksSimpleTelefon2x?.sourceUrl}
                                                      desktopIImageX1={item?.feedbacksSimpleKompyuter1x?.sourceUrl}
-                                                     desktopIImageX2={item?.feedbacksSimpleKompyuter2x?.sourceUrl} alt={"Фото клиента"}></Picture>
+                                                     desktopIImageX2={item?.feedbacksSimpleKompyuter2x?.sourceUrl} alt={item?.feedbacksSimpleKompyuter1x?.altText}></Picture>
                                             <div className={styles.slider__person}>
                                                 <h3 className={stack(styles.slider__name)}
                                                     dangerouslySetInnerHTML={{__html: item?.feedbacksSimpleImya}}></h3>

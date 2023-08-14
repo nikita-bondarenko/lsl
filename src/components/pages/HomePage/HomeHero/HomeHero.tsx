@@ -14,12 +14,12 @@ function Buttons(props) {
         <div className={styles.slider__buttonWrapper}>
             {(loop || index !== 0) && (
                 <div className={stack('link',styles.slider__btn,styles.slider__btnPrev)} onClick={prevHandler}><img className={styles.slider__buttonIcon}
-                                                                                   src="/image/arrow-left.png" alt=""/>
+                                                                                   src="/image/arrow-left.png" alt="Стрелка влево"/>
                 </div>
             )}
             {(loop || index !== total - 1) && (
                 <div className={stack('link',styles.slider__btn,styles.slider__btnNext)} onClick={nextHandler}><img className={styles.slider__buttonIcon}
-                                                                                   src="/image/arrow-right.png" alt=""/>
+                                                                                   src="/image/arrow-right.png" alt="Стрелка вправо"/>
                 </div>
             )}
         </div>
@@ -54,7 +54,7 @@ const HomeHero = () => {
                         className={styles.slider__picture} imageClassName={styles.slider__image} desktopIImageX1={item.mainHeroSlajderKompyuter1x.sourceUrl}
                         desktopIImageX2={item.mainHeroSlajderKompyuter2x.sourceUrl}
                         mobileIImageX1={item.mainHeroSlajderTelefon1x.sourceUrl}
-                        mobileIImageX2={item.mainHeroSlajderTelefon2x.sourceUrl} alt={'Слайд'}></Picture>)}
+                        mobileIImageX2={item.mainHeroSlajderTelefon2x.sourceUrl} alt={item.mainHeroSlajderKompyuter1x.altText}></Picture>)}
                     {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
                     {/*@ts-ignore  */}
                 </Carousel>
