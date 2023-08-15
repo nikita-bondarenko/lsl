@@ -3,6 +3,10 @@
     xl:block
 }
 
+.title, .text {
+    @apply select-none
+}
+
 .title {
     @apply mb-[20px]
     2xl:mb-[15px]
@@ -53,12 +57,12 @@
 
 
 .content {
-    @apply shrink-0  w-[630px] relative z-[1] after:bg-white after:absolute after:top-0 after:right-0 after:bottom-0 after:w-[50vw]
-          2xl:w-[463px]
-    xl:mb-[40px]  xl:w-auto xl:after:hidden
+    @apply shrink-0  w-[630px] relative z-[1] pointer-events-none
+    after:bg-white after:absolute after:top-0 after:right-[150px] after:bottom-0 after:pointer-events-auto after:w-[50vw] before:absolute before:top-0 before:right-0 before:bottom-0 before:w-[150px] before:bg-[linear-gradient(90deg,#FFF_0%,rgba(255,255,255,0.00)100%)]
+    2xl:w-[463px]
+    xl:mb-[40px] xl:w-auto xl:w-auto xl:after:hidden xl:before:hidden
     lg:mb-[30px]
     md:mb-[20px]
-
 }
 .sliders {
     @apply w-[calc(100%-630px)]

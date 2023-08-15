@@ -35,14 +35,18 @@ const NavSublist = (props: MenuItemsNode) => {
         isMobile && setOpen(prev => !prev)
     }
 
+   const focusHandler = () => {
+        // setIsNavModalOpen(true)
+   }
+
     return <>
-        <div onClick={onClick} onMouseEnter={onOpen} onMouseLeave={onClose}
+        <div onClick={onClick} tabIndex={0} onFocus={onOpen} onBlur={onClose} onMouseEnter={onOpen} onMouseLeave={onClose}
              className={stack(styles.nav__sublist, open && styles.open)}>
             <span className={stack('text-small', styles.nav__link, styles.sublist__title)}>{props.label}</span>
             <img className={styles.sublist__arrow} src="/image/nav-arrow.png" alt="Стрелка вниз"/>
             <div ref={ref} className={styles.sublist__wrapper}>
                 <div className={styles.sublist__list}>
-                    {arr.map(({label, url}) => <Link onClick={() => setIsNavModalOpen(false)} key={label}
+                    {arr.map(({label, url}) => <Link  onClick={() => setIsNavModalOpen(false)} key={label}
                                                      className={stack('text-small', 'nav-link', styles.nav__link, styles.sublist__item)}
                                                      to={url}>{label}</Link>)}
                 </div>

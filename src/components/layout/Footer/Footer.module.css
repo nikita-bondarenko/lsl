@@ -161,7 +161,10 @@
 .contacts__item {
 }
 
-.contacts__link {
+.contacts__link:focus {
+    outline: 3px solid black !important;
+    display: block;
+
 }
 
 .contacts__text {

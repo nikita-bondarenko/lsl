@@ -4,13 +4,18 @@
 
 
 @layer components {
+
     * {
         @apply box-border font-nunito text-black ;
 
     }
 
-    :focus, :focus-visible, :focus-within {
+     :focus-visible, :focus-within {
         outline: none;
+    }
+
+    :focus {
+        outline: 3px solid black;
     }
 
     h1, h2, h3, h4, p, ul {

@@ -68,9 +68,8 @@ const Footer = () => {
                 <div className={styles.contacts}>
                     <h3 className={stack(styles.title, styles.contacts__title)}>{section?.footer?.footerContactsZagolovok}</h3>
                     <ul className={styles.contacts__list}>
-                        {section?.footer?.footerContactsSpisok?.map((item, index) => <li key={index} className={styles.li}><a
-                            className={stack('link', styles.contacts__link)}
-                            >
+                        {section?.footer?.footerContactsSpisok?.map((item, index) => <li key={index} className={styles.li}>
+                            <a  className={stack('link', styles.contacts__link)} href={item.footerContactsHref}>
                             <p className={stack(styles.text, styles.contacts__text)}>{item.footerContactsTekst}</p>
                             {item.footerContactsEstKommentarij === "true" &&
                                 <p className={styles.contacts__description}> {item.footerContactsKommentarij}</p>}

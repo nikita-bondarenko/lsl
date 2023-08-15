@@ -18,15 +18,19 @@
 }
 
 .item {
-    @apply bg-white hover:bg-gray-800 flex-grow h-[580px] rounded-[32px] border-[2px] border-[#DFDFDF] overflow-hidden
-    2xl:h-[430px] 2xl:rounded-[24px] 2xl:border-[1px]
- xl:h-[316px] xl:rounded-[12px]
-    lg:h-[354px]
-    md:w-full md:h-[300px] md:rounded-[10px]
+
 }
 
 .item {
-    @apply lg:w-[calc((100%-20px)/2)] lg:flex-grow-0 md:w-full md:flex-grow
+    @apply flex-grow  lg:w-[calc((100%-20px)/2)] lg:flex-grow-0 md:w-full md:flex-grow
+}
+
+.item__link{
+   @apply overflow-hidden block bg-white hover:bg-gray-800 h-[580px] rounded-[32px] border-[2px] border-[#DFDFDF]
+   2xl:h-[430px] 2xl:rounded-[24px] 2xl:border-[1px]
+   xl:h-[316px] xl:rounded-[12px]
+   lg:h-[354px]
+   md:w-full md:h-[300px] md:rounded-[10px]
 }
 
 .item__picture {

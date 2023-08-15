@@ -31,7 +31,7 @@ const Blog = ({title, linkHref, linkText, remark}: BlogProps) => {
         <section className={stack('container', 'section-indent', styles.body)}>
             <h2 className={stack('title-secondary', styles.title)} dangerouslySetInnerHTML={{__html: title}}></h2>
             <ul className={styles.list}>
-                {blog?.map((item, index) => <li key={index} className={stack(styles.item)} ><Link to={item.id} >
+                {blog?.map((item, index) => <li key={index} className={stack(styles.item)} ><Link className={styles.item__link} to={item.id} >
                     <Picture imageClassName={stack('link',styles.item__image)} className={styles.item__picture}
                              desktopIImageX2={item?.blog?.blogPostImageKompyuter2x?.sourceUrl}
                              desktopIImageX1={item?.blog?.blogPostImageKompyuter1x?.sourceUrl}

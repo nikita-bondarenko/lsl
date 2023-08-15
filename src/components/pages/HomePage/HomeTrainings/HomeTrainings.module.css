@@ -55,7 +55,7 @@
 }
 
 .item__image {
-    @apply mb-[8px] rounded-[32px] overflow-hidden h-[520px] border-[5px] border-transparent transition-all box-content
+    @apply mb-[8px] rounded-[32px] overflow-hidden h-[520px] border-[5px] border-transparent transition-all box-border
     2xl:rounded-[24px] 2xl:mb-[15px] 2xl:h-[390px]
     xl:rounded-[18px] xl:h-[284px] xl:mb-[12px] xl:border-[3px]
     lg:rounded-[12px] lg:h-[250px] lg:shrink-0 lg:mb-[10px]

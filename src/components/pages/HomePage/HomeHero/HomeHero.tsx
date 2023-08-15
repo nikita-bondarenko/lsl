@@ -11,16 +11,16 @@ function Buttons(props) {
 
     const {index, total, loop, prevHandler, nextHandler} = props
     return (
-        <div className={styles.slider__buttonWrapper}>
+        <div  className={styles.slider__buttonWrapper}>
             {(loop || index !== 0) && (
-                <div className={stack('link',styles.slider__btn,styles.slider__btnPrev)} onClick={prevHandler}><img className={styles.slider__buttonIcon}
+                <button tabIndex={0} className={stack('link',styles.slider__btn,styles.slider__btnPrev)} onClick={prevHandler}><img className={styles.slider__buttonIcon}
                                                                                    src="/image/arrow-left.png" alt="Стрелка влево"/>
-                </div>
+                </button>
             )}
             {(loop || index !== total - 1) && (
-                <div className={stack('link',styles.slider__btn,styles.slider__btnNext)} onClick={nextHandler}><img className={styles.slider__buttonIcon}
+                <button tabIndex={0} className={stack('link',styles.slider__btn,styles.slider__btnNext)} onClick={nextHandler}><img className={styles.slider__buttonIcon}
                                                                                    src="/image/arrow-right.png" alt="Стрелка вправо"/>
-                </div>
+                </button>
             )}
         </div>
     )

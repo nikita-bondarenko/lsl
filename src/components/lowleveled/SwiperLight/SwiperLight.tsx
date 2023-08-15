@@ -23,16 +23,56 @@ const SwiperLight = ({children, className}: SwiperProps) => {
     const [changedX, setChangedX] = useState(0)
     const [translateX, setTranslateX] = useState(0)
     const [moving, setMoving] = useState(false)
-    const [isLeftBorderInView, setIsLeftBorderInView] = useState(true)
-    const [isRightBorderInView, setIsRightBorderInView] = useState(true)
+    const [slideIndex, setSlideIndex] = useState(0)
+    const [initSlideIndex, setInitSlideIndex] = useState(0)
 
     const ref = createRef<HTMLDivElement>()
+
+    const getDistance = () => {
+        const currentTranslateX = -(ref.current.children[0].getBoundingClientRect().width - ref.current.getBoundingClientRect().width)
+        return {
+            currentTranslateX
+        }
+    }
+
+    const getCurrentSlide = () => {
+
+        let distance;
+        let index;
+        if (ref.current) {
+            Array.from(ref.current.children[0].children).forEach((item, itemIndex) => {
+                const itemDistance = Math.abs(item.getBoundingClientRect().left - ref.current.parentElement.getBoundingClientRect().left)
+                if (distance === undefined || itemDistance < distance) {
+                    distance = itemDistance
+                    index = itemIndex
+                }
+            })
+        }
+        return index;
+    }
+
+    const setSlide = (index: number) => {
+        if (ref.current && ref.current.children[0].children[index] && index >=0 && index < ref.current.children[0].children.length) {
+            const pixels = (ref.current.children[0].children[index].getBoundingClientRect().left - ref.current.children[0].getBoundingClientRect().left)
+            const widthWindow = ref.current.parentElement.getBoundingClientRect().width
+            const widthWrapper = ref.current.children[0].getBoundingClientRect().width
+            const maxTranslate = widthWrapper - widthWindow
+            if (maxTranslate< pixels) {
+                setTranslateX(- maxTranslate )
+                const index = getCurrentSlide()
+                index && setSlideIndex(index)
+            } else {
+                setTranslateX(-pixels)
+                setSlideIndex(index)
+            }
+
+        }
+    }
 
     useEffect(() => {
         if (moving) {
             const distance = changedX - initX
             setX(distance)
-
         }
     }, [changedX, moving])
 
@@ -41,28 +81,24 @@ const SwiperLight = ({children, className}: SwiperProps) => {
         setInitX(initX)
         setChangedX(changedX)
         setMoving(true)
+        setInitSlideIndex(slideIndex)
+
     }
 
     const endSwiping = () => {
+
         setMoving(false)
 
-        const gap = ref.current.children[0].children[1].getBoundingClientRect().x - ref.current.children[0].children[0].getBoundingClientRect().x - ref.current.children[0].children[0].getBoundingClientRect().width
-        const width = Array.from(ref.current.children[0].children).reduce((acc, item) => acc + item.getBoundingClientRect().width, 0) + gap * (ref.current.children[0].children.length - 1)
-        const currentTranslateX = -(width - ref.current.clientWidth)
-// console.log('gap', gap)
-//         console.log('width', width)
+        const enoughX = 50
 
-        setTranslateX(prev => {
-            const res = prev + x
-            // console.log(res, currentTranslateX)
-            if (res < currentTranslateX) {
-                return currentTranslateX
-            } else if (res > 0) {
-                return 0
-            } else {
-                return res
+        if (Math.abs(x) > enoughX) {
+            if (x < 0) {
+                setSlide(initSlideIndex + 1)
+            } else if (x > 0) {
+                setSlide(initSlideIndex - 1)
             }
-        })
+        }
+
         setX(0)
     }
 
@@ -86,11 +122,17 @@ const SwiperLight = ({children, className}: SwiperProps) => {
         swiping({changedX: e.clientX})
     }
 
+    const focusHandler = () => {
+        setSlide(Array.from(document.activeElement.parentElement.children).indexOf(document.activeElement))
+
+    }
+
     return (
         <div className={stack(styles.swiper, className)} onTouchStart={touchStart} onTouchEnd={endSwiping}
              onTouchMove={touchMove} onMouseDown={touchMouseStart}
              onMouseUp={endSwiping} onMouseMove={touchMouseMove} onMouseLeave={endSwiping}>
             <div
+                onFocusCapture={focusHandler}
                 className={stack(styles.swiper__wrapper, !moving && styles.transition)} ref={ref}
                 style={{transform: `translateX(${translateX + x}px)`}}>
                 {children}
