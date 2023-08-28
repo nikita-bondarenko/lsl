@@ -6,6 +6,10 @@ import Contacts from "../../pages/Contacts";
 import {useWholeData} from "../../hooks/useWholeData";
 import Feedbacks from "../../pages/Feedbacks";
 import Test from "../../pages/Test";
+import Trainings from "../../pages/Trainings";
+import History from "../../pages/History";
+import Blog from "../../pages/Blog";
+import BlogPost from "../../pages/BlogPost";
 
 const routes: { path: string, element: ReactElement | ReactNode }[] = [
     {
@@ -18,6 +22,22 @@ const routes: { path: string, element: ReactElement | ReactNode }[] = [
     {
         path: '/feedbacks',
         element: <Feedbacks/>
+    },
+    {
+        path: '/history',
+        element: <History/>
+    },
+    {
+        path: '/trainings',
+        element: <Trainings/>
+    },
+    {
+        path: '/blog',
+        element: <Blog/>
+    },
+    {
+        path: '/blog/:id',
+        element: <BlogPost/>
     },
     {
         path: '/test',

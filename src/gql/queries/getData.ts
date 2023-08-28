@@ -2,117 +2,334 @@ import {gql} from "@apollo/client";
 
 export const DATA = gql(`
 query Data {
-  allBlog {
+  allBlog (last:9999999) {
     nodes {
       id
       slug
+      date
       blog {
-        blogPostTekst
-        blogPostZagolovok
-        blogPostImageKompyuter1x {
+        blogPostContentTekst
+        blogPostHeroKratkoeOpisanie
+        blogPostHeroZagolovok
+        blogPostMediaTekstPodVideo
+        blogPostMediaTekstNadIzobrazheniem
+        blogPostMediaVideo {
+          mediaItemUrl
           sourceUrl
           altText
         }
-        blogPostImageKompyuter2x {
+        blogPostMediaIzobrazhenieDlyaTelefonaX2 {
           sourceUrl
           altText
         }
-        blogPostImageTelefon1x {
+        blogPostMediaIzobrazhenieDlyaTelefonaX1 {
+          altText
+          sourceUrl
+        }
+        blogPostMediaIzobrazhenieDlyaKompyuteraX2 {
+          altText
+          sourceUrl
+        }
+        blogPostMediaIzobrazhenieDlyaKompyuteraX1 {
+          altText
+          sourceUrl
+        }
+        blogPostHeroImageTelefon2x {
           sourceUrl
           altText
         }
-        blogPostImageTelefon2x {
-          sourceUrl
+        blogPostHeroImageTelefon1x {
           altText
+          sourceUrl
+        }
+        blogPostHeroImageKompyuter2x {
+          altText
+          sourceUrl
+        }
+        blogPostHeroImageKompyuter1x {
+          altText
+          sourceUrl
         }
       }
-      date
     }
   }
   pages {
     nodes {
       slug
-    metaData {
-      metaOpisanie
-      metaZagolovok
+      metaData {
+        metaOpisanie
+        metaZagolovok
+      }
+      contacts {
+        contactsPageTekstKnopki
+        contactsPageZagolovok
+        contactsPagePodzagolovok
+      }
+      main {
+        mainAboutTekst
+        mainAboutZagolovok
+        mainBlogAdresSsylki
+        mainBlogRemarka
+        mainBlogTekstSsylki
+        mainBlogZagolovok
+        mainHeroAdresSsylki
+        mainHeroMalyjTekst
+        mainHeroPodzagolovok
+        mainHeroTekst
+        mainHeroTekstSsylki
+        mainHeroZagolovok
+        mainSafetyPervyjTekst
+        mainSafetyVtorojTekst
+        mainSafetyThirdTekst
+        mainSafetyZagolovok
+        mainSupportRemarka
+        mainSupportRemarkaVnizu
+        mainSupportTekst
+        mainSupportTekstKnopki
+        mainSupportZagolovok
+        mainTrainingAdresSsylki
+        mainTrainingTekstSsylki
+        mainTrainingZagolovok
+        mainValuesZagolovok
+        mainAboutImageKompyuter1x {
+          sourceUrl
+          altText
+        }
+        mainAboutImageKompyuter2x {
+          sourceUrl
+          altText
+        }
+        mainAboutImageTelefon1x {
+          sourceUrl
+          altText
+        }
+        mainAboutImageTelefon2x {
+          sourceUrl
+          altText
+        }
+        mainHeroSlajder {
+          mainHeroSlajderKompyuter1x {
+            sourceUrl
+            altText
+          }
+          mainHeroSlajderKompyuter2x {
+            sourceUrl
+            altText
+          }
+          mainHeroSlajderTelefon1x {
+            sourceUrl
+            altText
+          }
+          mainHeroSlajderTelefon2x {
+            sourceUrl
+            altText
+          }
+        }
+        mainSupportSpisokVozmozhnyhPozhertvovanij {
+          mainSupportSpisokSumma
+        }
+        mainSafetyVideo {
+          mediaItemUrl
+        }
+        mainValuesSpisok {
+          mainValuesNomer
+          mainValuesTekst
+        }
+      }
+      history {
+        historyFindTrainingAdresSsylki
+        historyFindTrainingTekst
+        historyFindTrainingTekstSsylki
+        historyHeroBolshojTekst
+        historyHeroMalyjTekst
+        historyHistoryZagolovok
+        historyMessengerSsylkaKnopki
+        historyMessengerTekst
+        historyMessengerTekstKnopki
+        historyMessengerZagolovok
+        historyProjectsTekst
+        historyProjectsZagolovok
+        historySendedKoneczPervojStroki
+        historySendedKoneczVtorojStroki
+        historySendedNachaloPervojStroki
+        historySendedTretyaStroka
+        historySendedVydelennyjTekstPervojStroki
+        historySendedVydelennyjTekstVtorojStroki
+        historyWeCzitata
+        historyWeTekstSverhu
+        historyWeTekstVnizu
+        historyWeZagolovok
+        historyHistoryList {
+          god
+          tekst
+        }
+        historyHeroImageKompyuterX1 {
+          altText
+          sourceUrl
+        }
+        historyHeroImageKompyuterX2 {
+          altText
+          sourceUrl
+        }
+        historyHeroImageTelefonX1 {
+          altText
+          sourceUrl
+        }
+        historyHeroImageTelefonX2 {
+          sourceUrl
+        }
+        historyMessengerIzobrazhenieDlyaKompyuteraX1 {
+          altText
+          sourceUrl
+        }
+        historyMessengerIzobrazhenieDlyaKompyuteraX2 {
+          altText
+          sourceUrl
+        }
+        historyMessengerIzobrazhenieDlyaTelefonaX1 {
+          altText
+          sourceUrl
+        }
+        historyMessengerIzobrazhenieDlyaTelefonaX2 {
+          altText
+          sourceUrl
+        }
+        historyProjectsSpisok {
+          kompyuterX1 {
+            altText
+            sourceUrl
+          }
+          kompyuterX2 {
+            altText
+            sourceUrl
+          }
+          telefonX1 {
+            altText
+            sourceUrl
+          }
+          telefonX2 {
+            altText
+            sourceUrl
+          }
+        }
+        historySendedGoroda {
+          strokaGorodov {
+            nazvanieGoroda
+            izobrazhenie {
+              altText
+              sourceUrl
+            }
+          }
+        }
+        historyWeFirstImageKompyuterX1 {
+          altText
+          sourceUrl
+        }
+        historyWeFirstImageKompyuterX2 {
+          altText
+          sourceUrl
+        }
+        historyWeFirstImageTelefonX1 {
+          altText
+          sourceUrl
+        }
+        historyWeFirstImageTelefonX2 {
+          altText
+          sourceUrl
+        }
+        historyWeSecondImageKompyuterX1 {
+          altText
+          sourceUrl
+        }
+        historyWeSecondImageKompyuterX2 {
+          altText
+          sourceUrl
+        }
+        historyWeSecondImageTelefonX1 {
+          altText
+          sourceUrl
+        }
+        historyWeSecondImageTelefonX2 {
+          altText
+          sourceUrl
+        }
+      }
+      blogPage {
+        blogZagolovok
+      }
+      trainings {
+        trainingsAboutTekst
+        trainingsDeliveryZagolovok
+        trainingsGiftTekst
+        trainingsHeroPodzagolovok
+        trainingsHeroZagolovok
+        trainingsSelectPodzagolovok
+        trainingsSelectZagolovok
+        trainingsAboutIzobrazhenieDlyaKompyuteraX1 {
+          altText
+          sourceUrl
+        }
+        trainingsAboutIzobrazhenieDlyaKompyuteraX2 {
+          altText
+          sourceUrl
+        }
+        trainingsAboutIzobrazhenieDlyaTelefonaX1 {
+          altText
+          sourceUrl
+        }
+        trainingsAboutIzobrazhenieDlyaTelefonaX2 {
+          altText
+          sourceUrl
+        }
+        trainingsAdvantagesSpisok {
+          tekst
+          zagolovok
+          dekor {
+            altText
+            sourceUrl
+          }
+        }
+        trainingsDeliverySpisok {
+          tekst
+          dekor {
+            altText
+            sourceUrl
+          }
+        }
+        trainingsGiftIzobrazhenieDlyaKompyuteraX1 {
+          altText
+          sourceUrl
+        }
+        trainingsGiftIzobrazhenieDlyaKompyuteraX2 {
+          altText
+          sourceUrl
+        }
+        trainingsGiftIzobrazhenieDlyaTelefonaX1 {
+          altText
+          sourceUrl
+        }
+        trainingsGiftIzobrazhenieDlyaTelefonaX2 {
+          altText
+          sourceUrl
+        }
+        trainingsHeroIzobrazhenieDlyaKompyuteraX1 {
+          altText
+          sourceUrl
+        }
+        trainingsHeroIzobrazhenieDlyaKompyuteraX2 {
+          altText
+          sourceUrl
+        }
+        trainingsHeroIzobrazhenieDlyaTelefonaX1 {
+          altText
+          sourceUrl
+        }
+        trainingsHeroIzobrazhenieDlyaTelefonaX2 {
+          altText
+          sourceUrl
+        }
+      }
     }
-    contacts {
-      contactsPageTekstKnopki
-      contactsPageZagolovok
-      contactsPagePodzagolovok
-    }
-    main {
-      mainAboutTekst
-      mainAboutZagolovok
-      mainBlogAdresSsylki
-      mainBlogRemarka
-      mainBlogTekstSsylki
-      mainBlogZagolovok
-      mainHeroAdresSsylki
-      mainHeroMalyjTekst
-      mainHeroPodzagolovok
-      mainHeroTekst
-      mainHeroTekstSsylki
-      mainHeroZagolovok
-      mainSafetyPervyjTekst
-      mainSafetyVtorojTekst
-      mainSafetyThirdTekst
-      mainSafetyZagolovok
-      mainSupportRemarka
-      mainSupportRemarkaVnizu
-      mainSupportTekst
-      mainSupportTekstKnopki
-      mainSupportZagolovok
-      mainTrainingAdresSsylki
-      mainTrainingTekstSsylki
-      mainTrainingZagolovok
-      mainValuesZagolovok
-      mainAboutImageKompyuter1x {
-        sourceUrl
-        altText
-      }
-      mainAboutImageKompyuter2x {
-        sourceUrl
-        altText
-      }
-      mainAboutImageTelefon1x {
-        sourceUrl
-        altText
-      }
-      mainAboutImageTelefon2x {
-        sourceUrl
-        altText
-      }
-      mainHeroSlajder {
-        mainHeroSlajderKompyuter1x {
-          sourceUrl
-          altText
-        }
-        mainHeroSlajderKompyuter2x {
-          sourceUrl
-          altText
-        }
-        mainHeroSlajderTelefon1x {
-          sourceUrl
-          altText
-        }
-        mainHeroSlajderTelefon2x {
-          sourceUrl
-          altText
-        }
-      }
-      mainSupportSpisokVozmozhnyhPozhertvovanij {
-        mainSupportSpisokSumma
-      }
-      mainSafetyVideo {
-        mediaItemUrl
-      }
-      mainValuesSpisok {
-        mainValuesNomer
-        mainValuesTekst
-      }
-    }
-       }
   }
   commonSections {
     nodes {
@@ -123,9 +340,9 @@ query Data {
         }
       }
       feedbacks {
-          feedbacksPodzagolovok
+        feedbacksPodzagolovok
         feedbacksZagolovok
-            feedbacksPodzagolovok1
+        feedbacksPodzagolovok1
         feedbacksZagolovok1
         feedbacksZagolovok2
         feedbacksImageSlajder {
@@ -251,7 +468,6 @@ query Data {
       }
     }
   }
-   
   menu(id: "dGVybToxOQ==") {
     menuItems(where: {parentDatabaseId: 0}) {
       nodes {
@@ -296,7 +512,7 @@ query Data {
       }
     }
   }
-  trainings {
+  trainings  (last:9999999) {
     nodes {
       date
       modified

@@ -4,12 +4,12 @@ export interface Pokedex {
 }
 
 export interface Data {
+    allBlog:        AllBlog;
     pages:          Pages;
     commonSections: CommonSections;
     menu:           Menu;
     publications:   DataPublications;
-    trainings:      Trainings;
-    allBlog:        AllBlog;
+    trainings:      DataTrainings;
 }
 
 export interface AllBlog {
@@ -19,22 +19,51 @@ export interface AllBlog {
 export interface AllBlogNode {
     id:   string;
     slug: string;
-    blog: Blog;
     date: Date;
+    blog: Blog;
 }
 
 export interface Blog {
-    blogPostTekst:            null;
-    blogPostZagolovok:        null;
-    blogPostImageKompyuter1x: BlogPostImageKompyuter1X;
-    blogPostImageKompyuter2x: BlogPostImageKompyuter1X;
-    blogPostImageTelefon1x:   BlogPostImageKompyuter1X;
-    blogPostImageTelefon2x:   BlogPostImageKompyuter1X;
+    blogPostContentTekst:                      null;
+    blogPostHeroKratkoeOpisanie:               string;
+    blogPostHeroZagolovok:                     BlogPostHeroZagolovok;
+    blogPostMediaTekstPodVideo:                null;
+    blogPostMediaTekstNadIzobrazheniem:        null;
+    blogPostMediaVideo:                        null;
+    blogPostMediaIzobrazhenieDlyaTelefonaX2:   null;
+    blogPostMediaIzobrazhenieDlyaTelefonaX1:   null;
+    blogPostMediaIzobrazhenieDlyaKompyuteraX2: null;
+    blogPostMediaIzobrazhenieDlyaKompyuteraX1: null;
+    blogPostHeroImageTelefon2x:                BlogPostHeroImageKompyuter1X;
+    blogPostHeroImageTelefon1x:                BlogPostHeroImageKompyuter1X;
+    blogPostHeroImageKompyuter2x:              BlogPostHeroImageKompyuter1X;
+    blogPostHeroImageKompyuter1x:              BlogPostHeroImageKompyuter1X;
 }
 
-export interface BlogPostImageKompyuter1X {
+export interface BlogPostHeroImageKompyuter1X {
+    altText:   AltText;
     sourceUrl: string;
-    altText: string;
+}
+
+export enum AltText {
+    Empty = "",
+    ДевочкаВКрасномПлатье = "Девочка в красном платье",
+    ЛогоWhatsapp = "Лого Whatsapp",
+    ЛогоИнстаграм = "Лого Инстаграм",
+    Логотип = "Логотип",
+    МамаКати = "Мама Кати",
+    СтатьяВЖурналеForbes = "Статья в журнале forbes",
+    СтатьяВЖурналеМосквич = "Статья в журнале Москвич",
+    СтатьяВЖурналеЯМогу = "Статья в журнале Я-могу",
+    Телефон = "Телефон",
+    ТренажерРастущийСтолИСтул = "Тренажер Растущий стол и стул",
+    ТренажерСтульчикШведскаяСтенка = "Тренажер Стульчик шведская стенка",
+    ТренажерСтупенька = "Тренажер Ступенька",
+    ТренажерТабуретНаКолесиках = "Тренажер Табурет на колесиках",
+}
+
+export enum BlogPostHeroZagolovok {
+    НазваниеСтатьи = "Название статьи",
 }
 
 export interface CommonSections {
@@ -62,29 +91,28 @@ export interface CookiesPolitikaKonfidenczialnosti {
 export interface Feedbacks {
     feedbacksPodzagolovok:  null | string;
     feedbacksZagolovok:     null | string;
-    feedbacksPodzagolovok1:  null | string;
-    feedbacksZagolovok1:     null | string;
-    feedbacksPodzagolovok2:  null | string;
-    feedbacksZagolovok2:     null | string;
+    feedbacksPodzagolovok1: null | string;
+    feedbacksZagolovok1:    null | string;
+    feedbacksZagolovok2:    null | string;
     feedbacksImageSlajder:  FeedbacksImageSlajder[] | null;
     feedbacksSimpleSlajder: FeedbacksSimpleSlajder[] | null;
 }
 
 export interface FeedbacksImageSlajder {
-    feedbacksImageKompyuter1x: BlogPostImageKompyuter1X;
-    feedbacksImageKompyuter2x: BlogPostImageKompyuter1X;
-    feedbacksImageTelefon1x:   BlogPostImageKompyuter1X;
-    feedbacksImageTelefon2x:   BlogPostImageKompyuter1X;
+    feedbacksImageKompyuter1x: BlogPostHeroImageKompyuter1X;
+    feedbacksImageKompyuter2x: BlogPostHeroImageKompyuter1X;
+    feedbacksImageTelefon1x:   BlogPostHeroImageKompyuter1X;
+    feedbacksImageTelefon2x:   BlogPostHeroImageKompyuter1X;
 }
 
 export interface FeedbacksSimpleSlajder {
     feedbacksSimpleImya:            string;
     feedbacksSimpleOpisanieKlienta: string;
     feedbacksSimpleTekstOtzyva:     string;
-    feedbacksSimpleKompyuter1x:     BlogPostImageKompyuter1X;
-    feedbacksSimpleKompyuter2x:     BlogPostImageKompyuter1X;
-    feedbacksSimpleTelefon1x:       BlogPostImageKompyuter1X;
-    feedbacksSimpleTelefon2x:       BlogPostImageKompyuter1X;
+    feedbacksSimpleKompyuter1x:     BlogPostHeroImageKompyuter1X;
+    feedbacksSimpleKompyuter2x:     BlogPostHeroImageKompyuter1X;
+    feedbacksSimpleTelefon1x:       BlogPostHeroImageKompyuter1X;
+    feedbacksSimpleTelefon2x:       BlogPostHeroImageKompyuter1X;
 }
 
 export interface Footer {
@@ -92,8 +120,8 @@ export interface Footer {
     footerKopirajt:                   null | string;
     footerSocialZagolovok:            null | string;
     footerContactsSpisok:             FooterContactsSpisok[] | null;
-    footerLogotip:                    BlogPostImageKompyuter1X | null;
-    footerLogotipMobile:              BlogPostImageKompyuter1X | null;
+    footerLogotip:                    BlogPostHeroImageKompyuter1X | null;
+    footerLogotipMobile:              BlogPostHeroImageKompyuter1X | null;
     footerPolitikaKonfidenczialnosti: CookiesPolitikaKonfidenczialnosti | null;
     footerPublichnayaOferta:          CookiesPolitikaKonfidenczialnosti | null;
     footerSocialSpisok:               FooterSocialSpisok[] | null;
@@ -112,14 +140,14 @@ export interface FooterContactsSpisok {
 export interface FooterSocialSpisok {
     footerSocialAdres:  string;
     footerSocialTekst:  string;
-    footerSocialIkonka: BlogPostImageKompyuter1X;
+    footerSocialIkonka: BlogPostHeroImageKompyuter1X;
 }
 
 export interface Header {
     headerAdresSajta:    null | string;
     headerTelefon:       null | string;
-    headerLogotip:       BlogPostImageKompyuter1X | null;
-    headerLogotipMobile: BlogPostImageKompyuter1X | null;
+    headerLogotip:       BlogPostHeroImageKompyuter1X | null;
+    headerLogotipMobile: BlogPostHeroImageKompyuter1X | null;
 }
 
 export interface Messenger {
@@ -128,10 +156,10 @@ export interface Messenger {
     messengerTekstKnopki:      null | string;
     messengerZagolovok:        null | string;
     messengerTelefon:          null | string;
-    messengerImageKompyuter1x: BlogPostImageKompyuter1X | null;
-    messengerImageKompyuter2x: BlogPostImageKompyuter1X | null;
-    messengerImageTelefon1x:   BlogPostImageKompyuter1X | null;
-    messengerImageTelefon2x:   BlogPostImageKompyuter1X | null;
+    messengerImageKompyuter1x: BlogPostHeroImageKompyuter1X | null;
+    messengerImageKompyuter2x: BlogPostHeroImageKompyuter1X | null;
+    messengerImageTelefon1x:   BlogPostHeroImageKompyuter1X | null;
+    messengerImageTelefon2x:   BlogPostHeroImageKompyuter1X | null;
 }
 
 export interface OrderSteps {
@@ -167,16 +195,92 @@ export interface Pages {
 }
 
 export interface PagesNode {
-    slug:     string;
-    metaData: MetaData;
-    contacts: Contacts;
-    main:     Main;
+    slug:      string;
+    metaData:  MetaData;
+    contacts:  Contacts;
+    main:      Main;
+    history:   History;
+    blogPage:  BlogPage;
+    trainings: NodeTrainings;
+}
+
+export interface BlogPage {
+    blogZagolovok: null | string;
 }
 
 export interface Contacts {
     contactsPageTekstKnopki:  null | string;
     contactsPageZagolovok:    null | string;
     contactsPagePodzagolovok: null | string;
+}
+
+export interface History {
+    historyFindTrainingAdresSsylki:               null | string;
+    historyFindTrainingTekst:                     null | string;
+    historyFindTrainingTekstSsylki:               null | string;
+    historyHeroBolshojTekst:                      null | string;
+    historyHeroMalyjTekst:                        null | string;
+    historyHistoryZagolovok:                      null | string;
+    historyMessengerSsylkaKnopki:                 null;
+    historyMessengerTekst:                        null | string;
+    historyMessengerTekstKnopki:                  null | string;
+    historyMessengerZagolovok:                    null | string;
+    historyProjectsTekst:                         null | string;
+    historyProjectsZagolovok:                     null | string;
+    historySendedKoneczPervojStroki:              null | string;
+    historySendedKoneczVtorojStroki:              null | string;
+    historySendedNachaloPervojStroki:             null | string;
+    historySendedTretyaStroka:                    null | string;
+    historySendedVydelennyjTekstPervojStroki:     null | string;
+    historySendedVydelennyjTekstVtorojStroki:     null | string;
+    historyWeCzitata:                             null | string;
+    historyWeTekstSverhu:                         null | string;
+    historyWeTekstVnizu:                          null | string;
+    historyWeZagolovok:                           null | string;
+    historyHistoryList:                           HistoryHistoryList[] | null;
+    historyHeroImageKompyuterX1:                  BlogPostHeroImageKompyuter1X | null;
+    historyHeroImageKompyuterX2:                  BlogPostHeroImageKompyuter1X | null;
+    historyHeroImageTelefonX1:                    BlogPostHeroImageKompyuter1X | null;
+    historyHeroImageTelefonX2:                    HistoryHeroImageTelefonX2 | null;
+    historyMessengerIzobrazhenieDlyaKompyuteraX1: BlogPostHeroImageKompyuter1X | null;
+    historyMessengerIzobrazhenieDlyaKompyuteraX2: BlogPostHeroImageKompyuter1X | null;
+    historyMessengerIzobrazhenieDlyaTelefonaX1:   BlogPostHeroImageKompyuter1X | null;
+    historyMessengerIzobrazhenieDlyaTelefonaX2:   BlogPostHeroImageKompyuter1X | null;
+    historyProjectsSpisok:                        HistoryProjectsSpisok[] | null;
+    historySendedGoroda:                          HistorySendedGoroda[] | null;
+    historyWeFirstImageKompyuterX1:               BlogPostHeroImageKompyuter1X | null;
+    historyWeFirstImageKompyuterX2:               BlogPostHeroImageKompyuter1X | null;
+    historyWeFirstImageTelefonX1:                 BlogPostHeroImageKompyuter1X | null;
+    historyWeFirstImageTelefonX2:                 BlogPostHeroImageKompyuter1X | null;
+    historyWeSecondImageKompyuterX1:              BlogPostHeroImageKompyuter1X | null;
+    historyWeSecondImageKompyuterX2:              BlogPostHeroImageKompyuter1X | null;
+    historyWeSecondImageTelefonX1:                BlogPostHeroImageKompyuter1X | null;
+    historyWeSecondImageTelefonX2:                BlogPostHeroImageKompyuter1X | null;
+}
+
+export interface HistoryHeroImageTelefonX2 {
+    sourceUrl: string;
+}
+
+export interface HistoryHistoryList {
+    god:   string;
+    tekst: string;
+}
+
+export interface HistoryProjectsSpisok {
+    kompyuterX1: BlogPostHeroImageKompyuter1X;
+    kompyuterX2: BlogPostHeroImageKompyuter1X;
+    telefonX1:   BlogPostHeroImageKompyuter1X;
+    telefonX2:   BlogPostHeroImageKompyuter1X;
+}
+
+export interface HistorySendedGoroda {
+    strokaGorodov: StrokaGorodov[];
+}
+
+export interface StrokaGorodov {
+    nazvanieGoroda: string;
+    izobrazhenie:   BlogPostHeroImageKompyuter1X;
 }
 
 export interface Main {
@@ -194,8 +298,7 @@ export interface Main {
     mainHeroZagolovok:                         null | string;
     mainSafetyPervyjTekst:                     null | string;
     mainSafetyVtorojTekst:                     null | string;
-
-    mainSafetyThirdTekst:                       null | string;
+    mainSafetyThirdTekst:                      null | string;
     mainSafetyZagolovok:                       null | string;
     mainSupportRemarka:                        null | string;
     mainSupportRemarkaVnizu:                   null | string;
@@ -206,10 +309,10 @@ export interface Main {
     mainTrainingTekstSsylki:                   null | string;
     mainTrainingZagolovok:                     null | string;
     mainValuesZagolovok:                       null | string;
-    mainAboutImageKompyuter1x:                 BlogPostImageKompyuter1X | null;
-    mainAboutImageKompyuter2x:                 BlogPostImageKompyuter1X | null;
-    mainAboutImageTelefon1x:                   BlogPostImageKompyuter1X | null;
-    mainAboutImageTelefon2x:                   BlogPostImageKompyuter1X | null;
+    mainAboutImageKompyuter1x:                 BlogPostHeroImageKompyuter1X | null;
+    mainAboutImageKompyuter2x:                 BlogPostHeroImageKompyuter1X | null;
+    mainAboutImageTelefon1x:                   BlogPostHeroImageKompyuter1X | null;
+    mainAboutImageTelefon2x:                   BlogPostHeroImageKompyuter1X | null;
     mainHeroSlajder:                           MainHeroSlajder[] | null;
     mainSupportSpisokVozmozhnyhPozhertvovanij: MainSupportSpisokVozmozhnyhPozhertvovanij[] | null;
     mainSafetyVideo:                           CookiesPolitikaKonfidenczialnosti | null;
@@ -217,10 +320,10 @@ export interface Main {
 }
 
 export interface MainHeroSlajder {
-    mainHeroSlajderKompyuter1x: BlogPostImageKompyuter1X;
-    mainHeroSlajderKompyuter2x: BlogPostImageKompyuter1X;
-    mainHeroSlajderTelefon1x:   BlogPostImageKompyuter1X;
-    mainHeroSlajderTelefon2x:   BlogPostImageKompyuter1X;
+    mainHeroSlajderKompyuter1x: BlogPostHeroImageKompyuter1X;
+    mainHeroSlajderKompyuter2x: BlogPostHeroImageKompyuter1X;
+    mainHeroSlajderTelefon1x:   BlogPostHeroImageKompyuter1X;
+    mainHeroSlajderTelefon2x:   BlogPostHeroImageKompyuter1X;
 }
 
 export interface MainSupportSpisokVozmozhnyhPozhertvovanij {
@@ -237,6 +340,41 @@ export interface MetaData {
     metaZagolovok: string;
 }
 
+export interface NodeTrainings {
+    trainingsAboutTekst:                        null | string;
+    trainingsDeliveryZagolovok:                 null | string;
+    trainingsGiftTekst:                         null | string;
+    trainingsHeroPodzagolovok:                  null | string;
+    trainingsHeroZagolovok:                     null | string;
+    trainingsSelectPodzagolovok:                null | string;
+    trainingsSelectZagolovok:                   null | string;
+    trainingsAboutIzobrazhenieDlyaKompyuteraX1: BlogPostHeroImageKompyuter1X | null;
+    trainingsAboutIzobrazhenieDlyaKompyuteraX2: null;
+    trainingsAboutIzobrazhenieDlyaTelefonaX1:   BlogPostHeroImageKompyuter1X | null;
+    trainingsAboutIzobrazhenieDlyaTelefonaX2:   BlogPostHeroImageKompyuter1X | null;
+    trainingsAdvantagesSpisok:                  TrainingsAdvantagesSpisok[] | null;
+    trainingsDeliverySpisok:                    TrainingsDeliverySpisok[] | null;
+    trainingsGiftIzobrazhenieDlyaKompyuteraX1:  BlogPostHeroImageKompyuter1X | null;
+    trainingsGiftIzobrazhenieDlyaKompyuteraX2:  BlogPostHeroImageKompyuter1X | null;
+    trainingsGiftIzobrazhenieDlyaTelefonaX1:    BlogPostHeroImageKompyuter1X | null;
+    trainingsGiftIzobrazhenieDlyaTelefonaX2:    BlogPostHeroImageKompyuter1X | null;
+    trainingsHeroIzobrazhenieDlyaKompyuteraX1:  BlogPostHeroImageKompyuter1X | null;
+    trainingsHeroIzobrazhenieDlyaKompyuteraX2:  BlogPostHeroImageKompyuter1X | null;
+    trainingsHeroIzobrazhenieDlyaTelefonaX1:    BlogPostHeroImageKompyuter1X | null;
+    trainingsHeroIzobrazhenieDlyaTelefonaX2:    BlogPostHeroImageKompyuter1X | null;
+}
+
+export interface TrainingsAdvantagesSpisok {
+    tekst:     string;
+    zagolovok: string;
+    dekor:     BlogPostHeroImageKompyuter1X;
+}
+
+export interface TrainingsDeliverySpisok {
+    tekst: string;
+    dekor: BlogPostHeroImageKompyuter1X;
+}
+
 export interface DataPublications {
     nodes: PublicationsNode[];
 }
@@ -251,16 +389,14 @@ export interface NodePublications {
     publicationsKratkoeOpisanie:   string;
     publicationsNazvanie:          string;
     publicationsPodrobnoeOpisanie: null;
-    publicationsAdresSsylki:       null | string;
-
-    publicationsAlt: null | string;
-    publicationsImageKompyuter1x:  BlogPostImageKompyuter1X;
-    publicationsImageKompyuter2x:  BlogPostImageKompyuter1X;
-    publicationsImageTelefon1x:    BlogPostImageKompyuter1X;
-    publicationsImageTelefon2x:    BlogPostImageKompyuter1X;
+    publicationsAdresSsylki:       string;
+    publicationsImageKompyuter1x:  BlogPostHeroImageKompyuter1X;
+    publicationsImageKompyuter2x:  BlogPostHeroImageKompyuter1X;
+    publicationsImageTelefon1x:    BlogPostHeroImageKompyuter1X;
+    publicationsImageTelefon2x:    BlogPostHeroImageKompyuter1X;
 }
 
-export interface Trainings {
+export interface DataTrainings {
     nodes: TrainingsNode[];
 }
 
@@ -272,13 +408,13 @@ export interface TrainingsNode {
 
 export interface Training {
     nazvanie:                  string;
-    trainingCzena:             number;
+    trainingCzena:             string;
     trainingKratkoeOpisanie:   string;
     trainingPodrobnoeOpisanie: null;
-    trainingImageKompyuter1x:  BlogPostImageKompyuter1X;
-    trainingImageKompyuter2x:  BlogPostImageKompyuter1X;
-    trainingImageTelefon1x:    BlogPostImageKompyuter1X;
-    trainingImageTelefon2x:    BlogPostImageKompyuter1X;
+    trainingImageKompyuter1x:  BlogPostHeroImageKompyuter1X;
+    trainingImageKompyuter2x:  BlogPostHeroImageKompyuter1X;
+    trainingImageTelefon1x:    BlogPostHeroImageKompyuter1X;
+    trainingImageTelefon2x:    BlogPostHeroImageKompyuter1X;
 }
 
 export interface Extensions {

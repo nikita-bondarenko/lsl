@@ -1,6 +1,6 @@
 import {createContext, Dispatch, SetStateAction, useContext, useEffect, useState} from "react";
 
-import {Data,  PagesNode} from "../types/data";
+import {AllBlogNode, Data, PagesNode} from "../types/data";
 
 export type GlobalContextType = {
 
@@ -24,8 +24,16 @@ export type GlobalContextType = {
     setData: Dispatch<SetStateAction<Data | undefined>>,
     mainPage: PagesNode | undefined,
     setMainPage: Dispatch<SetStateAction<PagesNode | undefined>>,
+    historyPage: PagesNode | undefined,
+    setHistoryPage: Dispatch<SetStateAction<PagesNode | undefined>>,
     contactPage: PagesNode | undefined,
-    setContactPage: Dispatch<SetStateAction<PagesNode | undefined>>
+    setContactPage: Dispatch<SetStateAction<PagesNode | undefined>>,
+    blogPage: PagesNode | undefined,
+    setBlogPage: Dispatch<SetStateAction<PagesNode | undefined>>,
+    trainingsPage: PagesNode | undefined,
+    setTrainingsPage: Dispatch<SetStateAction<PagesNode | undefined>>,
+    blogPostPage: AllBlogNode | undefined,
+    setBlogPostPage: Dispatch<SetStateAction<AllBlogNode | undefined>>
 }
 
 
@@ -39,6 +47,10 @@ export const globalState = (): GlobalContextType => {
     const [data, setData] = useState<Data>()
     const [mainPage, setMainPage] = useState<PagesNode>()
     const [contactPage, setContactPage] = useState<PagesNode>()
+    const [historyPage, setHistoryPage] = useState<PagesNode>()
+    const [blogPage, setBlogPage] = useState<PagesNode>()
+    const [blogPostPage, setBlogPostPage] = useState<AllBlogNode>()
+    const [trainingsPage, setTrainingsPage] = useState<PagesNode>()
 
 
     useEffect(() => {
@@ -46,8 +58,9 @@ export const globalState = (): GlobalContextType => {
 
     }, [])
 
-    useEffect(() => {setHistoryLength(prev => prev+ 1)}, [location.href])
-
+    useEffect(() => {
+        setHistoryLength(prev => prev + 1)
+    }, [location.href])
 
 
     return {
@@ -60,7 +73,20 @@ export const globalState = (): GlobalContextType => {
         isNavModalOpen,
         setIsNavModalOpen,
         isMobile,
-       historyLength, setHistoryLength, setData, data, setMainPage, mainPage, setContactPage, contactPage
+        historyLength,
+        setHistoryLength,
+        setData,
+        data,
+        setMainPage,
+        mainPage,
+        setContactPage,
+        contactPage,
+        blogPage,
+        setBlogPage,
+        historyPage,
+        setHistoryPage,
+        setTrainingsPage,
+        trainingsPage, blogPostPage, setBlogPostPage
     }
 }
 

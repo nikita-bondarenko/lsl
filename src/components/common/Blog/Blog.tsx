@@ -33,10 +33,10 @@ const Blog = ({title, linkHref, linkText, remark}: BlogProps) => {
             <ul className={styles.list}>
                 {blog?.map((item, index) => <li key={index} className={stack(styles.item)} ><Link className={styles.item__link} to={item.id} >
                     <Picture imageClassName={stack('link',styles.item__image)} className={styles.item__picture}
-                             desktopIImageX2={item?.blog?.blogPostImageKompyuter2x?.sourceUrl}
-                             desktopIImageX1={item?.blog?.blogPostImageKompyuter1x?.sourceUrl}
-                             mobileIImageX1={item?.blog?.blogPostImageTelefon1x?.sourceUrl}
-                             mobileIImageX2={item?.blog?.blogPostImageTelefon2x?.sourceUrl} alt={item?.blog?.blogPostImageKompyuter1x?.altText}></Picture>
+                             desktopIImageX2={item?.blog?.blogPostHeroImageKompyuter2x?.sourceUrl}
+                             desktopIImageX1={item?.blog?.blogPostHeroImageKompyuter1x?.sourceUrl}
+                             mobileIImageX1={item?.blog?.blogPostHeroImageTelefon1x?.sourceUrl}
+                             mobileIImageX2={item?.blog?.blogPostHeroImageTelefon2x?.sourceUrl} alt={item?.blog?.blogPostHeroImageKompyuter1x?.altText}></Picture>
                 </Link>
                 </li>)}
             </ul>

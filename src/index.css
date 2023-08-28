@@ -44,6 +44,11 @@
         sm:px-[10px]
     }
 
+    .container-new {
+        @apply max-w-[1440px] mx-auto px-[40px]
+        xl:px-[20px]
+    }
+
     .title-primary {
         @apply font-bold text-[56px] leading-[1.2]
         2xl:text-[42px]
@@ -108,6 +113,12 @@
         xl:text-[16px] xl:rounded-[8px] xl:border-[2px]
     }
 
+    .button-secondary-new {
+        @apply font-bold  leading-[1.4] flex items-center justify-center rounded-[16px] border-[3px] bg-yellow-400 border-yellow-400 transition-all hover:bg-white
+        2xl:rounded-[12px] 2xl:text-[24px]
+        xl:text-[16px] xl:rounded-[8px] xl:border-[2px]
+    }
+
     .button-small {
         @apply font-normal text-[20px] leading-[1] flex items-center justify-center border-[1px] border-white rounded-[4px] bg-white bg-opacity-[0] transition-all hover:bg-opacity-[1]
         2xl:text-[18px]
@@ -121,6 +132,14 @@
 
     .section-indent-new {
         @apply mb-[140px] xl:mb-[86px] lg:mb-[72px] md:mb-[36px] sm:mb-[32px]
+    }
+
+    .text-sm {
+
+    }
+
+    .text-lg {
+
     }
 
     .ytp-large-play-button.ytp-button.ytp-large-play-button-red-bg {
