@@ -38,7 +38,7 @@ const HomeTrainings = () => {
                             <h3 className={stack('text-primary', styles.item__title)}
                                 dangerouslySetInnerHTML={{__html: item.training?.nazvanie}}></h3>
                             <p className={stack('text-primary', styles.item__price)}
-                               >{item?.training?.trainingCzena.toLocaleString()} руб.</p>
+                               >{item?.training?.trainingCzena} </p>
                         </div>
                         <p className={stack('text-small', styles.item__text)}
                            dangerouslySetInnerHTML={{__html: item?.training?.trainingKratkoeOpisanie}}></p>

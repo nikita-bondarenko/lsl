@@ -21,7 +21,7 @@ const TrainingsSelect = () => {
             <p className={styles.subtitle}>{trainingsPage.trainings.trainingsSelectPodzagolovok}</p>
             <div className={styles.screen}>
                 <ul className={styles.list}>
-                    {trainings.map((item, index) => <li key={index} className={styles.item}>
+                    {trainings.map((item, index) => <li key={item.date.toDateString()} className={styles.item}>
                         <Link to={`/trainings/` + ''} className={stack('link', styles.link)}>
                             <Picture imageClassName={styles.image} className={styles.picture}
                                      alt={item.training.trainingImageKompyuter1x.altText}

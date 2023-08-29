@@ -10,12 +10,12 @@ import ToTopButton from "../../common/ToTopButton/ToTopButton";
 const Footer = () => {
 
     const [section] = useCommonSection("podval")
-    const {data} = useGlobalContext()
+    const {data, isNewContainer} = useGlobalContext()
 
     if (!section) return null
 
     return (
-        <section className={stack('container', styles.footer)}>
+        <section className={stack(isNewContainer ? 'container-new' : 'container', styles.footer)}>
             <ToTopButton className={styles.buttonToTop}></ToTopButton>
             <div className={styles.footer__body}>
                 <div className={styles.logo}>

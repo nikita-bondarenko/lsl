@@ -8,13 +8,16 @@ const HistoryProjects = () => {
     const {historyPage} = useGlobalContext()
 
     return (
-        <div className={stack('container-new', 'section-indent-new' , styles.body)}>
+        <div className={stack('container-new', 'section-indent-new', styles.body)}>
             <div className={styles.top}>
-                <h2 className={stack('text-lg', styles.title)}>{historyPage.history.historyProjectsZagolovok}</h2>
-                <p className={stack('text-sm', styles.text)}>{historyPage.history.historyProjectsTekst}</p>
+                <h2 className={stack('text-large', styles.title)}
+                    dangerouslySetInnerHTML={{__html: historyPage?.history.historyProjectsZagolovok}}></h2>
+                <p className={stack('text-simple', styles.text)}
+                   dangerouslySetInnerHTML={{__html: historyPage?.history.historyProjectsTekst}}></p>
             </div>
             <ul className={styles.list}>
-                {historyPage.history.historyProjectsSpisok.map((item, index) => <li key={index} className={styles.list__item}>
+                {historyPage?.history.historyProjectsSpisok.map((item, index) => <li key={index}
+                                                                                    className={styles.list__item}>
                     <Picture imageClassName={styles.image} className={styles.picture}
                              alt={item.kompyuterX1.altText}
                              desktopIImageX1={item.kompyuterX1.sourceUrl}

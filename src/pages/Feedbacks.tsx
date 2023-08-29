@@ -12,8 +12,12 @@ const Feedbacks = () => {
 
     const {
         setTitle,
-        setDescription
+        setDescription,
+        setIsNewContainer
     } = useGlobalContext()
+    useEffect(() => {
+        setIsNewContainer(false)
+    }, []);
 
     const [page] = usePage('otzyvy')
     useEffect(() => {

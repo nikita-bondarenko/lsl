@@ -10,7 +10,7 @@
 
     }
 
-     :focus-visible, :focus-within {
+    :focus-visible, :focus-within {
         outline: none;
     }
 
@@ -40,7 +40,7 @@
 
     .container {
         @apply max-w-[1920px] mx-auto px-[40px]
-      xl:px-[20px]
+        xl:px-[20px]
         sm:px-[10px]
     }
 
@@ -134,12 +134,22 @@
         @apply mb-[140px] xl:mb-[86px] lg:mb-[72px] md:mb-[36px] sm:mb-[32px]
     }
 
-    .text-sm {
-
+    .text-simple {
+        @apply text-[22px] leading-[1.4] font-normal
+        xl:text-[16px]
+        md:text-[14px]
     }
 
-    .text-lg {
+    .text-large {
+        @apply text-[38px] leading-[1.2] font-bold
+        xl:text-[32px]
+        md:text-[22px]
+    }
 
+    .text-page {
+        @apply text-[48px] font-bold leading-[1.2]
+        xl:text-[32px]
+        md:text-[24px]
     }
 
     .ytp-large-play-button.ytp-button.ytp-large-play-button-red-bg {

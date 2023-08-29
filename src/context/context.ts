@@ -33,7 +33,9 @@ export type GlobalContextType = {
     trainingsPage: PagesNode | undefined,
     setTrainingsPage: Dispatch<SetStateAction<PagesNode | undefined>>,
     blogPostPage: AllBlogNode | undefined,
-    setBlogPostPage: Dispatch<SetStateAction<AllBlogNode | undefined>>
+    setBlogPostPage: Dispatch<SetStateAction<AllBlogNode | undefined>>,
+    isNewContainer: boolean,
+    setIsNewContainer: Dispatch<SetStateAction<boolean>>
 }
 
 
@@ -51,7 +53,7 @@ export const globalState = (): GlobalContextType => {
     const [blogPage, setBlogPage] = useState<PagesNode>()
     const [blogPostPage, setBlogPostPage] = useState<AllBlogNode>()
     const [trainingsPage, setTrainingsPage] = useState<PagesNode>()
-
+    const [isNewContainer, setIsNewContainer] = useState<boolean>(false)
 
     useEffect(() => {
         setIsMobile(document.body.clientWidth < 1024)
@@ -86,7 +88,7 @@ export const globalState = (): GlobalContextType => {
         historyPage,
         setHistoryPage,
         setTrainingsPage,
-        trainingsPage, blogPostPage, setBlogPostPage
+        trainingsPage, blogPostPage, setBlogPostPage, isNewContainer, setIsNewContainer
     }
 }
 

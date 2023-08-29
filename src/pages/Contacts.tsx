@@ -11,8 +11,13 @@ const Contacts = () => {
     const {
         setTitle,
         setDescription,
-        setContactPage
+        setContactPage,
+        setIsNewContainer
     } = useGlobalContext()
+
+    useEffect(() => {
+        setIsNewContainer(false)
+    }, []);
 
     const [page] = usePage('kontakty')
     useEffect(() => {

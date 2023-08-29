@@ -94,7 +94,7 @@ export const Navigation = () => {
 const Header = () => {
 
     const [section] = useCommonSection("shapka")
-    const { setIsNavModalOpen} = useGlobalContext()
+    const { setIsNavModalOpen, isNewContainer} = useGlobalContext()
 
 
     const clickHandler = () => {
@@ -104,7 +104,7 @@ const Header = () => {
     if (!section) return null
     return (
 
-        <div className={stack('container', styles.body)}>
+        <div className={stack(isNewContainer ? 'container-new' :'container', styles.body)}>
             <div className={styles.wrapper}>
                 <Logo className={styles.logo} desktopUrl={section?.header?.headerLogotip?.sourceUrl}
                       mobileUrl={section?.header?.headerLogotipMobile?.sourceUrl} alt={section?.header?.headerLogotip?.altText}></Logo>

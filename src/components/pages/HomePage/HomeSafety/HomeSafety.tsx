@@ -18,8 +18,6 @@ const HomeSafety = () => {
             } else {
                 video.current.pause()
             }
-
-
         }
     }, [isPlaying])
 

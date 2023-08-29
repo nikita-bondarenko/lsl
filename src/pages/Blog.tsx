@@ -2,6 +2,8 @@ import React, {useEffect} from 'react';
 import Layout from "../components/layout/Layout";
 import {useGlobalContext} from "../context/context";
 import {usePage} from "../hooks/usePage";
+import Online from "../components/common/Online/Online";
+import BlogList from "../components/pages/BlogPage/BlogList/BlogList";
 
 const Blog = () => {
 
@@ -9,8 +11,14 @@ const Blog = () => {
     const {
         setTitle,
         setDescription,
-        setBlogPage
+        setBlogPage,
+        setIsNewContainer
     } = useGlobalContext()
+
+    useEffect(() => {
+        setIsNewContainer(true)
+    }, []);
+
 
     const [page] = usePage('blog')
     useEffect(() => {
@@ -23,7 +31,8 @@ const Blog = () => {
 
     return (
         <Layout>
-            blog
+            <BlogList></BlogList>
+            <Online></Online>
         </Layout>
     );
 };

@@ -2,7 +2,7 @@ import {gql} from "@apollo/client";
 
 export const DATA = gql(`
 query Data {
-  allBlog (last:9999999) {
+  allBlog(last: 9999999) {
     nodes {
       id
       slug
@@ -47,6 +47,22 @@ query Data {
           sourceUrl
         }
         blogPostHeroImageKompyuter1x {
+          altText
+          sourceUrl
+        }
+        blogPostPreviewIzobrazhenieDlyaKompyuteraX1 {
+          altText
+          sourceUrl
+        }
+        blogPostPreviewIzobrazhenieDlyaKompyuteraX2 {
+          altText
+          sourceUrl
+        }
+        blogPostPreviewIzobrazhenieDlyaTelefonaX1 {
+          altText
+          sourceUrl
+        }
+        blogPostPreviewIzobrazhenieDlyaTelefonaX2 {
           altText
           sourceUrl
         }
@@ -265,22 +281,6 @@ query Data {
         trainingsHeroZagolovok
         trainingsSelectPodzagolovok
         trainingsSelectZagolovok
-        trainingsAboutIzobrazhenieDlyaKompyuteraX1 {
-          altText
-          sourceUrl
-        }
-        trainingsAboutIzobrazhenieDlyaKompyuteraX2 {
-          altText
-          sourceUrl
-        }
-        trainingsAboutIzobrazhenieDlyaTelefonaX1 {
-          altText
-          sourceUrl
-        }
-        trainingsAboutIzobrazhenieDlyaTelefonaX2 {
-          altText
-          sourceUrl
-        }
         trainingsAdvantagesSpisok {
           tekst
           zagolovok
@@ -325,6 +325,19 @@ query Data {
           sourceUrl
         }
         trainingsHeroIzobrazhenieDlyaTelefonaX2 {
+          altText
+          sourceUrl
+        }
+        trainingsAboutZagolovok
+        trainingsAboutIzobrazhenieDlyaKompyutera {
+          altText
+          sourceUrl
+        }
+        trainingsAboutIzobrazhenieDlyaPlansheta {
+          altText
+          sourceUrl
+        }
+        trainingsAboutIzobrazhenieDlyaTelefona {
           altText
           sourceUrl
         }
@@ -466,6 +479,11 @@ query Data {
           tekstSsylki
         }
       }
+      online {
+        onlineTekst
+        onlineTekstKnopki
+        onlineZagolovok
+      }
     }
   }
   menu(id: "dGVybToxOQ==") {
@@ -512,7 +530,7 @@ query Data {
       }
     }
   }
-  trainings  (last:9999999) {
+  trainings(last: 9999999) {
     nodes {
       date
       modified

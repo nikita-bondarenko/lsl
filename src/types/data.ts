@@ -24,20 +24,24 @@ export interface AllBlogNode {
 }
 
 export interface Blog {
-    blogPostContentTekst:                      null;
-    blogPostHeroKratkoeOpisanie:               string;
-    blogPostHeroZagolovok:                     BlogPostHeroZagolovok;
-    blogPostMediaTekstPodVideo:                null;
-    blogPostMediaTekstNadIzobrazheniem:        null;
-    blogPostMediaVideo:                        null;
-    blogPostMediaIzobrazhenieDlyaTelefonaX2:   null;
-    blogPostMediaIzobrazhenieDlyaTelefonaX1:   null;
-    blogPostMediaIzobrazhenieDlyaKompyuteraX2: null;
-    blogPostMediaIzobrazhenieDlyaKompyuteraX1: null;
-    blogPostHeroImageTelefon2x:                BlogPostHeroImageKompyuter1X;
-    blogPostHeroImageTelefon1x:                BlogPostHeroImageKompyuter1X;
-    blogPostHeroImageKompyuter2x:              BlogPostHeroImageKompyuter1X;
-    blogPostHeroImageKompyuter1x:              BlogPostHeroImageKompyuter1X;
+    blogPostContentTekst:                        null | string;
+    blogPostHeroKratkoeOpisanie:                 string;
+    blogPostHeroZagolovok:                       string;
+    blogPostMediaTekstPodVideo:                  null | string;
+    blogPostMediaTekstNadIzobrazheniem:          null | string;
+    blogPostMediaVideo:                          CookiesPolitikaKonfidenczialnosti | null;
+    blogPostMediaIzobrazhenieDlyaTelefonaX2:     BlogPostHeroImageKompyuter1X | null;
+    blogPostMediaIzobrazhenieDlyaTelefonaX1:     BlogPostHeroImageKompyuter1X | null;
+    blogPostMediaIzobrazhenieDlyaKompyuteraX2:   BlogPostHeroImageKompyuter1X | null;
+    blogPostMediaIzobrazhenieDlyaKompyuteraX1:   BlogPostHeroImageKompyuter1X | null;
+    blogPostHeroImageTelefon2x:                  BlogPostHeroImageKompyuter1X;
+    blogPostHeroImageTelefon1x:                  BlogPostHeroImageKompyuter1X;
+    blogPostHeroImageKompyuter2x:                BlogPostHeroImageKompyuter1X;
+    blogPostHeroImageKompyuter1x:                BlogPostHeroImageKompyuter1X;
+    blogPostPreviewIzobrazhenieDlyaKompyuteraX1: BlogPostHeroImageKompyuter1X;
+    blogPostPreviewIzobrazhenieDlyaKompyuteraX2: BlogPostHeroImageKompyuter1X;
+    blogPostPreviewIzobrazhenieDlyaTelefonaX1:   BlogPostHeroImageKompyuter1X;
+    blogPostPreviewIzobrazhenieDlyaTelefonaX2:   BlogPostHeroImageKompyuter1X;
 }
 
 export interface BlogPostHeroImageKompyuter1X {
@@ -56,14 +60,11 @@ export enum AltText {
     СтатьяВЖурналеМосквич = "Статья в журнале Москвич",
     СтатьяВЖурналеЯМогу = "Статья в журнале Я-могу",
     Телефон = "Телефон",
+    ТренажерАхиллесоваСтупень = "Тренажер Ахиллесова ступень",
     ТренажерРастущийСтолИСтул = "Тренажер Растущий стол и стул",
     ТренажерСтульчикШведскаяСтенка = "Тренажер Стульчик шведская стенка",
     ТренажерСтупенька = "Тренажер Ступенька",
     ТренажерТабуретНаКолесиках = "Тренажер Табурет на колесиках",
-}
-
-export enum BlogPostHeroZagolovok {
-    НазваниеСтатьи = "Название статьи",
 }
 
 export interface CommonSections {
@@ -78,6 +79,7 @@ export interface CommonSectionsNode {
     header:     Header;
     messenger:  Messenger;
     orderSteps: OrderSteps;
+    online:     Online;
 }
 
 export interface Cookies {
@@ -160,6 +162,12 @@ export interface Messenger {
     messengerImageKompyuter2x: BlogPostHeroImageKompyuter1X | null;
     messengerImageTelefon1x:   BlogPostHeroImageKompyuter1X | null;
     messengerImageTelefon2x:   BlogPostHeroImageKompyuter1X | null;
+}
+
+export interface Online {
+    onlineTekst:       null;
+    onlineTekstKnopki: null;
+    onlineZagolovok:   null;
 }
 
 export interface OrderSteps {
@@ -341,27 +349,27 @@ export interface MetaData {
 }
 
 export interface NodeTrainings {
-    trainingsAboutTekst:                        null | string;
-    trainingsDeliveryZagolovok:                 null | string;
-    trainingsGiftTekst:                         null | string;
-    trainingsHeroPodzagolovok:                  null | string;
-    trainingsHeroZagolovok:                     null | string;
-    trainingsSelectPodzagolovok:                null | string;
-    trainingsSelectZagolovok:                   null | string;
-    trainingsAboutIzobrazhenieDlyaKompyuteraX1: BlogPostHeroImageKompyuter1X | null;
-    trainingsAboutIzobrazhenieDlyaKompyuteraX2: null;
-    trainingsAboutIzobrazhenieDlyaTelefonaX1:   BlogPostHeroImageKompyuter1X | null;
-    trainingsAboutIzobrazhenieDlyaTelefonaX2:   BlogPostHeroImageKompyuter1X | null;
-    trainingsAdvantagesSpisok:                  TrainingsAdvantagesSpisok[] | null;
-    trainingsDeliverySpisok:                    TrainingsDeliverySpisok[] | null;
-    trainingsGiftIzobrazhenieDlyaKompyuteraX1:  BlogPostHeroImageKompyuter1X | null;
-    trainingsGiftIzobrazhenieDlyaKompyuteraX2:  BlogPostHeroImageKompyuter1X | null;
-    trainingsGiftIzobrazhenieDlyaTelefonaX1:    BlogPostHeroImageKompyuter1X | null;
-    trainingsGiftIzobrazhenieDlyaTelefonaX2:    BlogPostHeroImageKompyuter1X | null;
-    trainingsHeroIzobrazhenieDlyaKompyuteraX1:  BlogPostHeroImageKompyuter1X | null;
-    trainingsHeroIzobrazhenieDlyaKompyuteraX2:  BlogPostHeroImageKompyuter1X | null;
-    trainingsHeroIzobrazhenieDlyaTelefonaX1:    BlogPostHeroImageKompyuter1X | null;
-    trainingsHeroIzobrazhenieDlyaTelefonaX2:    BlogPostHeroImageKompyuter1X | null;
+    trainingsAboutTekst:                       null | string;
+    trainingsDeliveryZagolovok:                null | string;
+    trainingsGiftTekst:                        null | string;
+    trainingsHeroPodzagolovok:                 null | string;
+    trainingsHeroZagolovok:                    null | string;
+    trainingsSelectPodzagolovok:               null | string;
+    trainingsSelectZagolovok:                  null | string;
+    trainingsAdvantagesSpisok:                 TrainingsAdvantagesSpisok[] | null;
+    trainingsDeliverySpisok:                   TrainingsDeliverySpisok[] | null;
+    trainingsGiftIzobrazhenieDlyaKompyuteraX1: BlogPostHeroImageKompyuter1X | null;
+    trainingsGiftIzobrazhenieDlyaKompyuteraX2: BlogPostHeroImageKompyuter1X | null;
+    trainingsGiftIzobrazhenieDlyaTelefonaX1:   BlogPostHeroImageKompyuter1X | null;
+    trainingsGiftIzobrazhenieDlyaTelefonaX2:   BlogPostHeroImageKompyuter1X | null;
+    trainingsHeroIzobrazhenieDlyaKompyuteraX1: BlogPostHeroImageKompyuter1X | null;
+    trainingsHeroIzobrazhenieDlyaKompyuteraX2: BlogPostHeroImageKompyuter1X | null;
+    trainingsHeroIzobrazhenieDlyaTelefonaX1:   BlogPostHeroImageKompyuter1X | null;
+    trainingsHeroIzobrazhenieDlyaTelefonaX2:   BlogPostHeroImageKompyuter1X | null;
+    trainingsAboutZagolovok:                   null | string;
+    trainingsAboutIzobrazhenieDlyaKompyutera:  BlogPostHeroImageKompyuter1X | null;
+    trainingsAboutIzobrazhenieDlyaPlansheta:   BlogPostHeroImageKompyuter1X | null;
+    trainingsAboutIzobrazhenieDlyaTelefona:    BlogPostHeroImageKompyuter1X | null;
 }
 
 export interface TrainingsAdvantagesSpisok {
@@ -408,7 +416,7 @@ export interface TrainingsNode {
 
 export interface Training {
     nazvanie:                  string;
-    trainingCzena:             string;
+    trainingCzena:             null | string;
     trainingKratkoeOpisanie:   string;
     trainingPodrobnoeOpisanie: null;
     trainingImageKompyuter1x:  BlogPostHeroImageKompyuter1X;

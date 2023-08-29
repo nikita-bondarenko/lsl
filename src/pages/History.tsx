@@ -16,8 +16,13 @@ const History = () => {
     const {
         setTitle,
         setDescription,
-        setHistoryPage
+        setHistoryPage,
+        setIsNewContainer
     } = useGlobalContext()
+
+    useEffect(() => {
+        setIsNewContainer(true)
+    }, []);
 
     const [page] = usePage('istoriya')
     useEffect(() => {
@@ -33,10 +38,10 @@ const History = () => {
             <HistoryHero></HistoryHero>
             <HistoryWe></HistoryWe>
             <HistoryProjects></HistoryProjects>
-            <HistoryFind></HistoryFind>
-            <HistoryHistory></HistoryHistory>
-            <HistorySended></HistorySended>
-            <HistorySupport></HistorySupport>
+            {/*<HistoryFind></HistoryFind>*/}
+            {/*<HistoryHistory></HistoryHistory>*/}
+            {/*<HistorySended></HistorySended>*/}
+            {/*<HistorySupport></HistorySupport>*/}
         </Layout>
     );
 };

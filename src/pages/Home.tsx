@@ -20,8 +20,12 @@ const Home = () => {
     const {
         setTitle,
         setDescription,
-        setMainPage
+        setMainPage,
+        setIsNewContainer
     } = useGlobalContext()
+    useEffect(() => {
+        setIsNewContainer(false)
+    }, []);
 
     const [page] = usePage('glavnaya')
     useEffect(() => {
