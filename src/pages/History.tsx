@@ -38,9 +38,9 @@ const History = () => {
             <HistoryHero></HistoryHero>
             <HistoryWe></HistoryWe>
             <HistoryProjects></HistoryProjects>
-            {/*<HistoryFind></HistoryFind>*/}
-            {/*<HistoryHistory></HistoryHistory>*/}
-            {/*<HistorySended></HistorySended>*/}
+            <HistoryFind></HistoryFind>
+            <HistoryHistory></HistoryHistory>
+            <HistorySended></HistorySended>
             {/*<HistorySupport></HistorySupport>*/}
         </Layout>
     );

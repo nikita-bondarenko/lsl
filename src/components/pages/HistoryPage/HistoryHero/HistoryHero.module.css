@@ -10,7 +10,8 @@
 .display {
     @apply relative
     h-[600px]
-    xl:h-[364px]
+    xl:h-[47vw]
+    md:min-h-[320px]
 }
 
 .picture {

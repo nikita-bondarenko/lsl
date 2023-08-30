@@ -33,8 +33,6 @@ const Picture = ({
     useLayoutEffect(() => {
         if (ref?.current && setPosition) {
             const value = ref.current.getBoundingClientRect().bottom
-            console.log(value)
-
             setPosition(value)
         }
     }, [width, ref?.current, title]);

@@ -7,7 +7,7 @@ import Picture from "../../../images/Picture/Picture";
 const HistoryHero = () => {
     const {historyPage} = useGlobalContext()
     return (
-        <div className={stack('container-new', styles.body, 'section-indent-new')}>
+        <div className={stack('container-new', styles.body, 'section-mb')}>
             <div className={styles.display}>
                 <Picture imageClassName={styles.image} className={styles.picture}
                          alt={historyPage?.history.historyHeroImageKompyuterX1.altText}

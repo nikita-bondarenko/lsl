@@ -36,7 +36,7 @@
 }
 
 .top__image {
-    @apply xl:object-left
+    @apply object-[left_top] xl:object-left
     md:object-[top_left]
 }
 

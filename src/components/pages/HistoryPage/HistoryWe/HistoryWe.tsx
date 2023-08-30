@@ -28,7 +28,7 @@ const HistoryWe = () => {
 
 
     return (
-        <div className={stack('container-new', styles.body, 'section-indent-new')}>
+        <div className={stack('container-new', styles.body, 'section-mb')}>
             <div className={styles.top}>
                 <div className={styles.top__left}>
                     <div className={styles.top__back}>

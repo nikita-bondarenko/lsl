@@ -27,10 +27,11 @@
 }
 
 .picture {
-    @apply rounded-[24px] border-[2px] border-[#F6F6F6] overflow-hidden relative block
-    md:rounded-[12px]
+    @apply rounded-[24px] border-[2px] border-[#F6F6F6] overflow-hidden relative block h-[340px]
+        xl:h-[34vw]
+    md:rounded-[12px] md:h-[32vw]
 }
 
 .image {
-    @apply object-cover max-w-none  h-[calc(100%+4px)] w-[calc(100%+4px)] m-[-2px]  xl:min-h-[264px] md:min-h-[114px]
+    @apply object-cover w-[calc(100%+4px)] h-[calc(100%+4px)] max-w-none absolute top-[-2px] right-[-2px] left-[-2px] bottom-[-2px] block
 }

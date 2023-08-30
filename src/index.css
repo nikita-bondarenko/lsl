@@ -114,8 +114,8 @@
     }
 
     .button-secondary-new {
-        @apply font-bold  leading-[1.4] flex items-center justify-center rounded-[16px] border-[3px] bg-yellow-400 border-yellow-400 transition-all hover:bg-white
-        2xl:rounded-[12px] 2xl:text-[24px]
+        @apply font-bold  leading-[1.4] flex items-center justify-center border-[3px] bg-yellow-400 border-yellow-400 transition-all hover:bg-white
+        rounded-[12px] text-[24px]
         xl:text-[16px] xl:rounded-[8px] xl:border-[2px]
     }
 
@@ -132,6 +132,11 @@
 
     .section-indent-new {
         @apply mb-[140px] xl:mb-[86px] lg:mb-[72px] md:mb-[36px] sm:mb-[32px]
+    }
+
+    .section-mb {
+        @apply mb-[140px] xl:mb-[92px] md:mb-[64px]
+
     }
 
     .text-simple {
