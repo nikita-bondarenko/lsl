@@ -1,9 +1,10 @@
 .body {
-
+ @apply xl:mt-[-14px]
+    md:mt-[-3px]
 }
 
 .title {
-    @apply mb-[64px]
+    @apply mb-[72px]
     xl:mb-[52px]
     md:mb-[38px]
 }
@@ -43,7 +44,11 @@
 }
 
 .text p {
-    @apply block h-[14px]
-    xl:h-[10px]
+    @apply block h-[10px]
+    xl:h-[8px]
     md:h-[8px]
+}
+
+.text {
+    @apply md:leading-[22px]
 }

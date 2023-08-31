@@ -159,10 +159,6 @@ query Data {
         historyHeroBolshojTekst
         historyHeroMalyjTekst
         historyHistoryZagolovok
-        historyMessengerSsylkaKnopki
-        historyMessengerTekst
-        historyMessengerTekstKnopki
-        historyMessengerZagolovok
         historyProjectsTekst
         historyProjectsZagolovok
         historySendedKoneczPervojStroki
@@ -192,22 +188,6 @@ query Data {
           sourceUrl
         }
         historyHeroImageTelefonX2 {
-          sourceUrl
-        }
-        historyMessengerIzobrazhenieDlyaKompyuteraX1 {
-          altText
-          sourceUrl
-        }
-        historyMessengerIzobrazhenieDlyaKompyuteraX2 {
-          altText
-          sourceUrl
-        }
-        historyMessengerIzobrazhenieDlyaTelefonaX1 {
-          altText
-          sourceUrl
-        }
-        historyMessengerIzobrazhenieDlyaTelefonaX2 {
-          altText
           sourceUrl
         }
         historyProjectsSpisok {
@@ -483,6 +463,28 @@ query Data {
         onlineTekst
         onlineTekstKnopki
         onlineZagolovok
+      }
+      support {
+        supportAdresSsylki
+        supportTekst
+        supportTekstSsylki
+        supportZagolovok
+        supportImageKompyuterX1 {
+          altText
+          sourceUrl
+        }
+        supportImageKompyuterX2 {
+          altText
+          sourceUrl
+        }
+        supportImageTelefonX1 {
+          altText
+          sourceUrl
+        }
+        supportImageTelefonX2 {
+          altText
+          sourceUrl
+        }
       }
     }
   }

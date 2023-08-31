@@ -1,8 +1,9 @@
 .body {
+    @apply xl:mt-[-36px]
 }
 
 .top {
-    @apply mb-[64px]
+    @apply mb-[80px]
     xl:mb-[40px]
 }
 
@@ -20,7 +21,9 @@
 }
 
 .bottom {
-    @apply md:flex-col-reverse
+    @apply mb-[-20px]
+    xl:mb-[-89px]
+    md:flex-col-reverse md:mb-[0px]
 }
 
 .title {
@@ -30,7 +33,7 @@
 }
 
 .top__picture {
-    @apply absolute right-[38px] bottom-[38px] rounded-[24px] overflow-hidden h-[467px] w-[705px]
+    @apply absolute right-[38px] bottom-[23px] rounded-[24px] overflow-hidden h-[467px] w-[705px]
     xl:h-[350px] xl:w-[420px] xl:right-[16px] xl:bottom-[24px]
     md:h-auto  md:w-[calc(100%+15px)] md:relative md:translate-x-[-12px] md:translate-y-[-20px] md:rounded-[0px_24px_24px_0px]
 }
@@ -51,7 +54,8 @@
 }
 
 .top__back {
-    @apply bg-[#FFF4DE] rounded-[24px] absolute right-0 top-0  h-full w-[calc(100%+50px)]
+    @apply bg-[#FFF4DE] rounded-[24px] absolute right-0 top-0  h-[480px] w-[calc(100%+50px)]
+        xl:h-full
     md:h-[calc(100%-30px)]
 }
 
@@ -59,12 +63,19 @@
 .top__content {
 }
 
-.text {
+.body .text {
     @apply break-normal
+    md:leading-[22px]
+}
+
+.bottom .text p {
+    @apply h-[12px]
+    xl:h-[10px]
+    md:h-[8px]
 }
 
 .bottom__picture {
-    @apply h-[644px] w-[507px]  rounded-[24px] overflow-hidden top-[212px] left-[158px] absolute
+    @apply h-[644px] w-[507px]  rounded-[24px] overflow-hidden top-[212px] left-[148px] absolute
     xl:h-[414px] xl:w-[326px] xl:top-[158px] xl:left-[28px]
     md:h-auto md:relative md:w-full md:translate-x-[68px] md:translate-y-[126px] md:left-auto md:top-auto
 }
@@ -78,10 +89,12 @@
     xl:w-auto
 }
 
+
 .bottom__right {
     @apply relative
     xl:w-[350px] xl:shrink-0
-    md:w-full md:mb-[126px]
+    md:w-full md:mb-[115px]
+
 }
 
 
@@ -97,31 +110,32 @@
 }
 
 .bottom__back {
-    @apply bg-[#FEC955] left-0 top-[-160px] absolute w-[561px] h-[644px] rounded-[36px] py-[70px] px-[50px]
-    xl:top-[0px] xl:w-[338px] xl:h-[410px] xl:px-[24px] xl:py-[57px]
-    md:w-[calc(100%-68px)] md:h-auto md:relative md:rounded-[24px] md:p-0
+    @apply bg-[#FEC955] left-0 top-[-160px] absolute w-[561px] h-[644px] rounded-[36px] py-[75px] px-[50px]
+    xl:top-[-3px] xl:left-[19px] xl:w-[338px] xl:h-[410px] xl:px-[24px] xl:py-[57px]
+    md:w-[calc(100%-68px)] md:h-auto md:relative md:rounded-[24px] md:p-0 md:top-[-5px] md:left-[0px]
 }
 
 
 .bottom__content {
-
+@apply w-[calc(((100%-30px)/2)-10px)]
+    md:w-full
 }
 
 .quote__top {
-    @apply absolute top-[-18px] right-[-8px]
-    xl:top-[-25px]
+    @apply absolute top-[-23px] right-[3px]
+    xl:top-[-29px] xl:right-[-11px]
     md:right-[0px]
 }
 
 .quote__bottom {
-    @apply absolute bottom-[-18px] left-0
-    xl:bottom-[-28px] xl:left-[-5px]
-    md:left-[0px]
+    @apply absolute bottom-[-24px] left-[-4px]
+    xl:bottom-[-27px] xl:left-[-10px]
+    md:left-[0px] md:bottom-[-36px]
 }
 
 .top__left {
-    @apply relative shrink-0  mt-[38px]
-    xl:mt-[67px] xl:w-[362px] xl:h-[306px]
-    md:mt-[60px] md:h-auto md:w-full md:mb-[-30px]
+    @apply relative shrink-0  mt-[29px]
+    xl:mt-[67px] xl:w-[355px] xl:h-[306px]
+    md:mt-[56px] md:h-auto md:w-full md:mb-[-32px]
 }
 

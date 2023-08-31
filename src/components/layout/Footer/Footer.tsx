@@ -15,7 +15,7 @@ const Footer = () => {
     if (!section) return null
 
     return (
-        <section className={stack(isNewContainer ? 'container-new' : 'container', styles.footer)}>
+        <section className={stack(isNewContainer ? 'container-new' : 'container', isNewContainer ? styles.new : styles.old , styles.footer)}>
             <ToTopButton className={styles.buttonToTop}></ToTopButton>
             <div className={styles.footer__body}>
                 <div className={styles.logo}>
@@ -61,7 +61,7 @@ const Footer = () => {
                         </a>
                         </li>)}
                     </ul>
-                    <p className={stack('remark', styles.social__remark)}
+                    <p className={stack(isNewContainer ? 'remark-new' : 'remark', styles.social__remark)}
                        dangerouslySetInnerHTML={{__html: section?.footer?.footerSocialRemarka}}></p>
                 </div>
 

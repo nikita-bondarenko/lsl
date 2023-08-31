@@ -8,7 +8,7 @@ import HistoryProjects from "../components/pages/HistoryPage/HistoryProjects/His
 import HistoryFind from "../components/pages/HistoryPage/HistoryFind/HistoryFind";
 import HistoryHistory from "../components/pages/HistoryPage/HistoryHistory/HistoryHistory";
 import HistorySended from "../components/pages/HistoryPage/HistorySended/HistorySended";
-import HistorySupport from "../components/pages/HistoryPage/HistorySupport/HistorySupport";
+import Support from "../components/common/Support/Support";
 
 const History = () => {
 
@@ -41,7 +41,7 @@ const History = () => {
             <HistoryFind></HistoryFind>
             <HistoryHistory></HistoryHistory>
             <HistorySended></HistorySended>
-            {/*<HistorySupport></HistorySupport>*/}
+            <Support></Support>
         </Layout>
     );
 };

@@ -16,7 +16,7 @@ const NavSublist = (props: MenuItemsNode) => {
     const [arr] = useSortNav(props.childItems.nodes)
     const [open, setOpen] = useState(false)
     const [sublistHeight, setSublistHeight] = useState<number>()
-    const {isMobile, setIsNavModalOpen} = useGlobalContext()
+    const {isMobile, setIsNavModalOpen, isNewContainer} = useGlobalContext()
     const ref = createRef<HTMLDivElement>()
     const onOpen = () => {
         !isMobile && setOpen(true)
@@ -35,19 +35,17 @@ const NavSublist = (props: MenuItemsNode) => {
         isMobile && setOpen(prev => !prev)
     }
 
-   const focusHandler = () => {
-        // setIsNavModalOpen(true)
-   }
 
     return <>
-        <div onClick={onClick} tabIndex={0} onFocus={onOpen} onBlur={onClose} onMouseEnter={onOpen} onMouseLeave={onClose}
+        <div onClick={onClick} tabIndex={0} onFocus={onOpen} onBlur={onClose} onMouseEnter={onOpen}
+             onMouseLeave={onClose}
              className={stack(styles.nav__sublist, open && styles.open)}>
-            <span className={stack('text-small', styles.nav__link, styles.sublist__title)}>{props.label}</span>
+            <span className={stack(isNewContainer ? 'text-small-new' : 'text-small', styles.nav__link, styles.sublist__title)}>{props.label}</span>
             <img className={styles.sublist__arrow} src="/image/nav-arrow.png" alt="Стрелка вниз"/>
             <div ref={ref} className={styles.sublist__wrapper}>
                 <div className={styles.sublist__list}>
-                    {arr.map(({label, url}) => <Link  onClick={() => setIsNavModalOpen(false)} key={label}
-                                                     className={stack('text-small', 'nav-link', styles.nav__link, styles.sublist__item)}
+                    {arr.map(({label, url}) => <Link onClick={() => setIsNavModalOpen(false)} key={label}
+                                                     className={stack(isNewContainer ? 'text-small-new' : 'text-small', 'nav-link', styles.nav__link, styles.sublist__item)}
                                                      to={url}>{label}</Link>)}
                 </div>
             </div>
@@ -62,12 +60,12 @@ const PhoneButton = ({number}: PhoneButtonProps) => {
         if (number) {
             setHref('tel:' + number.split(' ').join('').split('-').join(''))
         }
-    },[number])
+    }, [number])
     return <a className={stack('button-secondary', styles.button)} href={href}>{number}</a>
 }
 
 export const Navigation = () => {
-    const {data} = useGlobalContext()
+    const {data, isNewContainer} = useGlobalContext()
     const {setIsNavModalOpen} = useGlobalContext()
     const [section] = useCommonSection("shapka")
 
@@ -76,14 +74,14 @@ export const Navigation = () => {
     return (
         <div onClick={(e) => e.stopPropagation()} className={stack(styles.nav)}>
             {navArr?.map((item) =>
-                <React.Fragment key={item.label} >
-                {!item.childItems.nodes.length
-                    ? <Link  onClick={() => setIsNavModalOpen(false)}
-                            className={stack('text-small', 'nav-link', styles.nav__link)}
-                            to={item.url}>{item.label}</Link>
-                    : <NavSublist  {...item}></NavSublist>}
+                <React.Fragment key={item.label}>
+                    {!item.childItems.nodes.length
+                        ? <Link onClick={() => setIsNavModalOpen(false)}
+                                className={stack(isNewContainer ? 'text-small-new' : 'text-small', 'nav-link', styles.nav__link)}
+                                to={item.url}>{item.label}</Link>
+                        : <NavSublist  {...item}></NavSublist>}
                 </React.Fragment>)}
-                <PhoneButton number={section?.header?.headerTelefon}></PhoneButton>
+            <PhoneButton number={section?.header?.headerTelefon}></PhoneButton>
             <button className={styles.nav__close} onClick={() => setIsNavModalOpen(false)}>
                 <img src="/image/nav-close.png" className={styles.nav__close__icon} alt="Крестик"/>
             </button>
@@ -94,7 +92,7 @@ export const Navigation = () => {
 const Header = () => {
 
     const [section] = useCommonSection("shapka")
-    const { setIsNavModalOpen, isNewContainer} = useGlobalContext()
+    const {setIsNavModalOpen, isNewContainer} = useGlobalContext()
 
 
     const clickHandler = () => {
@@ -104,10 +102,12 @@ const Header = () => {
     if (!section) return null
     return (
 
-        <div className={stack(isNewContainer ? 'container-new' :'container', styles.body)}>
+        <div
+            className={stack(isNewContainer ? 'container-new' : 'container', isNewContainer ? styles.new : styles.old, styles.body)}>
             <div className={styles.wrapper}>
                 <Logo className={styles.logo} desktopUrl={section?.header?.headerLogotip?.sourceUrl}
-                      mobileUrl={section?.header?.headerLogotipMobile?.sourceUrl} alt={section?.header?.headerLogotip?.altText}></Logo>
+                      mobileUrl={section?.header?.headerLogotipMobile?.sourceUrl}
+                      alt={section?.header?.headerLogotip?.altText}></Logo>
                 <div className={styles.body__nav}>
                     <Navigation></Navigation>
                 </div>

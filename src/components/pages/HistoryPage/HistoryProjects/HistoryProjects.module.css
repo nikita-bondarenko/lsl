@@ -5,8 +5,8 @@
 
 .top {
     @apply flex gap-[60px] mb-[64px]
-    xl:gap-[50px] xl:mb-[32px]
-    md:flex-col md:gap-[12px]
+    xl:gap-[50px] xl:mb-[34px]
+    md:flex-col md:gap-[12px] md:mb-[22px]
 }
 
 .body {
@@ -15,6 +15,7 @@
 
 .text {
     @apply mt-[6px]
+    md:mt-[0px]
 }
 
 .list {

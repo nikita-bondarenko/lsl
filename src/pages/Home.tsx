@@ -14,6 +14,7 @@ import HomeSupport from "../components/pages/HomePage/HomeSupport/HomeSupport";
 import HomeAbout from "../components/pages/HomePage/HomeAbout/HomeAbout";
 import {usePage} from "../hooks/usePage";
 import {stack} from "../hooks/useClassName";
+import Support from "../components/common/Support/Support";
 
 const Home = () => {
 
@@ -50,7 +51,7 @@ const Home = () => {
                   linkHref={page?.main?.mainBlogAdresSsylki}
                   linkText={page?.main?.mainBlogTekstSsylki}></Blog>
             <Feedbacks></Feedbacks>
-            <HomeSupport></HomeSupport>
+            <Support></Support>
         </Layout>
     );
 };

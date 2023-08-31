@@ -52,15 +52,17 @@ const SwiperLight = ({children, className}: SwiperProps) => {
     }
 
     const setSlide = (index: number) => {
-        if (ref.current && ref.current.children[0].children[index] && index >=0 && index < ref.current.children[0].children.length) {
+
+        if (ref.current && ref.current.children[0].children[index] && index >= 0 && index < ref.current.children[0].children.length) {
             const pixels = (ref.current.children[0].children[index].getBoundingClientRect().left - ref.current.children[0].getBoundingClientRect().left)
             const widthWindow = ref.current.parentElement.getBoundingClientRect().width
             const widthWrapper = ref.current.children[0].getBoundingClientRect().width
             const maxTranslate = widthWrapper - widthWindow
-            if (maxTranslate< pixels) {
+
+            if (maxTranslate < pixels) {
                 setTranslateX(- maxTranslate )
-                const index = getCurrentSlide()
-                index && setSlideIndex(index)
+                const index2 = getCurrentSlide()
+                index2 && setSlideIndex(index2)
             } else {
                 setTranslateX(-pixels)
                 setSlideIndex(index)
@@ -85,8 +87,7 @@ const SwiperLight = ({children, className}: SwiperProps) => {
 
     }
 
-    const endSwiping = () => {
-
+    const endSwiping = (e) => {
         setMoving(false)
 
         const enoughX = 50

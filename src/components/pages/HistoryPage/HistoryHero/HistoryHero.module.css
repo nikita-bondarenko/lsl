@@ -1,6 +1,7 @@
 .body {
 @apply mt-[-20px]
-    xl:mt-[0px]
+    xl:mt-[-14px]
+    md:mt-[-2px]
 }
 
 .image {
@@ -10,7 +11,7 @@
 .display {
     @apply relative
     h-[600px]
-    xl:h-[47vw]
+    xl:h-[47.4vw]
     md:min-h-[320px]
 }
 
@@ -27,6 +28,7 @@
 
 .title {
     @apply mb-[5px]
+        xl:mb-[10px]
     md:mb-[2px]
 }
 

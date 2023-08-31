@@ -1,5 +1,7 @@
-.body {
-
+.body.heavy {
+    @apply pt-[12px]
+    xl:pt-[0px] xl:mt-[-10px] xl:mb-[97px]
+    md:mt-[0px] md:mb-[70px]
 }
 
 .top {
@@ -35,11 +37,12 @@
 .subtitle:not(:last-child) {
     @apply mb-[10px]
     xl:mb-[20px]
+    md:mb-[15px]
 }
 
 .subtitle__text {
     @apply text-[32px] font-bold leading-[1.4]
-    xl:text-[24px]
+    xl:text-[24px] xl:leading-[1.5]
     md:text-[16px]
 }
 
@@ -50,7 +53,7 @@
 .subtitle__marked {
     @apply p-[10px] rounded-[8px] border-[2px] border-[#FEC955] mr-[14px] pb-[9px] inline-block
     xl:mr-[12px]
-    md:px-[12px] md:pt-[8px] md:pb-[7px] md:mb-[8px] md:mr-[0px]
+    md:px-[12px] md:pt-[5px] md:pb-[4px] md:mb-[8px] md:mr-[0px]
 }
 
 .display {

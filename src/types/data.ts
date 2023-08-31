@@ -29,7 +29,7 @@ export interface Blog {
     blogPostHeroZagolovok:                       string;
     blogPostMediaTekstPodVideo:                  null | string;
     blogPostMediaTekstNadIzobrazheniem:          null | string;
-    blogPostMediaVideo:                          CookiesPolitikaKonfidenczialnosti | null;
+    blogPostMediaVideo:                          null;
     blogPostMediaIzobrazhenieDlyaTelefonaX2:     BlogPostHeroImageKompyuter1X | null;
     blogPostMediaIzobrazhenieDlyaTelefonaX1:     BlogPostHeroImageKompyuter1X | null;
     blogPostMediaIzobrazhenieDlyaKompyuteraX2:   BlogPostHeroImageKompyuter1X | null;
@@ -80,6 +80,7 @@ export interface CommonSectionsNode {
     messenger:  Messenger;
     orderSteps: OrderSteps;
     online:     Online;
+    support:    Support;
 }
 
 export interface Cookies {
@@ -183,6 +184,17 @@ export interface Spisok {
     tekstSsylki:        null | string;
 }
 
+export interface Support {
+    supportAdresSsylki:      null;
+    supportTekst:            null | string;
+    supportTekstSsylki:      null | string;
+    supportZagolovok:        null | string;
+    supportImageKompyuterX1: BlogPostHeroImageKompyuter1X | null;
+    supportImageKompyuterX2: BlogPostHeroImageKompyuter1X | null;
+    supportImageTelefonX1:   BlogPostHeroImageKompyuter1X | null;
+    supportImageTelefonX2:   BlogPostHeroImageKompyuter1X | null;
+}
+
 export interface Menu {
     menuItems: Items;
 }
@@ -223,47 +235,39 @@ export interface Contacts {
 }
 
 export interface History {
-    historyFindTrainingAdresSsylki:               null | string;
-    historyFindTrainingTekst:                     null | string;
-    historyFindTrainingTekstSsylki:               null | string;
-    historyHeroBolshojTekst:                      null | string;
-    historyHeroMalyjTekst:                        null | string;
-    historyHistoryZagolovok:                      null | string;
-    historyMessengerSsylkaKnopki:                 null;
-    historyMessengerTekst:                        null | string;
-    historyMessengerTekstKnopki:                  null | string;
-    historyMessengerZagolovok:                    null | string;
-    historyProjectsTekst:                         null | string;
-    historyProjectsZagolovok:                     null | string;
-    historySendedKoneczPervojStroki:              null | string;
-    historySendedKoneczVtorojStroki:              null | string;
-    historySendedNachaloPervojStroki:             null | string;
-    historySendedTretyaStroka:                    null | string;
-    historySendedVydelennyjTekstPervojStroki:     null | string;
-    historySendedVydelennyjTekstVtorojStroki:     null | string;
-    historyWeCzitata:                             null | string;
-    historyWeTekstSverhu:                         null | string;
-    historyWeTekstVnizu:                          null | string;
-    historyWeZagolovok:                           null | string;
-    historyHistoryList:                           HistoryHistoryList[] | null;
-    historyHeroImageKompyuterX1:                  BlogPostHeroImageKompyuter1X | null;
-    historyHeroImageKompyuterX2:                  BlogPostHeroImageKompyuter1X | null;
-    historyHeroImageTelefonX1:                    BlogPostHeroImageKompyuter1X | null;
-    historyHeroImageTelefonX2:                    HistoryHeroImageTelefonX2 | null;
-    historyMessengerIzobrazhenieDlyaKompyuteraX1: BlogPostHeroImageKompyuter1X | null;
-    historyMessengerIzobrazhenieDlyaKompyuteraX2: BlogPostHeroImageKompyuter1X | null;
-    historyMessengerIzobrazhenieDlyaTelefonaX1:   BlogPostHeroImageKompyuter1X | null;
-    historyMessengerIzobrazhenieDlyaTelefonaX2:   BlogPostHeroImageKompyuter1X | null;
-    historyProjectsSpisok:                        HistoryProjectsSpisok[] | null;
-    historySendedGoroda:                          HistorySendedGoroda[] | null;
-    historyWeFirstImageKompyuterX1:               BlogPostHeroImageKompyuter1X | null;
-    historyWeFirstImageKompyuterX2:               BlogPostHeroImageKompyuter1X | null;
-    historyWeFirstImageTelefonX1:                 BlogPostHeroImageKompyuter1X | null;
-    historyWeFirstImageTelefonX2:                 BlogPostHeroImageKompyuter1X | null;
-    historyWeSecondImageKompyuterX1:              BlogPostHeroImageKompyuter1X | null;
-    historyWeSecondImageKompyuterX2:              BlogPostHeroImageKompyuter1X | null;
-    historyWeSecondImageTelefonX1:                BlogPostHeroImageKompyuter1X | null;
-    historyWeSecondImageTelefonX2:                BlogPostHeroImageKompyuter1X | null;
+    historyFindTrainingAdresSsylki:           null | string;
+    historyFindTrainingTekst:                 null | string;
+    historyFindTrainingTekstSsylki:           null | string;
+    historyHeroBolshojTekst:                  null | string;
+    historyHeroMalyjTekst:                    null | string;
+    historyHistoryZagolovok:                  null | string;
+    historyProjectsTekst:                     null | string;
+    historyProjectsZagolovok:                 null | string;
+    historySendedKoneczPervojStroki:          null | string;
+    historySendedKoneczVtorojStroki:          null | string;
+    historySendedNachaloPervojStroki:         null | string;
+    historySendedTretyaStroka:                null | string;
+    historySendedVydelennyjTekstPervojStroki: null | string;
+    historySendedVydelennyjTekstVtorojStroki: null | string;
+    historyWeCzitata:                         null | string;
+    historyWeTekstSverhu:                     null | string;
+    historyWeTekstVnizu:                      null | string;
+    historyWeZagolovok:                       null | string;
+    historyHistoryList:                       HistoryHistoryList[] | null;
+    historyHeroImageKompyuterX1:              BlogPostHeroImageKompyuter1X | null;
+    historyHeroImageKompyuterX2:              BlogPostHeroImageKompyuter1X | null;
+    historyHeroImageTelefonX1:                BlogPostHeroImageKompyuter1X | null;
+    historyHeroImageTelefonX2:                HistoryHeroImageTelefonX2 | null;
+    historyProjectsSpisok:                    HistoryProjectsSpisok[] | null;
+    historySendedGoroda:                      HistorySendedGoroda[] | null;
+    historyWeFirstImageKompyuterX1:           BlogPostHeroImageKompyuter1X | null;
+    historyWeFirstImageKompyuterX2:           BlogPostHeroImageKompyuter1X | null;
+    historyWeFirstImageTelefonX1:             BlogPostHeroImageKompyuter1X | null;
+    historyWeFirstImageTelefonX2:             BlogPostHeroImageKompyuter1X | null;
+    historyWeSecondImageKompyuterX1:          BlogPostHeroImageKompyuter1X | null;
+    historyWeSecondImageKompyuterX2:          BlogPostHeroImageKompyuter1X | null;
+    historyWeSecondImageTelefonX1:            BlogPostHeroImageKompyuter1X | null;
+    historyWeSecondImageTelefonX2:            BlogPostHeroImageKompyuter1X | null;
 }
 
 export interface HistoryHeroImageTelefonX2 {
@@ -362,10 +366,10 @@ export interface NodeTrainings {
     trainingsGiftIzobrazhenieDlyaKompyuteraX2: BlogPostHeroImageKompyuter1X | null;
     trainingsGiftIzobrazhenieDlyaTelefonaX1:   BlogPostHeroImageKompyuter1X | null;
     trainingsGiftIzobrazhenieDlyaTelefonaX2:   BlogPostHeroImageKompyuter1X | null;
-    trainingsHeroIzobrazhenieDlyaKompyuteraX1: BlogPostHeroImageKompyuter1X | null;
-    trainingsHeroIzobrazhenieDlyaKompyuteraX2: BlogPostHeroImageKompyuter1X | null;
-    trainingsHeroIzobrazhenieDlyaTelefonaX1:   BlogPostHeroImageKompyuter1X | null;
-    trainingsHeroIzobrazhenieDlyaTelefonaX2:   BlogPostHeroImageKompyuter1X | null;
+    trainingsHeroIzobrazhenieDlyaKompyuteraX1: null;
+    trainingsHeroIzobrazhenieDlyaKompyuteraX2: null;
+    trainingsHeroIzobrazhenieDlyaTelefonaX1:   null;
+    trainingsHeroIzobrazhenieDlyaTelefonaX2:   null;
     trainingsAboutZagolovok:                   null | string;
     trainingsAboutIzobrazhenieDlyaKompyutera:  BlogPostHeroImageKompyuter1X | null;
     trainingsAboutIzobrazhenieDlyaPlansheta:   BlogPostHeroImageKompyuter1X | null;

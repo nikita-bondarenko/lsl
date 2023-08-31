@@ -1,4 +1,6 @@
 .body {
+    @apply xl:mt-[-10px]
+    md:mt-[-2px]
 }
 
 .content {
