@@ -7,6 +7,7 @@ import BlogPostHero from "../components/pages/BlogPostPage/BlogPostHero/BlogPost
 import BlogPostContent from "../components/pages/BlogPostPage/BlogPostContent/BlogPostContent";
 import BlogPostMore from "../components/pages/BlogPostPage/BlogPostMore/BlogPostMore";
 import BlogPostMedia from "../components/pages/BlogPostPage/BlogPostMedia/BlogPostMedia";
+import Online from "../components/common/Online/Online";
 
 const BlogPost = () => {
 
@@ -38,6 +39,7 @@ const BlogPost = () => {
             <BlogPostContent></BlogPostContent>
             <BlogPostMedia></BlogPostMedia>
             <BlogPostMore></BlogPostMore>
+            <Online className={'hidden xl:block'}></Online>
         </Layout>
     );
 };

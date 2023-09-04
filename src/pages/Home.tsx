@@ -1,4 +1,4 @@
-import  {useEffect} from 'react';
+import {useEffect} from 'react';
 import Layout from "../components/layout/Layout";
 import {useGlobalContext} from "../context/context";
 import HomeHero from "../components/pages/HomePage/HomeHero/HomeHero";
@@ -43,9 +43,9 @@ const Home = () => {
             <HomeTrainings></HomeTrainings>
             <HomeSafety></HomeSafety>
             <Steps></Steps>
-                <Messenger></Messenger>
-                <HomeAbout></HomeAbout>
-            <HomePublications ></HomePublications>
+            <Messenger></Messenger>
+            <HomeAbout></HomeAbout>
+            <HomePublications></HomePublications>
             <HomeValues></HomeValues>
             <Blog title={page?.main?.mainBlogZagolovok} remark={page?.main?.mainBlogRemarka}
                   linkHref={page?.main?.mainBlogAdresSsylki}

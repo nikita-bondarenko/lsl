@@ -66,6 +66,14 @@ query Data {
           altText
           sourceUrl
         }
+        blogPostMediaZastavkaDlyaVideoKompyuter {
+          altText
+          sourceUrl
+        }
+        blogPostMediaZastavkaDlyaVideoKompyuterKopiya {
+          altText
+          sourceUrl
+        }
       }
     }
   }

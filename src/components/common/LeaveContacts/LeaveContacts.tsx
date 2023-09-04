@@ -36,7 +36,6 @@ const LeaveContacts = ({title, buttonText}: LeaveContacts) => {
                 <p><strong>E-mail:</strong>${email}</p>
                 `)
             }
-
         }, [name, phone, email])
         const nullify = () => {
             setNameEmptyError(false)
@@ -102,7 +101,7 @@ const LeaveContacts = ({title, buttonText}: LeaveContacts) => {
                             <p className={styles.form__error}>{emailError}</p>}
                     </div>
                     <button onClick={onSubmit}
-                            className={stack('button-secondary', styles.submit, loading && 'disabled')}>{buttonText}</button>
+                            className={stack( styles.submit, loading && 'disabled')}>{buttonText}</button>
                 </div>
             </section>
         );

@@ -15,7 +15,7 @@ const BlogPostMore = () => {
             <h2 className={stack('text-lg', styles.title)}>Читайте также</h2>
             <SwiperLight>
                 <ul className={styles.list}>
-                    {posts.map((item, index) => <li key={index} className={styles.item}>
+                    {posts?.map((item, index) => <li key={index} className={styles.item}>
                         <Link to={"/blog/" + item.slug}>
                             <Picture imageClassName={styles.item__image}
                                      alt={item.blog.blogPostPreviewIzobrazhenieDlyaKompyuteraX1.altText}
