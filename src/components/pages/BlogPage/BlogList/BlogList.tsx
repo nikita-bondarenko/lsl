@@ -12,7 +12,7 @@ const BlogList = () => {
     return (
         <div className={stack('container-new', 'section-indent-new', styles.body)}>
             <h1 className={stack(styles.title)}
-                dangerouslySetInnerHTML={{__html: blogPage.blogPage.blogZagolovok}}></h1>
+                dangerouslySetInnerHTML={{__html: blogPage?.blogPage?.blogZagolovok}}></h1>
             <div className={styles.screen}>
                 <ul className={styles.list}>
                     {posts.map((item, index) => <li key={item.id} className={styles.list__item}>

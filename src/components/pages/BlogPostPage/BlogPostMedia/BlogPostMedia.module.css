@@ -1,6 +1,6 @@
 .video {
     @apply relative rounded-[33px] overflow-hidden w-full border-[5px] border-yellow-400 shrink-0 w-[1210px] h-[660px]
-    2xl:w-[900px] 2xl:border-[4px] 2xl:h-[500px] 2xl:rounded-[20px]
+     w-[900px]  border-[4px]  h-[500px]  rounded-[20px]
     xl:h-[340px] xl:border-[3px] xl:rounded-[14px] xl:shrink
     lg:h-[280px] lg:border-[2px] lg:rounded-[12px]
     md:w-full md:h-[260px]
@@ -15,7 +15,7 @@
 
 .video__button {
     @apply absolute top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%] rounded-full z-10 w-[160px] h-[160px]
-    2xl:w-[120px] 2xl:h-[120px]
+     w-[120px]  h-[120px]
     xl:w-[72px] xl:h-[72px]
     lg:w-[60px] lg:h-[60px]
 

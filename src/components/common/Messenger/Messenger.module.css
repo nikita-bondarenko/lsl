@@ -1,6 +1,6 @@
 .body {
     @apply pt-[96px]
-    2xl:pt-[171px]
+     pt-[171px]
         xl:pt-[73px]
     lg:pt-[37px]
     md:pt-[0px]
@@ -12,7 +12,7 @@
 
 .wrapper {
     @apply relative rounded-[33px] bg-yellow-200 px-[93px] py-[70px]
-    2xl:rounded-[24px] 2xl:px-[60px] 2xl:pb-[47px] 2xl:pt-[60px]
+     rounded-[24px]  px-[60px]  pb-[47px]  pt-[60px]
     xl:pl-[20px] xl:pt-[60px] xl:pb-[70px] xl:rounded-[20px]
     lg:px-[20px] lg:pb-[115px] lg:pt-[30px]
     md:pl-[10px] md:pt-[34px] md:pb-[140px]
@@ -25,14 +25,14 @@
 
 .title {
     @apply mb-[26px]
-    2xl:mb-[20px]
+     mb-[20px]
     lg:mb-[10px]
     md:mb-[8px]
 }
 
 .body .text {
     @apply font-normal mb-[70px]
-    2xl:mb-[50px]
+     mb-[50px]
         xl:text-[18px]
     lg:mb-[20px] lg:text-[16px]
     md:text-[14px] md:mb-[40px]
@@ -45,7 +45,7 @@
 
 .body .link {
     @apply w-[403px] h-[95px] rounded-[16px] text-[26px]
-    2xl:w-[341px] 2xl:h-[74px] 2xl:text-[24px] 2xl:rounded-[12px]
+     w-[341px]  h-[74px]  text-[24px]  rounded-[12px]
     xl:w-[256px] xl:h-[65px] xl:text-[18px] xl:rounded-[12px]
     lg:w-[256px] lg:h-[65px] lg:text-[18px] lg:rounded-[8px]
     md:w-[214px] md:h-[52px] md:text-[16px] md:rounded-[8px]
@@ -53,7 +53,7 @@
 
 .picture {
     @apply w-[474px] h-[581px] absolute bottom-0 right-[143px]
-    2xl:w-[437px] 2xl:h-[536px] 2xl:right-[54px]
+     w-[437px]  h-[536px]  right-[54px]
     xl:w-[340px] xl:h-[417px] xl:right-[62px]
     lg:w-[285px] lg:h-[350px] lg:right-[18px]
     md:w-[215px] md:h-[264px] md:right-[20px]
@@ -62,7 +62,7 @@
 }
 
 .withPhone .picture {
-    @apply 2xl:right-[55px]
+    @apply  right-[55px]
     xl:right-[62px]
     lg:right-[18px]
     md:right-[20px]
@@ -71,14 +71,14 @@
 
 .buttons {
     @apply flex gap-[67px]
-    2xl:gap-[50px]
+     gap-[50px]
     xl:gap-[30px]
     lg:gap-[20px] lg:flex-col
 }
 
 .body .phoneButton {
     @apply bg-transparent w-[403px] h-[96px] hover:bg-yellow-400 text-[26px] rounded-[16px]
-    2xl:w-[341px] 2xl:h-[74px] 2xl:text-[24px] 2xl:rounded-[12px]
+     w-[341px]  h-[74px]  text-[24px]  rounded-[12px]
     xl:w-[256px] xl:h-[65px] xl:pt-[3px] xl:rounded-[12px] xl:text-[18px]
     lg:rounded-[8px]
     md:h-[42px]  md:w-[214px] md:h-[52px] md:text-[16px] md:pt-[0px]

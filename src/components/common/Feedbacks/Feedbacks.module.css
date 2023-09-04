@@ -5,7 +5,7 @@
 
 .title {
     @apply mb-[24px]
-    2xl:mb-[15px]
+     mb-[15px]
     xl:mb-[8px]
     md:mb-[10px]
 }
@@ -17,28 +17,28 @@
 
 .text {
     @apply max-w-[500px]
-    2xl:max-w-[370px]
+     max-w-[370px]
     xl:max-w-none
     md:max-w-[230px]
 }
 
 .sliderFirst {
     @apply w-full  mb-[144px]
-    2xl:mb-[108px]
+     mb-[108px]
     xl:mb-[40px]
     lg:mb-[20px]
 }
 
 .sliderFirst__list {
     @apply flex gap-[40px] select-none
-    2xl:gap-[30px]
+     gap-[30px]
     xl:gap-[20px]
     md:gap-[10px]
 }
 
 .sliderSecond__list {
     @apply flex gap-[53px]
-    2xl:gap-[47px]
+     gap-[47px]
     xl:gap-[20px]
 }
 
@@ -49,7 +49,7 @@
 
 .slideFirst__item {
     @apply border-[2px] rounded-[27px] border-[#DFDFDF] overflow-hidden h-[800px] w-[450px] pointer-events-none shrink-0
-    2xl:border-[1px] 2xl:h-[600px] 2xl:w-[337px] 2xl:rounded-[20px]
+     border-[1px]  h-[600px]  w-[337px]  rounded-[20px]
     xl:h-[460px] xl:w-[260px] xl:rounded-[10px]
     md:h-[390px] md:w-[220px] md:rounded-[10px]
 sm:h-[373px]
@@ -72,7 +72,7 @@ sm:h-[373px]
 
 .sliderSecond__item {
     @apply w-full rounded-[32px] bg-gray-400 px-[40px] pt-[40px] pb-[53px] w-[822px] select-none shrink-0
-    2xl:rounded-[24px] 2xl:p-[30px] 2xl:w-[610px]
+     rounded-[24px]  p-[30px]  w-[610px]
     xl:rounded-[24px] xl:py-[20px] xl:px-[30px] xl:w-[440px]
     sm:w-[auto] sm:max-w-[300px]
 
@@ -81,7 +81,7 @@ sm:h-[373px]
 
 .sliderSecond__picture {
     @apply rounded-full w-[160px] h-[160px] mr-[26px] pointer-events-none
-    2xl:w-[120px] 2xl:h-[120px] 2xl:mr-[20px]
+     w-[120px]  h-[120px]  mr-[20px]
     xl:w-[70px] xl:h-[70px] xl:mr-[10px]
     md:w-[60px] md:h-[60px]
 }
@@ -92,7 +92,7 @@ sm:h-[373px]
 
 .sliderSecond__name {
     @apply font-bold text-[38px] mb-[13px] leading-none
-    2xl:text-[28px] 2xl:mb-[5px]
+     text-[28px]  mb-[5px]
     xl:text-[20px] xl:mb-[3px]
     md:text-[18px]
 }
@@ -105,7 +105,7 @@ sm:h-[373px]
 
 .sliderSecond__top {
     @apply flex items-center mb-[40px]
-    2xl:mb-[30px]
+     mb-[30px]
     xl:mb-[10px]
 }
 
@@ -116,14 +116,14 @@ sm:h-[373px]
 .content {
     @apply shrink-0  w-[630px] relative z-[1] pointer-events-none
     after:bg-white after:absolute after:top-0 after:right-[150px] after:bottom-0 after:pointer-events-auto after:w-[50vw] before:absolute before:top-0 before:right-0 before:bottom-0 before:w-[150px] before:bg-[linear-gradient(90deg,#FFF_0%,rgba(255,255,255,0.00)100%)]
-    2xl:w-[463px]
+     w-[463px]
     xl:mb-[20px] xl:w-auto xl:after:hidden xl:before:hidden
 
 }
 
 .sliders {
     @apply w-[calc(100%-630px)]
-    2xl:w-[calc(100%-463px)]
+     w-[calc(100%-463px)]
     xl:w-full
 }
 

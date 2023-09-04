@@ -10,14 +10,14 @@ const TrainingsHero = () => {
     return (
         <div className={stack('container-new', styles.body, 'section-indent-new')}>
             <Picture imageClassName={styles.image} className={styles.picture}
-                     alt={trainingsPage.trainings.trainingsHeroIzobrazhenieDlyaKompyuteraX1.altText}
-                     desktopIImageX1={trainingsPage.trainings.trainingsHeroIzobrazhenieDlyaKompyuteraX1.sourceUrl}
-                     desktopIImageX2={trainingsPage.trainings.trainingsHeroIzobrazhenieDlyaKompyuteraX2.sourceUrl}
-                     mobileIImageX1={trainingsPage.trainings.trainingsHeroIzobrazhenieDlyaTelefonaX1.sourceUrl}
-                     mobileIImageX2={trainingsPage.trainings.trainingsHeroIzobrazhenieDlyaTelefonaX2.sourceUrl}></Picture>
+                     alt={trainingsPage?.trainings.trainingsHeroIzobrazhenieDlyaKompyuteraX1.altText}
+                     desktopIImageX1={trainingsPage?.trainings.trainingsHeroIzobrazhenieDlyaKompyuteraX1.sourceUrl}
+                     desktopIImageX2={trainingsPage?.trainings.trainingsHeroIzobrazhenieDlyaKompyuteraX2.sourceUrl}
+                     mobileIImageX1={trainingsPage?.trainings.trainingsHeroIzobrazhenieDlyaTelefonaX1.sourceUrl}
+                     mobileIImageX2={trainingsPage?.trainings.trainingsHeroIzobrazhenieDlyaTelefonaX2.sourceUrl}></Picture>
             <div className={stack(styles.content)}>
-                <h1 className={styles.title}>{trainingsPage.trainings.trainingsHeroZagolovok}</h1>
-                <p className={styles.text}> {trainingsPage.trainings.trainingsHeroPodzagolovok}</p>
+                <h1 className={styles.title}>{trainingsPage?.trainings.trainingsHeroZagolovok}</h1>
+                <p className={styles.text}> {trainingsPage?.trainings.trainingsHeroPodzagolovok}</p>
             </div>
         </div>
     );

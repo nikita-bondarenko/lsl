@@ -5,14 +5,14 @@
 
 .title {
     @apply mb-[20px]
-    2xl:mb-[15px]
+     mb-[15px]
     xl:mb-[8px]
     md:mb-[10px]
 }
 
 .text {
     @apply max-w-[500px]
-    2xl:max-w-[370px]
+     max-w-[370px]
     xl:max-w-none
     md:max-w-[230px]
 }
@@ -32,7 +32,7 @@
 
 .slider__top {
     @apply flex items-center mb-[40px]
-    2xl:mb-[30px]
+     mb-[30px]
     xl:mb-[10px]
 }
 
@@ -42,7 +42,7 @@
 .content {
     @apply shrink-0  w-[630px] relative z-[1] pointer-events-none
     after:bg-white after:absolute after:top-0 after:right-[150px] after:bottom-0 after:pointer-events-auto after:w-[50vw] before:absolute before:top-0 before:right-0 before:bottom-0 before:w-[150px] before:bg-[linear-gradient(90deg,#FFF_0%,rgba(255,255,255,0.00)100%)]
-    2xl:w-[463px]
+     w-[463px]
     xl:mb-[40px] xl:w-auto xl:w-auto xl:after:hidden xl:before:hidden
     lg:mb-[30px]
     md:mb-[20px]
@@ -50,7 +50,7 @@
 
 .slider {
     @apply w-[calc(100%-630px)]
-    2xl:w-[calc(100%-463px)]
+     w-[calc(100%-463px)]
     xl:w-full
 }
 
@@ -63,7 +63,7 @@
 
 .item__top {
     @apply relative mb-[17px] w-[390px] h-[534px] pointer-events-none
-    2xl:mb-[24px] 2xl:w-[339px] 2xl:h-[466px]
+     mb-[24px]  w-[339px]  h-[466px]
     xl:mb-[17px] xl:w-[305px] xl:h-[405px]
         lg:w-[301px]
     md:mb-[17px] md:w-[227px] md:h-[310px]
@@ -77,7 +77,7 @@
 
 .item:nth-child(3n-2) .item__decor {
     @apply  top-0 left-0 right-[34px] bottom-[40px]
-    2xl:right-[32px] 2xl:bottom-[37px]
+     right-[32px]  bottom-[37px]
     xl:right-[27px] xl:bottom-[32px]
     md:right-[21px] md:bottom-[24px]
 
@@ -114,7 +114,7 @@
 
 .item__picture {
     @apply  w-[373px] h-[517px]   absolute rounded-[15px] overflow-hidden
-     2xl:h-[450px] 2xl:w-[324px]
+      h-[450px]  w-[324px]
     xl:h-[390px] xl:w-[290px]
         lg:w-[286px]
     md:w-[211px] md:h-[295px]    md:rounded-[14px]
@@ -126,7 +126,7 @@
 
 .body .item__text {
     @apply text-[20px] text-left max-w-[345px] w-fit
-        2xl:max-w-[341px]
+         max-w-[341px]
     xl:text-[16px] xl:max-w-[276px]
     md:text-[14px] md:max-w-[239px]
 }

@@ -1,6 +1,6 @@
 .body.old {
     @apply mt-[20px] mb-[53px]
-    2xl:mt-[10px] 2xl:mb-[40px]
+     mt-[10px]  mb-[40px]
     xl:mb-[23px]
     lg:mb-[33px]
     md:mb-[20px]
@@ -18,7 +18,7 @@
 
 .old .logo {
     @apply h-[64px] w-[104px]
-    2xl:h-[40px] 2xl:w-[65px]
+     h-[40px]  w-[65px]
     xl:h-[30px] xl:w-[50px]
     lg:h-[30px] lg:w-[48px]
     sm:h-[40px] sm:w-[66px]
@@ -34,7 +34,7 @@
 
 .old .wrapper {
     @apply rounded-[13px] bg-yellow-200 flex items-center justify-between  px-[41px] py-[12px]
-    2xl:rounded-[10px] 2xl:py-[11px] 2xl:pl-[25px] 2xl:pr-[6px]
+     rounded-[10px]  py-[11px]  pl-[25px]  pr-[6px]
     xl:py-[8px]  xl:pl-[20px] xl:pr-[23px]
     lg:py-[15px] lg:px-[15px] lg:pr-[23px]
     md:py-[15px] md:px-[10px] md:rounded-[6px]
@@ -56,7 +56,7 @@
 
 .old .nav {
     @apply flex items-center gap-[40px]
-    2xl:gap-[30px]
+     gap-[30px]
     xl:gap-[15px]
     md:absolute md:top-[9px] md:right-[0px] md:rounded-[8px] md:p-[26px] md:pt-[40px] md:overflow-hidden md:flex-col md:items-start md:bg-yellow-200 md:w-[250px]
 }
@@ -90,7 +90,7 @@
 
 .old .nav__sublist {
     @apply relative flex gap-[15px] items-center transition-all
-    2xl:gap-[10px]
+     gap-[10px]
     xl:gap-[8px]
     md:mb-[-15px]
 
@@ -115,7 +115,7 @@
 
 .old .sublist__wrapper {
     @apply absolute top-[3em] left-[0px] transition-all opacity-[0] invisible before:absolute before:w-full before:h-[20px] before:top-[-20px] before:left-[0px] z-[20]
-    2xl:top-[150%]
+     top-[150%]
     md:before:hidden  md:top-[100%]
 }
 
@@ -131,7 +131,7 @@
 
 .old .sublist__arrow {
     @apply w-[15px] h-[9px] object-contain transition-all rotate-[180deg]
-    2xl:w-[12px] 2xl:h-[7px]
+     w-[12px]  h-[7px]
     lg:w-[10px] lg:h-[5px]
 }
 
@@ -167,19 +167,19 @@
 
 .old .sublist__item:not(:last-child) {
     @apply mb-[11px]
-    2xl:mb-[10px]
+     mb-[10px]
     md:mb-[5px]
 }
 
 .new .sublist__item:not(:last-child) {
     @apply mb-[11px]
-    2xl:mb-[10px]
+     mb-[10px]
     md:mb-[5px]
 }
 
 .old .button {
     @apply w-[313px] h-[76px] text-[26px] ml-[133px] rounded-[13px]
-    2xl:w-[239px] 2xl:h-[58px] 2xl:text-[20px] 2xl:ml-[103px] 2xl:rounded-[10px]
+     w-[239px]  h-[58px]  text-[20px]  ml-[103px]  rounded-[10px]
     xl:rounded-[8px] xl:w-[183px] xl:h-[52px] xl:text-[16px] xl:ml-[57px]
     lg:hidden
     md:flex md:w-[156px] md:h-[40px] md:text-[14px] md:ml-[0px] md:mt-[25px]
