@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useLayoutEffect, useState} from 'react';
 import styles from './BlogPostMore.module.css'
 import {stack} from "../../../../hooks/useClassName";
 import {useGlobalContext} from "../../../../context/context";
@@ -8,14 +8,24 @@ import {Link} from "react-router-dom";
 import Picture from "../../../images/Picture/Picture";
 
 const BlogPostMore = () => {
-    const [posts] = usePosts()
+    const [firstListSize, setFirstListSize] = useState(3)
+
+    useLayoutEffect(() => {
+        const width = window.innerWidth
+        if (width < 1440) {
+            setFirstListSize(2)
+        }
+    }, []);
+
+    const postSlug = window.location.href.split('/').slice(-1).join('');
+
+    const [posts] = usePosts(postSlug)
 
     return (
-        <div className={stack('container-new', 'section-indent-new', styles.body)}>
-            <h2 className={stack('text-lg', styles.title)}>Читайте также</h2>
-            <SwiperLight>
+        <div className={stack('container-new',  styles.body)}>
+            <h2 className={stack('text-page', styles.title)}>Читайте также</h2>
                 <ul className={styles.list}>
-                    {posts?.map((item, index) => <li key={index} className={styles.item}>
+                    {posts?.slice(0,firstListSize).map((item, index) => <li key={index} className={styles.item}>
                         <Link to={"/blog/" + item.slug}>
                             <Picture imageClassName={styles.item__image}
                                      alt={item.blog.blogPostPreviewIzobrazhenieDlyaKompyuteraX1.altText}
@@ -31,7 +41,6 @@ const BlogPostMore = () => {
                         </Link>
                     </li>)}
                 </ul>
-            </SwiperLight>
         </div>
     );
 };

@@ -1,5 +1,5 @@
 .body.heavy {
-    @apply pt-[12px]
+    @apply pt-[12px] mb-[182px]
     xl:pt-[0px] xl:mt-[-10px] xl:mb-[97px]
     md:mt-[0px] md:mb-[70px]
 }

@@ -52,7 +52,7 @@ const BlogList = () => {
                     {isListOpen && posts?.slice(firstListSize).map((item, index) => <BlogListItem {...item} key={index}></BlogListItem>)}
                 </ul>
             </div>
-            {!isListOpen && <button onClick={() => setIsListOpen(true)} className={stack('button-primary', styles.button)}>Загрузить еще</button>}
+            {!isListOpen && <button onClick={() => setIsListOpen(true)} className={stack('button-primary-new', styles.button)}>Загрузить еще</button>}
         </div>
     );
 };

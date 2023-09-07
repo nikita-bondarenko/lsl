@@ -40,17 +40,19 @@ const Layout = memo(({children}: LayoutProps) => {
             {historyLength < 2 ?
                 <>
                     <Loading></Loading>
-                <div style={{display: isLoading ? 'none' : 'block'}} className={!isLoading ? 'animate-appear' : ''}>
-                    <Header></Header>
-                    <FixedLayer>
-                        <Cookies></Cookies>
-                        <Modal open={isNavModalOpen} setOpen={onModalClose}>
-                            {isNavModalOpen && <Navigation></Navigation>}
-                        </Modal>
-                    </FixedLayer>
-                    {children}
-                    <Footer></Footer>
-                </div>
+                    <div style={{display: isLoading ? 'none' : 'block'}} className={!isLoading ? 'animate-appear' : ''}>
+                        <Header></Header>
+                        <FixedLayer>
+                            <Cookies></Cookies>
+                            <Modal open={isNavModalOpen} setOpen={onModalClose}>
+                                {isNavModalOpen && <Navigation></Navigation>}
+                            </Modal>
+                        </FixedLayer>
+                        <main>
+                            {children}
+                        </main>
+                        <Footer></Footer>
+                    </div>
                 </>
                 : <>
                     <Header></Header>

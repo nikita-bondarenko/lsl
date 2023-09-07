@@ -62,6 +62,8 @@ export const globalState = (): GlobalContextType => {
 
     useEffect(() => {
         setHistoryLength(prev => prev + 1)
+        scrollTo(0, 0)
+
     }, [location.href])
 
 

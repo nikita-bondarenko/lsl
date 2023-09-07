@@ -83,7 +83,7 @@ const HistorySended = () => {
     const {setIsTopInView, isInView, setIsBottomInView} = useView()
 
     return (
-        <div className={stack('container-new', 'section-indent-new', styles.body, styles.heavy)}>
+        <div className={stack('container-new',  styles.body, styles.heavy)}>
             <div className={styles.top}>
                 <h2 className={stack('text-large', styles.title)}>
                     <span className={stack('text-large', styles.title__text)}

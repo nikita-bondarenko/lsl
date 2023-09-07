@@ -15,12 +15,14 @@ const Footer = () => {
     if (!section) return null
 
     return (
-        <section className={stack(isNewContainer ? 'container-new' : 'container', isNewContainer ? styles.new : styles.old , styles.footer)}>
+        <footer
+            className={stack(isNewContainer ? 'container-new' : 'container', isNewContainer ? styles.new : styles.old, styles.footer)}>
             <ToTopButton className={styles.buttonToTop}></ToTopButton>
             <div className={styles.footer__body}>
                 <div className={styles.logo}>
                     <Logo className={styles.logo__link} mobileUrl={section?.footer?.footerLogotipMobile?.sourceUrl}
-                          desktopUrl={section?.footer?.footerLogotip?.sourceUrl} alt={section?.footer?.footerLogotip?.altText}></Logo>
+                          desktopUrl={section?.footer?.footerLogotip?.sourceUrl}
+                          alt={section?.footer?.footerLogotip?.altText}></Logo>
                     <p className={stack(styles.text, styles.logo__copy)}
                        dangerouslySetInnerHTML={{__html: section?.footer?.footerKopirajt}}></p>
                 </div>
@@ -49,16 +51,17 @@ const Footer = () => {
                     <h3 className={stack(styles.title, styles.social__title)}
                         dangerouslySetInnerHTML={{__html: section?.footer?.footerSocialZagolovok}}></h3>
                     <ul className={styles.social__list}>
-                        {section?.footer?.footerSocialSpisok?.map((item, index) => <li className={styles.li} key={index}>
+                        {section?.footer?.footerSocialSpisok?.map((item, index) => <li className={styles.li}
+                                                                                       key={index}>
                             <a
-                            href={item.footerSocialAdres}
-                            target={"_blank"}
-                            className={stack('link', styles.social__item)}
+                                href={item.footerSocialAdres}
+                                target={"_blank"}
+                                className={stack('link', styles.social__item)}
                             >
-                            <img className={styles.social__icon} src={item?.footerSocialIkonka?.sourceUrl}
-                                 alt={item?.footerSocialIkonka?.altText}/>
-                            <p className={stack(styles.text, styles.social__text)}>{item.footerSocialTekst}</p>
-                        </a>
+                                <img className={styles.social__icon} src={item?.footerSocialIkonka?.sourceUrl}
+                                     alt={item?.footerSocialIkonka?.altText}/>
+                                <p className={stack(styles.text, styles.social__text)}>{item.footerSocialTekst}</p>
+                            </a>
                         </li>)}
                     </ul>
                     <p className={stack(isNewContainer ? 'remark-new' : 'remark', styles.social__remark)}
@@ -68,18 +71,20 @@ const Footer = () => {
                 <div className={styles.contacts}>
                     <h3 className={stack(styles.title, styles.contacts__title)}>{section?.footer?.footerContactsZagolovok}</h3>
                     <ul className={styles.contacts__list}>
-                        {section?.footer?.footerContactsSpisok?.map((item, index) => <li key={index} className={styles.li}>
-                            <a  className={stack('link', styles.contacts__link)} href={item.footerContactsHref}>
-                            <p className={stack(styles.text, styles.contacts__text)}>{item.footerContactsTekst}</p>
-                            {item.footerContactsEstKommentarij === "true" &&
-                                <p className={styles.contacts__description}> {item.footerContactsKommentarij}</p>}
+                        {section?.footer?.footerContactsSpisok?.map((item, index) => <li key={index}
+                                                                                         className={styles.li}>
+                            <a className={stack('link', styles.contacts__link)}
+                               href={item.footerContactsHref.split(' ').join('').split('−').join('').split('(').join('').split(')').join('')}>
+                                <p className={stack(styles.text, styles.contacts__text)}>{item.footerContactsTekst}</p>
+                                {item.footerContactsEstKommentarij === "true" &&
+                                    <p className={styles.contacts__description}> {item.footerContactsKommentarij}</p>}
 
-                        </a>
+                            </a>
                         </li>)}
                     </ul>
                 </div>
             </div>
-        </section>
+        </footer>
     );
 };
 

@@ -1,5 +1,7 @@
 .body {
-    @apply xl:mt-[-36px]
+    @apply mb-[133px]
+    xl:mt-[-36px] xl:mb-[92px]
+    md:mb-[58px]
 }
 
 .top {

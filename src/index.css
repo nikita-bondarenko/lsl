@@ -120,6 +120,12 @@
         xl:text-[16px] xl:rounded-[8px] xl:bg-yellow-400 xl:hover:bg-white xl:border-[2px]
     }
 
+    .button-primary-new {
+        @apply font-bold leading-[1.4] flex items-center justify-center  border-[3px] bg-white border-yellow-400 transition-all hover:bg-yellow-400
+        rounded-[12px]  text-[24px]
+        xl:text-[16px] xl:rounded-[8px] xl:border-[2px]
+    }
+
     .button-secondary {
         @apply font-bold text-[32px] leading-[1.4] flex items-center justify-center rounded-[16px] border-[3px] bg-yellow-400 border-yellow-400 transition-all hover:bg-white
         rounded-[12px]  text-[24px]

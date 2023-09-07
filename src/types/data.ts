@@ -374,10 +374,10 @@ export interface NodeTrainings {
     trainingsGiftIzobrazhenieDlyaKompyuteraX2: BlogPostHeroImageKompyuter1X | null;
     trainingsGiftIzobrazhenieDlyaTelefonaX1:   BlogPostHeroImageKompyuter1X | null;
     trainingsGiftIzobrazhenieDlyaTelefonaX2:   BlogPostHeroImageKompyuter1X | null;
-    trainingsHeroIzobrazhenieDlyaKompyuteraX1: null;
-    trainingsHeroIzobrazhenieDlyaKompyuteraX2: null;
-    trainingsHeroIzobrazhenieDlyaTelefonaX1:   null;
-    trainingsHeroIzobrazhenieDlyaTelefonaX2:   null;
+    trainingsHeroIzobrazhenieDlyaKompyuteraX1: BlogPostHeroImageKompyuter1X | null;
+    trainingsHeroIzobrazhenieDlyaKompyuteraX2: BlogPostHeroImageKompyuter1X | null;
+    trainingsHeroIzobrazhenieDlyaTelefonaX1:   BlogPostHeroImageKompyuter1X | null;
+    trainingsHeroIzobrazhenieDlyaTelefonaX2:   BlogPostHeroImageKompyuter1X | null;
     trainingsAboutZagolovok:                   null | string;
     trainingsAboutIzobrazhenieDlyaKompyutera:  BlogPostHeroImageKompyuter1X | null;
     trainingsAboutIzobrazhenieDlyaPlansheta:   BlogPostHeroImageKompyuter1X | null;

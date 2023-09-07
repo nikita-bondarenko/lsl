@@ -1,6 +1,6 @@
 .title {
     @apply w-[400px] shrink-0
-    xl:w-[236px]
+    xl:w-[236px] xl:mt-[5px]
 }
 
 .top {
@@ -10,7 +10,9 @@
 }
 
 .body {
-
+@apply mb-[150px]
+    xl:mb-[92px]
+    md:mb-[66px]
 }
 
 .text {

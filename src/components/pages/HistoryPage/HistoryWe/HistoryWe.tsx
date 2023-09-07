@@ -28,7 +28,7 @@ const HistoryWe = () => {
 
 
     return (
-        <div className={stack('container-new', styles.body, 'section-mb')}>
+        <div className={stack('container-new', styles.body)}>
             <div className={styles.top}>
                 <div className={styles.top__left}>
                     <div className={styles.top__back}>
@@ -45,8 +45,8 @@ const HistoryWe = () => {
                 <div className={styles.top__content}>
                     <h2 className={styles.title}
                         dangerouslySetInnerHTML={{__html: historyPage?.history.historyWeZagolovok}}></h2>
-                    <p className={stack(styles.text, 'text-simple')}
-                       dangerouslySetInnerHTML={{__html: historyPage?.history.historyWeTekstSverhu}}></p>
+                    <div className={stack(styles.text, 'text-simple')}
+                       dangerouslySetInnerHTML={{__html: historyPage?.history.historyWeTekstSverhu}}></div>
                     <div className={styles.top__indent}></div>
                 </div>
             </div>

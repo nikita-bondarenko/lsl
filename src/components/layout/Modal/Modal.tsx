@@ -13,7 +13,7 @@ const Modal = ({children, open, setOpen} : ModalProps) => {
     const {isNewContainer} = useGlobalContext()
     return (
         <div onClick={() => setOpen(false)} className={stack(styles.modal, open && styles.open)}>
-            <div className={stack(styles.body,isNewContainer ? 'container-new' : 'container')}>
+            <div className={stack(styles.body,'container-new' )}>
                 <div className={styles.content}>
                     {children}
                 </div>

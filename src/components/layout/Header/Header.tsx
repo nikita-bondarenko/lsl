@@ -58,7 +58,7 @@ const PhoneButton = ({number}: PhoneButtonProps) => {
     const [href, setHref] = useState('')
     useEffect(() => {
         if (number) {
-            setHref('tel:' + number.split(' ').join('').split('-').join(''))
+            setHref('tel:' + number.split(' ').join('').split('−').join('').split('(').join('').split(')').join(''))
         }
     }, [number])
     return <a className={stack('button-secondary', styles.button)} href={href}>{number}</a>
@@ -72,7 +72,7 @@ export const Navigation = () => {
     const [navArr] = useSortNav(data?.menu?.menuItems?.nodes)
 
     return (
-        <div onClick={(e) => e.stopPropagation()} className={stack(styles.nav)}>
+        <nav onClick={(e) => e.stopPropagation()} className={stack(styles.nav)}>
             {navArr?.map((item) =>
                 <React.Fragment key={item.label}>
                     {!item.childItems.nodes.length
@@ -85,7 +85,7 @@ export const Navigation = () => {
             <button className={styles.nav__close} onClick={() => setIsNavModalOpen(false)}>
                 <img src="/image/nav-close.png" className={styles.nav__close__icon} alt="Крестик"/>
             </button>
-        </div>
+        </nav>
     );
 };
 
@@ -102,8 +102,8 @@ const Header = () => {
     if (!section) return null
     return (
 
-        <div
-            className={stack(isNewContainer ? 'container-new' : 'container', isNewContainer ? styles.new : styles.old, styles.body)}>
+        <header
+            className={stack( 'container-new', styles.body)}>
             <div className={styles.wrapper}>
                 <Logo className={styles.logo} desktopUrl={section?.header?.headerLogotip?.sourceUrl}
                       mobileUrl={section?.header?.headerLogotipMobile?.sourceUrl}
@@ -116,7 +116,7 @@ const Header = () => {
                          src="/image/burger.svg" alt="Бургер"/>
                 </button>
             </div>
-        </div>
+        </header>
 
     );
 };

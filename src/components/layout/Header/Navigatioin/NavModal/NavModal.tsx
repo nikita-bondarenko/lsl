@@ -11,7 +11,6 @@ const NavModal = () => {
     return (
         <Modal open={isNavModalOpen} setOpen={setIsNavModalOpen}>
             <div className={stack(styles.body, 'container')}>
-
                 <Navigation></Navigation>
             </div>
         </Modal>

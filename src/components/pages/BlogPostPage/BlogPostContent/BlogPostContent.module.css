@@ -14,5 +14,5 @@
 
 .body {
     @apply flex justify-between mb-[86px]
-    xl:mb-[36px] md:mb-[56px]
+    xl:mb-[36px] md:mb-[60px]
 }

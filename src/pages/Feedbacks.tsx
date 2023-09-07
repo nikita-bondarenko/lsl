@@ -29,6 +29,7 @@ const Feedbacks = () => {
 
     return (
         <Layout>
+            <h1 className="hidden">Отзывы</h1>
             <div className="mt-[91px]  mt-[70px]
 xl:mt-[52px] lg:mt-[50px] md:mt-[37px] sm:mt-[7px]">
                 <FeedbacksSimple className={'section-indent-new'}></FeedbacksSimple>

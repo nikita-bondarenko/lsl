@@ -49,6 +49,6 @@
     md:h-[8px]
 }
 
-.text {
+.body .text {
     @apply md:leading-[22px]
 }

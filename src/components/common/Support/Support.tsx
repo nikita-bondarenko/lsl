@@ -11,7 +11,7 @@ const Support = () => {
     const [section] = useCommonSection('vasha-podderzhka')
     return (
         <div
-            className={stack(isNewContainer ? stack('container-new', 'section-indent-new', styles.new) : stack('container', 'section-indent', styles.old), styles.body)}>
+            className={stack( 'container-new',  styles.new , styles.body)}>
             <div className={styles.block}>
                 <div className={styles.content}>
                     <h2 className={stack('text-large', styles.title)}

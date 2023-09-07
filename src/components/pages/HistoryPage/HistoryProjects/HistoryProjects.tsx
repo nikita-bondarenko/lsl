@@ -8,7 +8,7 @@ const HistoryProjects = () => {
     const {historyPage} = useGlobalContext()
 
     return (
-        <div className={stack('container-new', 'section-mb', styles.body)}>
+        <div className={stack('container-new',  styles.body)}>
             <div className={styles.top}>
                 <h2 className={stack('text-large', styles.title)}
                     dangerouslySetInnerHTML={{__html: historyPage?.history.historyProjectsZagolovok}}></h2>

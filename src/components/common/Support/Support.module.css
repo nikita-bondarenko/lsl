@@ -27,9 +27,9 @@
 }
 
 .block {
-    @apply relative rounded-[45px] bg-[#FFF4DE] px-[60px] pb-[66px] pt-[82px]
-    xl:rounded-[20px] xl:px-[20px] xl:py-[32px]
-    md:rounded-[16px] md:pb-[330px] md:pt-[36px]
+    @apply relative rounded-[45px] bg-[#FFF4DE] px-[60px] pb-[66px] pt-[82px] mb-[140px]
+    xl:rounded-[20px] xl:px-[20px] xl:py-[32px] xl:mb-[22px]
+    md:rounded-[16px] md:pb-[333px] md:pt-[36px] md:mb-[17px]
 }
 
 .content {
@@ -40,9 +40,9 @@
 }
 
 .body .title {
-    @apply mb-[24px]
+    @apply mb-[24px] max-w-[500px]
     xl:mb-[10px] xl:max-w-[90%] xl:text-[24px]
-    md:mb-[20px] md:max-w-[95%]
+    md:mb-[20px] md:max-w-[85%] md:text-[22px]
 }
 
 .text {

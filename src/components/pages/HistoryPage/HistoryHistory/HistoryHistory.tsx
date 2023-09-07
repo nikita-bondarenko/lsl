@@ -51,7 +51,7 @@ const HistoryHistory = () => {
                                                                                                      className={styles.decor__item}></div>)}
                                     </div>}
                             </div>
-                            <p className={stack('text-simple', styles.text)} dangerouslySetInnerHTML={{__html: item.tekst}}></p>
+                            <div className={stack('text-simple', styles.text)} dangerouslySetInnerHTML={{__html: item.tekst}}></div>
                         </li>
                     })}
                 </ul>

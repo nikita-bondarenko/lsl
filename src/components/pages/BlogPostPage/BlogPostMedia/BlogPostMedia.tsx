@@ -24,23 +24,21 @@ const BlogPostMedia = () => {
         }
     }, [isPlaying])
     return (
-        <div className={stack('container-new', 'section-indent-new', styles.body)}>
+        <div className={stack('container-new',  styles.body)}>
             <div className={styles.left}>
-                <div onClick={videoClickHandler} className={styles.video}>
+                <div onClick={videoClickHandler} className={stack(styles.video, !isPlaying && styles.stop)}>
                     <video ref={video} className={styles.video__media}
                            src={blogPostPage?.blog?.blogPostMediaVideo?.mediaItemUrl}
                     ></video>
                     {!isPlaying &&
-                        <>
                             <button
                                 className={stack('link', styles.video__button)}>
                                 <img className={styles.video__image} src="/image/play.png" alt="Иконка Play"/></button>
-                            <LightPicture alt={blogPostPage?.blog.blogPostMediaZastavkaDlyaVideoKompyuter.altText}
-                                          className={stack(styles.video__picture)} imageClassName={styles.video__image}
-                                          desktopIImage={blogPostPage?.blog?.blogPostMediaZastavkaDlyaVideoKompyuter.sourceUrl}
-                                          mobileIImage={blogPostPage?.blog?.blogPostMediaZastavkaDlyaVideoKompyuterKopiya.sourceUrl}></LightPicture>
-                        </>
                     }
+                    <LightPicture alt={blogPostPage?.blog.blogPostMediaZastavkaDlyaVideoKompyuter.altText}
+                                  className={stack(styles.video__picture)} imageClassName={styles.video__image}
+                                  desktopIImage={blogPostPage?.blog?.blogPostMediaZastavkaDlyaVideoKompyuter.sourceUrl}
+                                  mobileIImage={blogPostPage?.blog?.blogPostMediaZastavkaDlyaVideoKompyuterKopiya.sourceUrl}></LightPicture>
                 </div>
 
                 <div className={styles.left__back}></div>

@@ -55,12 +55,12 @@ const Online = ({className, isSmall}: OnlineProps) => {
         validate()
     }
     return (
-        <div className={stack('container-new', 'section-indent-new', isSmall && styles.small , styles.container, className)}>
+        <div className={stack('container-new', isSmall && styles.small , styles.container, className)}>
             <div className={styles.body}>
                 <div className={styles.content}>
                     <h2 className={stack("text-large", styles.title)}
                         dangerouslySetInnerHTML={{__html: section?.online.onlineZagolovok}}></h2>
-                    <p className={stack('text-small', styles.text)}
+                    <p className={stack('text-simple', styles.text)}
                        dangerouslySetInnerHTML={{__html: section?.online.onlineTekst}}></p>
                 </div>
                 <div className={styles.form}>
